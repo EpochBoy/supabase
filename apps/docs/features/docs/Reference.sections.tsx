@@ -7,6 +7,7 @@ import ApiSchema from '~/components/ApiSchema'
 import { clientSdkIds, REFERENCES } from '~/content/navigation.references'
 import { MDXRemoteRefs, getRefMarkdown } from '~/features/docs/Reference.mdx'
 import type { MethodTypes } from '~/features/docs/Reference.typeSpec'
+import { formatMethodSignature } from '~/features/docs/Reference.typeSpec'
 import {
   getApiEndpointById,
   getCliSpec,
@@ -447,6 +448,16 @@ async function FunctionSection({
   return (
     <RefSubLayout.Section columns="double" link={link} {...section}>
       <StickyHeader {...section} className="col-[1_/_-1]" />
+
+      {/* Display method signature below title */}
+      {types && (
+        <div className="col-[1_/_-1] px-8 -mt-2 mb-4">
+          <code className="text-xs text-foreground-muted font-mono">
+            {formatMethodSignature(types)}
+          </code>
+        </div>
+      )}
+
       <div className="overflow-hidden flex flex-col gap-8">
         <div className="prose break-words text-sm">
           <MDXRemoteRefs source={fullDescription} />
