@@ -450,9 +450,9 @@ async function FunctionSection({
       <StickyHeader {...section} className="col-[1_/_-1]" />
 
       {/* Display method signature below title */}
-      {types && (
-        <div className="col-[1_/_-1] px-8 -mt-2 mb-4">
-          <code className="text-xs text-foreground-muted font-mono">
+      {types && formatMethodSignature(types) && (
+        <div className="col-[1_/_-1] -mt-2 mb-4">
+          <code className="text-sm text-foreground-muted font-mono">
             {formatMethodSignature(types)}
           </code>
         </div>
