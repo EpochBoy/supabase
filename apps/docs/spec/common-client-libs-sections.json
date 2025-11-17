@@ -1421,14 +1421,14 @@
       },
       {
         "id": "storage-js-storageclient-constructor",
-        "title": "new StorageClient()",
+        "title": "Create a storage client",
         "slug": "storage-js-storageclient-constructor",
         "type": "function",
         "product": "storage"
       },
       {
         "id": "storage-js-storageclient-from",
-        "title": "StorageClient.from()",
+        "title": "Access a storage bucket",
         "slug": "storage-js-storageclient-from",
         "type": "function",
         "product": "storage"
@@ -1443,14 +1443,14 @@
         "items": [
           {
             "id": "storage-js-storagevectorsclient-constructor",
-            "title": "new StorageVectorsClient()",
+            "title": "Create a vectors client",
             "slug": "storage-js-storagevectorsclient-constructor",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-storagevectorsclient-from",
-            "title": "StorageVectorsClient.from()",
+            "title": "Access a vector bucket",
             "slug": "storage-js-storagevectorsclient-from",
             "type": "function",
             "product": "storage"
@@ -1467,77 +1467,77 @@
         "items": [
           {
             "id": "storage-js-vectorbucketapi-constructor",
-            "title": "new VectorBucketApi()",
+            "title": "Create a vector bucket API instance",
             "slug": "storage-js-vectorbucketapi-constructor",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorbucketapi-createbucket",
-            "title": "VectorBucketApi.createBucket()",
+            "title": "Create a vector bucket",
             "slug": "storage-js-vectorbucketapi-createbucket",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorbucketapi-deletebucket",
-            "title": "VectorBucketApi.deleteBucket()",
+            "title": "Delete a vector bucket",
             "slug": "storage-js-vectorbucketapi-deletebucket",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorbucketapi-getbucket",
-            "title": "VectorBucketApi.getBucket()",
+            "title": "Retrieve a vector bucket",
             "slug": "storage-js-vectorbucketapi-getbucket",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorbucketapi-listbuckets",
-            "title": "VectorBucketApi.listBuckets()",
+            "title": "List all vector buckets",
             "slug": "storage-js-vectorbucketapi-listbuckets",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorbucketapi-throwonerror",
-            "title": "VectorBucketApi.throwOnError()",
+            "title": "Enable error throwing",
             "slug": "storage-js-vectorbucketapi-throwonerror",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorbucketscope-constructor",
-            "title": "new VectorBucketScope()",
+            "title": "Create a vector bucket scope",
             "slug": "storage-js-vectorbucketscope-constructor",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorbucketscope-createindex",
-            "title": "VectorBucketScope.createIndex()",
+            "title": "Create a vector index",
             "slug": "storage-js-vectorbucketscope-createindex",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorbucketscope-deleteindex",
-            "title": "VectorBucketScope.deleteIndex()",
+            "title": "Delete a vector index",
             "slug": "storage-js-vectorbucketscope-deleteindex",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorbucketscope-getindex",
-            "title": "VectorBucketScope.getIndex()",
+            "title": "Retrieve a vector index",
             "slug": "storage-js-vectorbucketscope-getindex",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorbucketscope-listindexes",
-            "title": "VectorBucketScope.listIndexes()",
+            "title": "List all vector indexes",
             "slug": "storage-js-vectorbucketscope-listindexes",
             "type": "function",
             "product": "storage"
@@ -1554,49 +1554,49 @@
         "items": [
           {
             "id": "storage-js-vectordataapi-constructor",
-            "title": "new VectorDataApi()",
+            "title": "Create a vector data API instance",
             "slug": "storage-js-vectordataapi-constructor",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectordataapi-deletevectors",
-            "title": "VectorDataApi.deleteVectors()",
+            "title": "Delete vectors",
             "slug": "storage-js-vectordataapi-deletevectors",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectordataapi-getvectors",
-            "title": "VectorDataApi.getVectors()",
+            "title": "Retrieve vectors",
             "slug": "storage-js-vectordataapi-getvectors",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectordataapi-listvectors",
-            "title": "VectorDataApi.listVectors()",
+            "title": "List all vectors",
             "slug": "storage-js-vectordataapi-listvectors",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectordataapi-putvectors",
-            "title": "VectorDataApi.putVectors()",
+            "title": "Insert or update vectors",
             "slug": "storage-js-vectordataapi-putvectors",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectordataapi-queryvectors",
-            "title": "VectorDataApi.queryVectors()",
+            "title": "Query vectors",
             "slug": "storage-js-vectordataapi-queryvectors",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectordataapi-throwonerror",
-            "title": "VectorDataApi.throwOnError()",
+            "title": "Enable error throwing",
             "slug": "storage-js-vectordataapi-throwonerror",
             "type": "function",
             "product": "storage"
@@ -1613,7 +1613,7 @@
         "items": [
           {
             "id": "storage-js-vectorindexapi-constructor",
-            "title": "new VectorIndexApi()",
+            "title": "Create a vector index API instance",
             "slug": "storage-js-vectorindexapi-constructor",
             "type": "function",
             "product": "storage"
@@ -1621,77 +1621,77 @@
 
           {
             "id": "storage-js-vectorindexapi-createindex",
-            "title": "VectorIndexApi.createIndex()",
+            "title": "Create an index",
             "slug": "storage-js-vectorindexapi-createindex",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorindexapi-deleteindex",
-            "title": "VectorIndexApi.deleteIndex()",
+            "title": "Delete an index",
             "slug": "storage-js-vectorindexapi-deleteindex",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorindexapi-getindex",
-            "title": "VectorIndexApi.getIndex()",
+            "title": "Retrieve an index",
             "slug": "storage-js-vectorindexapi-getindex",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorindexapi-listindexes",
-            "title": "VectorIndexApi.listIndexes()",
+            "title": "List all indexes",
             "slug": "storage-js-vectorindexapi-listindexes",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorindexapi-throwonerror",
-            "title": "VectorIndexApi.throwOnError()",
+            "title": "Enable error throwing",
             "slug": "storage-js-vectorindexapi-throwonerror",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorindexscope-constructor",
-            "title": "new VectorIndexScope()",
+            "title": "Create a vector index scope",
             "slug": "storage-js-vectorindexscope-constructor",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorindexscope-deletevectors",
-            "title": "VectorIndexScope.deleteVectors()",
+            "title": "Delete vectors from index",
             "slug": "storage-js-vectorindexscope-deletevectors",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorindexscope-getvectors",
-            "title": "VectorIndexScope.getVectors()",
+            "title": "Retrieve vectors from index",
             "slug": "storage-js-vectorindexscope-getvectors",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorindexscope-listvectors",
-            "title": "VectorIndexScope.listVectors()",
+            "title": "List vectors in index",
             "slug": "storage-js-vectorindexscope-listvectors",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorindexscope-putvectors",
-            "title": "VectorIndexScope.putVectors()",
+            "title": "Add vectors to index",
             "slug": "storage-js-vectorindexscope-putvectors",
             "type": "function",
             "product": "storage"
           },
           {
             "id": "storage-js-vectorindexscope-queryvectors",
-            "title": "VectorIndexScope.queryVectors()",
+            "title": "Search vectors in index",
             "slug": "storage-js-vectorindexscope-queryvectors",
             "type": "function",
             "product": "storage"

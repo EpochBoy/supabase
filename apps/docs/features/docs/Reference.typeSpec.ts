@@ -975,7 +975,7 @@ function formatTypeForSignature(type: TypeDetails | undefined): string {
       return 'Function'
     case 'union':
       if (type.subTypes && type.subTypes.length > 0) {
-        return type.subTypes.map(st => formatTypeForSignature(st)).join(' | ')
+        return type.subTypes.map((st) => formatTypeForSignature(st)).join(' | ')
       }
       return 'any'
     case 'record':
@@ -990,13 +990,25 @@ function formatTypeForSignature(type: TypeDetails | undefined): string {
 /**
  * Formats a method signature for display (minimal version)
  * Example: "signUp(credentials, password)" - shows only method name and param names
+ * Returns empty string for constructors (they're shown in the title already)
  */
 export function formatMethodSignature(method: MethodTypes): string {
-  const methodName = method.name !== TYPESPEC_NODE_ANONYMOUS ? method.name : 'anonymous'
+  let methodName = method.name !== TYPESPEC_NODE_ANONYMOUS ? method.name : 'anonymous'
+
+  // Strip package/class prefix - keep only the method name after the last dot
+  const lastDotIndex = methodName.lastIndexOf('.')
+  if (lastDotIndex !== -1) {
+    methodName = methodName.substring(lastDotIndex + 1)
+  }
+
+  // Hide constructors - they're already shown in the title
+  if (methodName.toLowerCase() === 'constructor') {
+    return ''
+  }
 
   // Format parameters - only names, no types
   const params = method.params
-    .map(param => {
+    .map((param) => {
       const paramName = param.name !== TYPESPEC_NODE_ANONYMOUS ? param.name : 'arg'
       const optional = param.isOptional ? '?' : ''
       return `${paramName}${optional}`
