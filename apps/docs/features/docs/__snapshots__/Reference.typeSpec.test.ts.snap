@@ -685,8 +685,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates an admin API client that can be used to manage users and OAuth clients."
         }
       },
-      "@supabase/supabase-js.GoTrueAdminApi.mfa.deleteFactor": {
-        "name": "@supabase/supabase-js.GoTrueAdminApi.mfa.deleteFactor",
+      "@supabase/supabase-js.GoTrueAdminMFAApi.deleteFactor": {
+        "name": "@supabase/supabase-js.GoTrueAdminMFAApi.deleteFactor",
         "params": [
           {
             "name": "params",
@@ -780,8 +780,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Deletes a factor on a user. This will log the user out of all active\\nsessions if the deleted factor was verified."
         }
       },
-      "@supabase/supabase-js.GoTrueAdminApi.mfa.listFactors": {
-        "name": "@supabase/supabase-js.GoTrueAdminApi.mfa.listFactors",
+      "@supabase/supabase-js.GoTrueAdminMFAApi.listFactors": {
+        "name": "@supabase/supabase-js.GoTrueAdminMFAApi.listFactors",
         "params": [
           {
             "name": "params",
@@ -925,8 +925,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Lists all factors associated to a user."
         }
       },
-      "@supabase/supabase-js.GoTrueAdminApi.oauth.createClient": {
-        "name": "@supabase/supabase-js.GoTrueAdminApi.oauth.createClient",
+      "@supabase/supabase-js.GoTrueAdminOAuthApi.createClient": {
+        "name": "@supabase/supabase-js.GoTrueAdminOAuthApi.createClient",
         "params": [
           {
             "name": "params",
@@ -1258,8 +1258,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a new OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
-      "@supabase/supabase-js.GoTrueAdminApi.oauth.deleteClient": {
-        "name": "@supabase/supabase-js.GoTrueAdminApi.oauth.deleteClient",
+      "@supabase/supabase-js.GoTrueAdminOAuthApi.deleteClient": {
+        "name": "@supabase/supabase-js.GoTrueAdminOAuthApi.deleteClient",
         "params": [
           {
             "name": "clientId",
@@ -1307,8 +1307,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Deletes an OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
-      "@supabase/supabase-js.GoTrueAdminApi.oauth.getClient": {
-        "name": "@supabase/supabase-js.GoTrueAdminApi.oauth.getClient",
+      "@supabase/supabase-js.GoTrueAdminOAuthApi.getClient": {
+        "name": "@supabase/supabase-js.GoTrueAdminOAuthApi.getClient",
         "params": [
           {
             "name": "clientId",
@@ -1554,8 +1554,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Gets details of a specific OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
-      "@supabase/supabase-js.GoTrueAdminApi.oauth.listClients": {
-        "name": "@supabase/supabase-js.GoTrueAdminApi.oauth.listClients",
+      "@supabase/supabase-js.GoTrueAdminOAuthApi.listClients": {
+        "name": "@supabase/supabase-js.GoTrueAdminOAuthApi.listClients",
         "params": [
           {
             "name": "params",
@@ -1644,8 +1644,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Lists all OAuth clients with optional pagination.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
-      "@supabase/supabase-js.GoTrueAdminApi.oauth.regenerateClientSecret": {
-        "name": "@supabase/supabase-js.GoTrueAdminApi.oauth.regenerateClientSecret",
+      "@supabase/supabase-js.GoTrueAdminOAuthApi.regenerateClientSecret": {
+        "name": "@supabase/supabase-js.GoTrueAdminOAuthApi.regenerateClientSecret",
         "params": [
           {
             "name": "clientId",
@@ -1891,8 +1891,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Regenerates the secret for an OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
-      "@supabase/supabase-js.GoTrueAdminApi.oauth.updateClient": {
-        "name": "@supabase/supabase-js.GoTrueAdminApi.oauth.updateClient",
+      "@supabase/supabase-js.GoTrueAdminOAuthApi.updateClient": {
+        "name": "@supabase/supabase-js.GoTrueAdminOAuthApi.updateClient",
         "params": [
           {
             "name": "clientId",
@@ -6585,8 +6585,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Create a new client for use in the browser."
         }
       },
-      "@supabase/supabase-js.GoTrueClient.mfa.challenge": {
-        "name": "@supabase/supabase-js.GoTrueClient.mfa.challenge",
+      "@supabase/supabase-js.GoTrueMFAApi.challenge": {
+        "name": "@supabase/supabase-js.GoTrueMFAApi.challenge",
         "params": [
           {
             "name": "params",
@@ -7167,8 +7167,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         ]
       },
-      "@supabase/supabase-js.GoTrueClient.mfa.challengeAndVerify": {
-        "name": "@supabase/supabase-js.GoTrueClient.mfa.challengeAndVerify",
+      "@supabase/supabase-js.GoTrueMFAApi.challengeAndVerify": {
+        "name": "@supabase/supabase-js.GoTrueMFAApi.challengeAndVerify",
         "params": [
           {
             "name": "params",
@@ -7780,8 +7780,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Helper method which creates a challenge and immediately uses the given code to verify against it thereafter. The verification code is\\nprovided by the user by entering a code seen in their authenticator app."
         }
       },
-      "@supabase/supabase-js.GoTrueClient.mfa.enroll": {
-        "name": "@supabase/supabase-js.GoTrueClient.mfa.enroll",
+      "@supabase/supabase-js.GoTrueMFAApi.enroll": {
+        "name": "@supabase/supabase-js.GoTrueMFAApi.enroll",
         "params": [
           {
             "name": "params",
@@ -8201,8 +8201,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         ]
       },
-      "@supabase/supabase-js.GoTrueClient.mfa.getAuthenticatorAssuranceLevel": {
-        "name": "@supabase/supabase-js.GoTrueClient.mfa.getAuthenticatorAssuranceLevel",
+      "@supabase/supabase-js.GoTrueMFAApi.getAuthenticatorAssuranceLevel": {
+        "name": "@supabase/supabase-js.GoTrueMFAApi.getAuthenticatorAssuranceLevel",
         "params": [],
         "ret": {
           "type": {
@@ -8356,8 +8356,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Returns the Authenticator Assurance Level (AAL) for the active session.\\n\\n- \`aal1\` (or \`null\`) means that the user's identity has been verified only\\nwith a conventional login (email+password, OTP, magic link, social login,\\netc.).\\n- \`aal2\` means that the user's identity has been verified both with a conventional login and at least one MFA factor.\\n\\nAlthough this method returns a promise, it's fairly quick (microseconds)\\nand rarely uses the network. You can use this to check whether the current\\nuser needs to be shown a screen to verify their MFA factors."
         }
       },
-      "@supabase/supabase-js.GoTrueClient.mfa.listFactors": {
-        "name": "@supabase/supabase-js.GoTrueClient.mfa.listFactors",
+      "@supabase/supabase-js.GoTrueMFAApi.listFactors": {
+        "name": "@supabase/supabase-js.GoTrueMFAApi.listFactors",
         "params": [],
         "ret": {
           "type": {
@@ -8405,8 +8405,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Returns the list of MFA factors enabled for this user."
         }
       },
-      "@supabase/supabase-js.GoTrueClient.mfa.unenroll": {
-        "name": "@supabase/supabase-js.GoTrueClient.mfa.unenroll",
+      "@supabase/supabase-js.GoTrueMFAApi.unenroll": {
+        "name": "@supabase/supabase-js.GoTrueMFAApi.unenroll",
         "params": [
           {
             "name": "params",
@@ -8490,8 +8490,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Unenroll removes a MFA factor.\\nA user has to have an \`aal2\` authenticator level in order to unenroll a \`verified\` factor."
         }
       },
-      "@supabase/supabase-js.GoTrueClient.mfa.verify": {
-        "name": "@supabase/supabase-js.GoTrueClient.mfa.verify",
+      "@supabase/supabase-js.GoTrueMFAApi.verify": {
+        "name": "@supabase/supabase-js.GoTrueMFAApi.verify",
         "params": [
           {
             "name": "params",
@@ -10948,8 +10948,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         ]
       },
-      "@supabase/supabase-js.GoTrueClient.oauth.approveAuthorization": {
-        "name": "@supabase/supabase-js.GoTrueClient.oauth.approveAuthorization",
+      "@supabase/supabase-js.AuthOAuthServerApi.approveAuthorization": {
+        "name": "@supabase/supabase-js.AuthOAuthServerApi.approveAuthorization",
         "params": [
           {
             "name": "authorizationId",
@@ -11044,8 +11044,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Approves an OAuth authorization request.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
         }
       },
-      "@supabase/supabase-js.GoTrueClient.oauth.denyAuthorization": {
-        "name": "@supabase/supabase-js.GoTrueClient.oauth.denyAuthorization",
+      "@supabase/supabase-js.AuthOAuthServerApi.denyAuthorization": {
+        "name": "@supabase/supabase-js.AuthOAuthServerApi.denyAuthorization",
         "params": [
           {
             "name": "authorizationId",
@@ -11140,8 +11140,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Denies an OAuth authorization request.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
         }
       },
-      "@supabase/supabase-js.GoTrueClient.oauth.getAuthorizationDetails": {
-        "name": "@supabase/supabase-js.GoTrueClient.oauth.getAuthorizationDetails",
+      "@supabase/supabase-js.AuthOAuthServerApi.getAuthorizationDetails": {
+        "name": "@supabase/supabase-js.AuthOAuthServerApi.getAuthorizationDetails",
         "params": [
           {
             "name": "authorizationId",
@@ -35454,6 +35454,777 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a channel that can broadcast messages, sync presence, and listen to Postgres changes.\\n\\nThe topic determines which realtime stream you are subscribing to. Config options let you\\nenable acknowledgement for broadcasts, presence tracking, or private channels."
         }
       },
+      "@supabase/supabase-js.RealtimePresence.constructor": {
+        "name": "@supabase/supabase-js.RealtimePresence.constructor",
+        "params": [
+          {
+            "name": "channel",
+            "type": {
+              "type": "nameOnly",
+              "name": "RealtimeChannel"
+            },
+            "comment": {
+              "shortText": "The realtime channel to bind to."
+            }
+          },
+          {
+            "name": "opts",
+            "type": {
+              "type": "nameOnly",
+              "name": "PresenceOpts"
+            },
+            "isOptional": true,
+            "comment": {
+              "shortText": "Optional custom event names, e.g. \`{ events: { state: 'state', diff: 'diff' } }\`."
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "nameOnly",
+            "name": "RealtimePresence"
+          }
+        },
+        "comment": {
+          "shortText": "Creates a Presence helper that keeps the local presence state in sync with the server."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.constructor": {
+        "name": "@supabase/supabase-js.RealtimeClient.constructor",
+        "params": [
+          {
+            "name": "endPoint",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            },
+            "comment": {
+              "shortText": "The string WebSocket endpoint, ie, \\"ws://example.com/socket\\", \\"wss://example.com\\", \\"/socket\\" (inherited host & protocol)"
+            }
+          },
+          {
+            "name": "options",
+            "type": {
+              "name": "RealtimeClientOptions",
+              "type": "object",
+              "properties": [
+                {
+                  "name": "accessToken",
+                  "type": {
+                    "type": "function",
+                    "params": [],
+                    "ret": {
+                      "type": {
+                        "type": "promise",
+                        "name": "Promise",
+                        "awaited": {
+                          "type": "union",
+                          "subTypes": [
+                            {
+                              "type": "intrinsic",
+                              "name": "string"
+                            },
+                            {
+                              "type": "literal",
+                              "value": null
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "decode",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "Function"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "encode",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "Function"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "fetch",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "Fetch"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "headers",
+                  "type": {
+                    "type": "index signature",
+                    "keyType": {
+                      "type": "intrinsic",
+                      "name": "string"
+                    },
+                    "valueType": {
+                      "type": "intrinsic",
+                      "name": "string"
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "heartbeatCallback",
+                  "type": {
+                    "type": "function",
+                    "params": [
+                      {
+                        "name": "status",
+                        "type": {
+                          "type": "nameOnly",
+                          "name": "HeartbeatStatus"
+                        }
+                      }
+                    ],
+                    "ret": {
+                      "type": {
+                        "type": "intrinsic",
+                        "name": "void"
+                      }
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "heartbeatIntervalMs",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "number"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "log_level",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "LogLevel"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "logger",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "Function"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "logLevel",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "LogLevel"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "params",
+                  "type": {
+                    "type": "index signature",
+                    "keyType": {
+                      "type": "intrinsic",
+                      "name": "string"
+                    },
+                    "valueType": {
+                      "type": "intrinsic",
+                      "name": "any"
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "reconnectAfterMs",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "Function"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "timeout",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "number"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "transport",
+                  "type": {
+                    "type": "object",
+                    "name": "WebSocketLikeConstructor",
+                    "properties": []
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "vsn",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "worker",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "boolean"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "workerUrl",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  },
+                  "isOptional": true
+                }
+              ]
+            },
+            "isOptional": true
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "nameOnly",
+            "name": "RealtimeClient"
+          }
+        },
+        "comment": {
+          "shortText": "Initializes the Socket."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.channel": {
+        "name": "@supabase/supabase-js.RealtimeClient.channel",
+        "params": [
+          {
+            "name": "topic",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "name": "params",
+            "type": {
+              "name": "RealtimeChannelOptions",
+              "type": "object",
+              "properties": [
+                {
+                  "name": "config",
+                  "type": {
+                    "type": "object",
+                    "properties": [
+                      {
+                        "name": "broadcast",
+                        "type": {
+                          "type": "object",
+                          "properties": [
+                            {
+                              "name": "ack",
+                              "type": {
+                                "type": "intrinsic",
+                                "name": "boolean"
+                              },
+                              "isOptional": true
+                            },
+                            {
+                              "name": "replay",
+                              "type": {
+                                "type": "nameOnly",
+                                "name": "ReplayOption"
+                              },
+                              "isOptional": true
+                            },
+                            {
+                              "name": "self",
+                              "type": {
+                                "type": "intrinsic",
+                                "name": "boolean"
+                              },
+                              "isOptional": true
+                            }
+                          ]
+                        },
+                        "isOptional": true,
+                        "comment": {
+                          "shortText": "self option enables client to receive message it broadcast\\nack option instructs server to acknowledge that broadcast message was received\\nreplay option instructs server to replay broadcast messages"
+                        }
+                      },
+                      {
+                        "name": "presence",
+                        "type": {
+                          "type": "object",
+                          "properties": [
+                            {
+                              "name": "enabled",
+                              "type": {
+                                "type": "intrinsic",
+                                "name": "boolean"
+                              },
+                              "isOptional": true
+                            },
+                            {
+                              "name": "key",
+                              "type": {
+                                "type": "intrinsic",
+                                "name": "string"
+                              },
+                              "isOptional": true
+                            }
+                          ]
+                        },
+                        "isOptional": true,
+                        "comment": {
+                          "shortText": "key option is used to track presence payload across clients"
+                        }
+                      },
+                      {
+                        "name": "private",
+                        "type": {
+                          "type": "intrinsic",
+                          "name": "boolean"
+                        },
+                        "isOptional": true,
+                        "comment": {
+                          "shortText": "defines if the channel is private or not and if RLS policies will be used to check data"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "isOptional": true
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "nameOnly",
+            "name": "RealtimeChannel"
+          }
+        },
+        "comment": {
+          "shortText": "Creates (or reuses) a RealtimeChannel for the provided topic.\\n\\nTopics are automatically prefixed with \`realtime:\` to match the Realtime service.\\nIf a channel with the same topic already exists it will be returned instead of creating\\na duplicate connection."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.connect": {
+        "name": "@supabase/supabase-js.RealtimeClient.connect",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Connects the socket, unless already connected."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.connectionState": {
+        "name": "@supabase/supabase-js.RealtimeClient.connectionState",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "nameOnly",
+            "name": "CONNECTION_STATE"
+          }
+        },
+        "comment": {
+          "shortText": "Returns the current state of the socket."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.disconnect": {
+        "name": "@supabase/supabase-js.RealtimeClient.disconnect",
+        "params": [
+          {
+            "name": "code",
+            "type": {
+              "type": "intrinsic",
+              "name": "number"
+            },
+            "isOptional": true,
+            "comment": {
+              "shortText": "A numeric status code to send on disconnect."
+            }
+          },
+          {
+            "name": "reason",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            },
+            "isOptional": true,
+            "comment": {
+              "shortText": "A custom reason for the disconnect."
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Disconnects the socket."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.endpointURL": {
+        "name": "@supabase/supabase-js.RealtimeClient.endpointURL",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "string"
+          }
+        },
+        "comment": {
+          "shortText": "Returns the URL of the websocket."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.flushSendBuffer": {
+        "name": "@supabase/supabase-js.RealtimeClient.flushSendBuffer",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Flushes send buffer"
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.getChannels": {
+        "name": "@supabase/supabase-js.RealtimeClient.getChannels",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "array",
+            "elemType": {
+              "type": "nameOnly",
+              "name": "RealtimeChannel"
+            }
+          }
+        },
+        "comment": {
+          "shortText": "Returns all created channels"
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.isConnected": {
+        "name": "@supabase/supabase-js.RealtimeClient.isConnected",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          }
+        },
+        "comment": {
+          "shortText": "Returns \`true\` is the connection is open."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.isConnecting": {
+        "name": "@supabase/supabase-js.RealtimeClient.isConnecting",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          }
+        },
+        "comment": {
+          "shortText": "Returns \`true\` if the connection is currently connecting."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.isDisconnecting": {
+        "name": "@supabase/supabase-js.RealtimeClient.isDisconnecting",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          }
+        },
+        "comment": {
+          "shortText": "Returns \`true\` if the connection is currently disconnecting."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.log": {
+        "name": "@supabase/supabase-js.RealtimeClient.log",
+        "params": [
+          {
+            "name": "kind",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "name": "msg",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "name": "data",
+            "type": {
+              "type": "intrinsic",
+              "name": "any"
+            },
+            "isOptional": true
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Logs the message.\\n\\nFor customized logging, \`this.logger\` can be overridden."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.onHeartbeat": {
+        "name": "@supabase/supabase-js.RealtimeClient.onHeartbeat",
+        "params": [
+          {
+            "name": "callback",
+            "type": {
+              "type": "function",
+              "params": [
+                {
+                  "name": "status",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "HeartbeatStatus"
+                  }
+                }
+              ],
+              "ret": {
+                "type": {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              }
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Sets a callback that receives lifecycle events for internal heartbeat messages.\\nUseful for instrumenting connection health (e.g. sent/ok/timeout/disconnected)."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.push": {
+        "name": "@supabase/supabase-js.RealtimeClient.push",
+        "params": [
+          {
+            "name": "data",
+            "type": {
+              "name": "RealtimeMessage",
+              "type": "object",
+              "properties": [
+                {
+                  "name": "event",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                },
+                {
+                  "name": "join_ref",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "payload",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "any"
+                  }
+                },
+                {
+                  "name": "ref",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                },
+                {
+                  "name": "topic",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Push out a message if the socket is connected.\\n\\nIf the socket is not connected, the message gets enqueued within a local buffer, and sent out when a connection is next established."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.removeAllChannels": {
+        "name": "@supabase/supabase-js.RealtimeClient.removeAllChannels",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "promise",
+            "name": "Promise",
+            "awaited": {
+              "type": "array",
+              "elemType": {
+                "type": "union",
+                "name": "RealtimeRemoveChannelResponse",
+                "subTypes": [
+                  {
+                    "type": "literal",
+                    "value": "ok"
+                  },
+                  {
+                    "type": "literal",
+                    "value": "timed out"
+                  },
+                  {
+                    "type": "literal",
+                    "value": "error"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "comment": {
+          "shortText": "Unsubscribes and removes all channels"
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.removeChannel": {
+        "name": "@supabase/supabase-js.RealtimeClient.removeChannel",
+        "params": [
+          {
+            "name": "channel",
+            "type": {
+              "type": "nameOnly",
+              "name": "RealtimeChannel"
+            },
+            "comment": {
+              "shortText": "A RealtimeChannel instance"
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "promise",
+            "name": "Promise",
+            "awaited": {
+              "type": "union",
+              "name": "RealtimeRemoveChannelResponse",
+              "subTypes": [
+                {
+                  "type": "literal",
+                  "value": "ok"
+                },
+                {
+                  "type": "literal",
+                  "value": "timed out"
+                },
+                {
+                  "type": "literal",
+                  "value": "error"
+                }
+              ]
+            }
+          }
+        },
+        "comment": {
+          "shortText": "Unsubscribes and removes a single channel"
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.sendHeartbeat": {
+        "name": "@supabase/supabase-js.RealtimeClient.sendHeartbeat",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "promise",
+            "name": "Promise",
+            "awaited": {
+              "type": "intrinsic",
+              "name": "void"
+            }
+          }
+        },
+        "comment": {
+          "shortText": "Sends a heartbeat message if the socket is connected."
+        }
+      },
+      "@supabase/supabase-js.RealtimeClient.setAuth": {
+        "name": "@supabase/supabase-js.RealtimeClient.setAuth",
+        "params": [
+          {
+            "name": "token",
+            "type": {
+              "type": "union",
+              "subTypes": [
+                {
+                  "type": "literal",
+                  "value": null
+                },
+                {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              ]
+            },
+            "isOptional": true,
+            "comment": {
+              "shortText": "A JWT string to override the token set on the client."
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "promise",
+            "name": "Promise",
+            "awaited": {
+              "type": "intrinsic",
+              "name": "void"
+            }
+          }
+        },
+        "comment": {
+          "shortText": "Sets the JWT access token used for channel subscription authorization and Realtime RLS.\\n\\nIf param is null it will use the \`accessToken\` callback function or the token set on the client.\\n\\nOn callback used, it will set the value of the token internal to the client."
+        }
+      },
       "@supabase/supabase-js.RealtimeChannel.httpSend": {
         "name": "@supabase/supabase-js.RealtimeChannel.httpSend",
         "params": [
@@ -37103,777 +37874,6 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Updates the payload that will be sent the next time the channel joins (reconnects).\\nUseful for rotating access tokens or updating config without re-creating the channel."
         }
       },
-      "@supabase/supabase-js.RealtimeClient.constructor": {
-        "name": "@supabase/supabase-js.RealtimeClient.constructor",
-        "params": [
-          {
-            "name": "endPoint",
-            "type": {
-              "type": "intrinsic",
-              "name": "string"
-            },
-            "comment": {
-              "shortText": "The string WebSocket endpoint, ie, \\"ws://example.com/socket\\", \\"wss://example.com\\", \\"/socket\\" (inherited host & protocol)"
-            }
-          },
-          {
-            "name": "options",
-            "type": {
-              "name": "RealtimeClientOptions",
-              "type": "object",
-              "properties": [
-                {
-                  "name": "accessToken",
-                  "type": {
-                    "type": "function",
-                    "params": [],
-                    "ret": {
-                      "type": {
-                        "type": "promise",
-                        "name": "Promise",
-                        "awaited": {
-                          "type": "union",
-                          "subTypes": [
-                            {
-                              "type": "intrinsic",
-                              "name": "string"
-                            },
-                            {
-                              "type": "literal",
-                              "value": null
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "decode",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "Function"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "encode",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "Function"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "fetch",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "Fetch"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "headers",
-                  "type": {
-                    "type": "index signature",
-                    "keyType": {
-                      "type": "intrinsic",
-                      "name": "string"
-                    },
-                    "valueType": {
-                      "type": "intrinsic",
-                      "name": "string"
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "heartbeatCallback",
-                  "type": {
-                    "type": "function",
-                    "params": [
-                      {
-                        "name": "status",
-                        "type": {
-                          "type": "nameOnly",
-                          "name": "HeartbeatStatus"
-                        }
-                      }
-                    ],
-                    "ret": {
-                      "type": {
-                        "type": "intrinsic",
-                        "name": "void"
-                      }
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "heartbeatIntervalMs",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "number"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "log_level",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "LogLevel"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "logger",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "Function"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "logLevel",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "LogLevel"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "params",
-                  "type": {
-                    "type": "index signature",
-                    "keyType": {
-                      "type": "intrinsic",
-                      "name": "string"
-                    },
-                    "valueType": {
-                      "type": "intrinsic",
-                      "name": "any"
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "reconnectAfterMs",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "Function"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "timeout",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "number"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "transport",
-                  "type": {
-                    "type": "object",
-                    "name": "WebSocketLikeConstructor",
-                    "properties": []
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "vsn",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "worker",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "boolean"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "workerUrl",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  },
-                  "isOptional": true
-                }
-              ]
-            },
-            "isOptional": true
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "nameOnly",
-            "name": "RealtimeClient"
-          }
-        },
-        "comment": {
-          "shortText": "Initializes the Socket."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.channel": {
-        "name": "@supabase/supabase-js.RealtimeClient.channel",
-        "params": [
-          {
-            "name": "topic",
-            "type": {
-              "type": "intrinsic",
-              "name": "string"
-            }
-          },
-          {
-            "name": "params",
-            "type": {
-              "name": "RealtimeChannelOptions",
-              "type": "object",
-              "properties": [
-                {
-                  "name": "config",
-                  "type": {
-                    "type": "object",
-                    "properties": [
-                      {
-                        "name": "broadcast",
-                        "type": {
-                          "type": "object",
-                          "properties": [
-                            {
-                              "name": "ack",
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "boolean"
-                              },
-                              "isOptional": true
-                            },
-                            {
-                              "name": "replay",
-                              "type": {
-                                "type": "nameOnly",
-                                "name": "ReplayOption"
-                              },
-                              "isOptional": true
-                            },
-                            {
-                              "name": "self",
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "boolean"
-                              },
-                              "isOptional": true
-                            }
-                          ]
-                        },
-                        "isOptional": true,
-                        "comment": {
-                          "shortText": "self option enables client to receive message it broadcast\\nack option instructs server to acknowledge that broadcast message was received\\nreplay option instructs server to replay broadcast messages"
-                        }
-                      },
-                      {
-                        "name": "presence",
-                        "type": {
-                          "type": "object",
-                          "properties": [
-                            {
-                              "name": "enabled",
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "boolean"
-                              },
-                              "isOptional": true
-                            },
-                            {
-                              "name": "key",
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "string"
-                              },
-                              "isOptional": true
-                            }
-                          ]
-                        },
-                        "isOptional": true,
-                        "comment": {
-                          "shortText": "key option is used to track presence payload across clients"
-                        }
-                      },
-                      {
-                        "name": "private",
-                        "type": {
-                          "type": "intrinsic",
-                          "name": "boolean"
-                        },
-                        "isOptional": true,
-                        "comment": {
-                          "shortText": "defines if the channel is private or not and if RLS policies will be used to check data"
-                        }
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            "isOptional": true
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "nameOnly",
-            "name": "RealtimeChannel"
-          }
-        },
-        "comment": {
-          "shortText": "Creates (or reuses) a RealtimeChannel for the provided topic.\\n\\nTopics are automatically prefixed with \`realtime:\` to match the Realtime service.\\nIf a channel with the same topic already exists it will be returned instead of creating\\na duplicate connection."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.connect": {
-        "name": "@supabase/supabase-js.RealtimeClient.connect",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "void"
-          }
-        },
-        "comment": {
-          "shortText": "Connects the socket, unless already connected."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.connectionState": {
-        "name": "@supabase/supabase-js.RealtimeClient.connectionState",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "nameOnly",
-            "name": "CONNECTION_STATE"
-          }
-        },
-        "comment": {
-          "shortText": "Returns the current state of the socket."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.disconnect": {
-        "name": "@supabase/supabase-js.RealtimeClient.disconnect",
-        "params": [
-          {
-            "name": "code",
-            "type": {
-              "type": "intrinsic",
-              "name": "number"
-            },
-            "isOptional": true,
-            "comment": {
-              "shortText": "A numeric status code to send on disconnect."
-            }
-          },
-          {
-            "name": "reason",
-            "type": {
-              "type": "intrinsic",
-              "name": "string"
-            },
-            "isOptional": true,
-            "comment": {
-              "shortText": "A custom reason for the disconnect."
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "void"
-          }
-        },
-        "comment": {
-          "shortText": "Disconnects the socket."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.endpointURL": {
-        "name": "@supabase/supabase-js.RealtimeClient.endpointURL",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "string"
-          }
-        },
-        "comment": {
-          "shortText": "Returns the URL of the websocket."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.flushSendBuffer": {
-        "name": "@supabase/supabase-js.RealtimeClient.flushSendBuffer",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "void"
-          }
-        },
-        "comment": {
-          "shortText": "Flushes send buffer"
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.getChannels": {
-        "name": "@supabase/supabase-js.RealtimeClient.getChannels",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "array",
-            "elemType": {
-              "type": "nameOnly",
-              "name": "RealtimeChannel"
-            }
-          }
-        },
-        "comment": {
-          "shortText": "Returns all created channels"
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.isConnected": {
-        "name": "@supabase/supabase-js.RealtimeClient.isConnected",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "boolean"
-          }
-        },
-        "comment": {
-          "shortText": "Returns \`true\` is the connection is open."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.isConnecting": {
-        "name": "@supabase/supabase-js.RealtimeClient.isConnecting",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "boolean"
-          }
-        },
-        "comment": {
-          "shortText": "Returns \`true\` if the connection is currently connecting."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.isDisconnecting": {
-        "name": "@supabase/supabase-js.RealtimeClient.isDisconnecting",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "boolean"
-          }
-        },
-        "comment": {
-          "shortText": "Returns \`true\` if the connection is currently disconnecting."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.log": {
-        "name": "@supabase/supabase-js.RealtimeClient.log",
-        "params": [
-          {
-            "name": "kind",
-            "type": {
-              "type": "intrinsic",
-              "name": "string"
-            }
-          },
-          {
-            "name": "msg",
-            "type": {
-              "type": "intrinsic",
-              "name": "string"
-            }
-          },
-          {
-            "name": "data",
-            "type": {
-              "type": "intrinsic",
-              "name": "any"
-            },
-            "isOptional": true
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "void"
-          }
-        },
-        "comment": {
-          "shortText": "Logs the message.\\n\\nFor customized logging, \`this.logger\` can be overridden."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.onHeartbeat": {
-        "name": "@supabase/supabase-js.RealtimeClient.onHeartbeat",
-        "params": [
-          {
-            "name": "callback",
-            "type": {
-              "type": "function",
-              "params": [
-                {
-                  "name": "status",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "HeartbeatStatus"
-                  }
-                }
-              ],
-              "ret": {
-                "type": {
-                  "type": "intrinsic",
-                  "name": "void"
-                }
-              }
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "void"
-          }
-        },
-        "comment": {
-          "shortText": "Sets a callback that receives lifecycle events for internal heartbeat messages.\\nUseful for instrumenting connection health (e.g. sent/ok/timeout/disconnected)."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.push": {
-        "name": "@supabase/supabase-js.RealtimeClient.push",
-        "params": [
-          {
-            "name": "data",
-            "type": {
-              "name": "RealtimeMessage",
-              "type": "object",
-              "properties": [
-                {
-                  "name": "event",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  }
-                },
-                {
-                  "name": "join_ref",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "payload",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "any"
-                  }
-                },
-                {
-                  "name": "ref",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  }
-                },
-                {
-                  "name": "topic",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  }
-                }
-              ]
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "void"
-          }
-        },
-        "comment": {
-          "shortText": "Push out a message if the socket is connected.\\n\\nIf the socket is not connected, the message gets enqueued within a local buffer, and sent out when a connection is next established."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.removeAllChannels": {
-        "name": "@supabase/supabase-js.RealtimeClient.removeAllChannels",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "promise",
-            "name": "Promise",
-            "awaited": {
-              "type": "array",
-              "elemType": {
-                "type": "union",
-                "name": "RealtimeRemoveChannelResponse",
-                "subTypes": [
-                  {
-                    "type": "literal",
-                    "value": "ok"
-                  },
-                  {
-                    "type": "literal",
-                    "value": "timed out"
-                  },
-                  {
-                    "type": "literal",
-                    "value": "error"
-                  }
-                ]
-              }
-            }
-          }
-        },
-        "comment": {
-          "shortText": "Unsubscribes and removes all channels"
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.removeChannel": {
-        "name": "@supabase/supabase-js.RealtimeClient.removeChannel",
-        "params": [
-          {
-            "name": "channel",
-            "type": {
-              "type": "nameOnly",
-              "name": "RealtimeChannel"
-            },
-            "comment": {
-              "shortText": "A RealtimeChannel instance"
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "promise",
-            "name": "Promise",
-            "awaited": {
-              "type": "union",
-              "name": "RealtimeRemoveChannelResponse",
-              "subTypes": [
-                {
-                  "type": "literal",
-                  "value": "ok"
-                },
-                {
-                  "type": "literal",
-                  "value": "timed out"
-                },
-                {
-                  "type": "literal",
-                  "value": "error"
-                }
-              ]
-            }
-          }
-        },
-        "comment": {
-          "shortText": "Unsubscribes and removes a single channel"
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.sendHeartbeat": {
-        "name": "@supabase/supabase-js.RealtimeClient.sendHeartbeat",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "promise",
-            "name": "Promise",
-            "awaited": {
-              "type": "intrinsic",
-              "name": "void"
-            }
-          }
-        },
-        "comment": {
-          "shortText": "Sends a heartbeat message if the socket is connected."
-        }
-      },
-      "@supabase/supabase-js.RealtimeClient.setAuth": {
-        "name": "@supabase/supabase-js.RealtimeClient.setAuth",
-        "params": [
-          {
-            "name": "token",
-            "type": {
-              "type": "union",
-              "subTypes": [
-                {
-                  "type": "literal",
-                  "value": null
-                },
-                {
-                  "type": "intrinsic",
-                  "name": "string"
-                }
-              ]
-            },
-            "isOptional": true,
-            "comment": {
-              "shortText": "A JWT string to override the token set on the client."
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "promise",
-            "name": "Promise",
-            "awaited": {
-              "type": "intrinsic",
-              "name": "void"
-            }
-          }
-        },
-        "comment": {
-          "shortText": "Sets the JWT access token used for channel subscription authorization and Realtime RLS.\\n\\nIf param is null it will use the \`accessToken\` callback function or the token set on the client.\\n\\nOn callback used, it will set the value of the token internal to the client."
-        }
-      },
-      "@supabase/supabase-js.RealtimePresence.constructor": {
-        "name": "@supabase/supabase-js.RealtimePresence.constructor",
-        "params": [
-          {
-            "name": "channel",
-            "type": {
-              "type": "nameOnly",
-              "name": "RealtimeChannel"
-            },
-            "comment": {
-              "shortText": "The realtime channel to bind to."
-            }
-          },
-          {
-            "name": "opts",
-            "type": {
-              "type": "nameOnly",
-              "name": "PresenceOpts"
-            },
-            "isOptional": true,
-            "comment": {
-              "shortText": "Optional custom event names, e.g. \`{ events: { state: 'state', diff: 'diff' } }\`."
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "nameOnly",
-            "name": "RealtimePresence"
-          }
-        },
-        "comment": {
-          "shortText": "Creates a Presence helper that keeps the local presence state in sync with the server."
-        }
-      },
       "@supabase/supabase-js.SupabaseClient.constructor": {
         "name": "@supabase/supabase-js.SupabaseClient.constructor",
         "params": [
@@ -39067,6 +39067,422 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
         "comment": {
           "shortText": "Detects whether the runtime can establish WebSocket connections."
         }
+      },
+      "@supabase/supabase-js.WebSocketLike.addEventListener": {
+        "name": "@supabase/supabase-js.WebSocketLike.addEventListener",
+        "params": [
+          {
+            "name": "type",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "name": "listener",
+            "type": {
+              "type": "nameOnly",
+              "name": "EventListener"
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Registers an event listener on the socket (compatible with browser WebSocket API)."
+        }
+      },
+      "@supabase/supabase-js.WebSocketLike.close": {
+        "name": "@supabase/supabase-js.WebSocketLike.close",
+        "params": [
+          {
+            "name": "code",
+            "type": {
+              "type": "intrinsic",
+              "name": "number"
+            },
+            "isOptional": true
+          },
+          {
+            "name": "reason",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            },
+            "isOptional": true
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Closes the socket, optionally providing a close code and reason."
+        }
+      },
+      "@supabase/supabase-js.WebSocketLike.removeEventListener": {
+        "name": "@supabase/supabase-js.WebSocketLike.removeEventListener",
+        "params": [
+          {
+            "name": "type",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "name": "listener",
+            "type": {
+              "type": "nameOnly",
+              "name": "EventListener"
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Removes a previously registered event listener."
+        }
+      },
+      "@supabase/supabase-js.WebSocketLike.send": {
+        "name": "@supabase/supabase-js.WebSocketLike.send",
+        "params": [
+          {
+            "name": "data",
+            "type": {
+              "type": "union",
+              "subTypes": [
+                {
+                  "type": "intrinsic",
+                  "name": "string"
+                },
+                {
+                  "type": "nameOnly",
+                  "name": "ArrayBufferLike"
+                },
+                {
+                  "type": "nameOnly",
+                  "name": "ArrayBufferView"
+                },
+                {
+                  "type": "nameOnly",
+                  "name": "Blob"
+                }
+              ]
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Sends data through the socket using the underlying implementation."
+        }
+      },
+      "@supabase/supabase-js.WebSocketLikeConstructor.constructor": {
+        "name": "@supabase/supabase-js.WebSocketLikeConstructor.constructor",
+        "params": [
+          {
+            "name": "address",
+            "type": {
+              "type": "union",
+              "subTypes": [
+                {
+                  "type": "intrinsic",
+                  "name": "string"
+                },
+                {
+                  "type": "nameOnly",
+                  "name": "URL"
+                }
+              ]
+            }
+          },
+          {
+            "name": "subprotocols",
+            "type": {
+              "type": "union",
+              "subTypes": [
+                {
+                  "type": "intrinsic",
+                  "name": "string"
+                },
+                {
+                  "type": "array",
+                  "elemType": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                }
+              ]
+            },
+            "isOptional": true
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "object",
+            "name": "WebSocketLike",
+            "properties": [
+              {
+                "name": "binaryType",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                },
+                "isOptional": true
+              },
+              {
+                "name": "bufferedAmount",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+                },
+                "isOptional": true
+              },
+              {
+                "name": "CLOSED",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              },
+              {
+                "name": "CLOSING",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              },
+              {
+                "name": "CONNECTING",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              },
+              {
+                "name": "dispatchEvent",
+                "type": {
+                  "type": "function",
+                  "params": [
+                    {
+                      "name": "event",
+                      "type": {
+                        "type": "nameOnly",
+                        "name": "Event"
+                      }
+                    }
+                  ],
+                  "ret": {
+                    "type": {
+                      "type": "intrinsic",
+                      "name": "boolean"
+                    }
+                  }
+                },
+                "isOptional": true
+              },
+              {
+                "name": "extensions",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                },
+                "isOptional": true
+              },
+              {
+                "name": "onclose",
+                "type": {
+                  "type": "union",
+                  "subTypes": [
+                    {
+                      "type": "literal",
+                      "value": null
+                    },
+                    {
+                      "type": "function",
+                      "params": [
+                        {
+                          "name": "this",
+                          "type": {
+                            "type": "intrinsic",
+                            "name": "any"
+                          }
+                        },
+                        {
+                          "name": "ev",
+                          "type": {
+                            "type": "nameOnly",
+                            "name": "CloseEvent"
+                          }
+                        }
+                      ],
+                      "ret": {
+                        "type": {
+                          "type": "intrinsic",
+                          "name": "any"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "onerror",
+                "type": {
+                  "type": "union",
+                  "subTypes": [
+                    {
+                      "type": "literal",
+                      "value": null
+                    },
+                    {
+                      "type": "function",
+                      "params": [
+                        {
+                          "name": "this",
+                          "type": {
+                            "type": "intrinsic",
+                            "name": "any"
+                          }
+                        },
+                        {
+                          "name": "ev",
+                          "type": {
+                            "type": "nameOnly",
+                            "name": "Event"
+                          }
+                        }
+                      ],
+                      "ret": {
+                        "type": {
+                          "type": "intrinsic",
+                          "name": "any"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "onmessage",
+                "type": {
+                  "type": "union",
+                  "subTypes": [
+                    {
+                      "type": "literal",
+                      "value": null
+                    },
+                    {
+                      "type": "function",
+                      "params": [
+                        {
+                          "name": "this",
+                          "type": {
+                            "type": "intrinsic",
+                            "name": "any"
+                          }
+                        },
+                        {
+                          "name": "ev",
+                          "type": {
+                            "type": "nameOnly",
+                            "name": "MessageEvent"
+                          }
+                        }
+                      ],
+                      "ret": {
+                        "type": {
+                          "type": "intrinsic",
+                          "name": "any"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "onopen",
+                "type": {
+                  "type": "union",
+                  "subTypes": [
+                    {
+                      "type": "literal",
+                      "value": null
+                    },
+                    {
+                      "type": "function",
+                      "params": [
+                        {
+                          "name": "this",
+                          "type": {
+                            "type": "intrinsic",
+                            "name": "any"
+                          }
+                        },
+                        {
+                          "name": "ev",
+                          "type": {
+                            "type": "nameOnly",
+                            "name": "Event"
+                          }
+                        }
+                      ],
+                      "ret": {
+                        "type": {
+                          "type": "intrinsic",
+                          "name": "any"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "OPEN",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              },
+              {
+                "name": "protocol",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              },
+              {
+                "name": "readyState",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              },
+              {
+                "name": "url",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              }
+            ]
+          }
+        }
       }
     }
   },
@@ -39663,8 +40079,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates an admin API client that can be used to manage users and OAuth clients."
         }
       },
-      "@supabase/auth-js.GoTrueAdminApi.mfa.deleteFactor": {
-        "name": "@supabase/auth-js.GoTrueAdminApi.mfa.deleteFactor",
+      "@supabase/auth-js.GoTrueAdminMFAApi.deleteFactor": {
+        "name": "@supabase/auth-js.GoTrueAdminMFAApi.deleteFactor",
         "params": [
           {
             "name": "params",
@@ -39758,8 +40174,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Deletes a factor on a user. This will log the user out of all active\\nsessions if the deleted factor was verified."
         }
       },
-      "@supabase/auth-js.GoTrueAdminApi.mfa.listFactors": {
-        "name": "@supabase/auth-js.GoTrueAdminApi.mfa.listFactors",
+      "@supabase/auth-js.GoTrueAdminMFAApi.listFactors": {
+        "name": "@supabase/auth-js.GoTrueAdminMFAApi.listFactors",
         "params": [
           {
             "name": "params",
@@ -39903,8 +40319,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Lists all factors associated to a user."
         }
       },
-      "@supabase/auth-js.GoTrueAdminApi.oauth.createClient": {
-        "name": "@supabase/auth-js.GoTrueAdminApi.oauth.createClient",
+      "@supabase/auth-js.GoTrueAdminOAuthApi.createClient": {
+        "name": "@supabase/auth-js.GoTrueAdminOAuthApi.createClient",
         "params": [
           {
             "name": "params",
@@ -40236,8 +40652,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a new OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
-      "@supabase/auth-js.GoTrueAdminApi.oauth.deleteClient": {
-        "name": "@supabase/auth-js.GoTrueAdminApi.oauth.deleteClient",
+      "@supabase/auth-js.GoTrueAdminOAuthApi.deleteClient": {
+        "name": "@supabase/auth-js.GoTrueAdminOAuthApi.deleteClient",
         "params": [
           {
             "name": "clientId",
@@ -40285,8 +40701,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Deletes an OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
-      "@supabase/auth-js.GoTrueAdminApi.oauth.getClient": {
-        "name": "@supabase/auth-js.GoTrueAdminApi.oauth.getClient",
+      "@supabase/auth-js.GoTrueAdminOAuthApi.getClient": {
+        "name": "@supabase/auth-js.GoTrueAdminOAuthApi.getClient",
         "params": [
           {
             "name": "clientId",
@@ -40532,8 +40948,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Gets details of a specific OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
-      "@supabase/auth-js.GoTrueAdminApi.oauth.listClients": {
-        "name": "@supabase/auth-js.GoTrueAdminApi.oauth.listClients",
+      "@supabase/auth-js.GoTrueAdminOAuthApi.listClients": {
+        "name": "@supabase/auth-js.GoTrueAdminOAuthApi.listClients",
         "params": [
           {
             "name": "params",
@@ -40622,8 +41038,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Lists all OAuth clients with optional pagination.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
-      "@supabase/auth-js.GoTrueAdminApi.oauth.regenerateClientSecret": {
-        "name": "@supabase/auth-js.GoTrueAdminApi.oauth.regenerateClientSecret",
+      "@supabase/auth-js.GoTrueAdminOAuthApi.regenerateClientSecret": {
+        "name": "@supabase/auth-js.GoTrueAdminOAuthApi.regenerateClientSecret",
         "params": [
           {
             "name": "clientId",
@@ -40869,8 +41285,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Regenerates the secret for an OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
-      "@supabase/auth-js.GoTrueAdminApi.oauth.updateClient": {
-        "name": "@supabase/auth-js.GoTrueAdminApi.oauth.updateClient",
+      "@supabase/auth-js.GoTrueAdminOAuthApi.updateClient": {
+        "name": "@supabase/auth-js.GoTrueAdminOAuthApi.updateClient",
         "params": [
           {
             "name": "clientId",
@@ -45560,8 +45976,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Create a new client for use in the browser."
         }
       },
-      "@supabase/auth-js.GoTrueClient.mfa.challenge": {
-        "name": "@supabase/auth-js.GoTrueClient.mfa.challenge",
+      "@supabase/auth-js.GoTrueMFAApi.challenge": {
+        "name": "@supabase/auth-js.GoTrueMFAApi.challenge",
         "params": [
           {
             "name": "params",
@@ -46142,8 +46558,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         ]
       },
-      "@supabase/auth-js.GoTrueClient.mfa.challengeAndVerify": {
-        "name": "@supabase/auth-js.GoTrueClient.mfa.challengeAndVerify",
+      "@supabase/auth-js.GoTrueMFAApi.challengeAndVerify": {
+        "name": "@supabase/auth-js.GoTrueMFAApi.challengeAndVerify",
         "params": [
           {
             "name": "params",
@@ -46755,8 +47171,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Helper method which creates a challenge and immediately uses the given code to verify against it thereafter. The verification code is\\nprovided by the user by entering a code seen in their authenticator app."
         }
       },
-      "@supabase/auth-js.GoTrueClient.mfa.enroll": {
-        "name": "@supabase/auth-js.GoTrueClient.mfa.enroll",
+      "@supabase/auth-js.GoTrueMFAApi.enroll": {
+        "name": "@supabase/auth-js.GoTrueMFAApi.enroll",
         "params": [
           {
             "name": "params",
@@ -47176,8 +47592,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         ]
       },
-      "@supabase/auth-js.GoTrueClient.mfa.getAuthenticatorAssuranceLevel": {
-        "name": "@supabase/auth-js.GoTrueClient.mfa.getAuthenticatorAssuranceLevel",
+      "@supabase/auth-js.GoTrueMFAApi.getAuthenticatorAssuranceLevel": {
+        "name": "@supabase/auth-js.GoTrueMFAApi.getAuthenticatorAssuranceLevel",
         "params": [],
         "ret": {
           "type": {
@@ -47331,8 +47747,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Returns the Authenticator Assurance Level (AAL) for the active session.\\n\\n- \`aal1\` (or \`null\`) means that the user's identity has been verified only\\nwith a conventional login (email+password, OTP, magic link, social login,\\netc.).\\n- \`aal2\` means that the user's identity has been verified both with a conventional login and at least one MFA factor.\\n\\nAlthough this method returns a promise, it's fairly quick (microseconds)\\nand rarely uses the network. You can use this to check whether the current\\nuser needs to be shown a screen to verify their MFA factors."
         }
       },
-      "@supabase/auth-js.GoTrueClient.mfa.listFactors": {
-        "name": "@supabase/auth-js.GoTrueClient.mfa.listFactors",
+      "@supabase/auth-js.GoTrueMFAApi.listFactors": {
+        "name": "@supabase/auth-js.GoTrueMFAApi.listFactors",
         "params": [],
         "ret": {
           "type": {
@@ -47380,8 +47796,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Returns the list of MFA factors enabled for this user."
         }
       },
-      "@supabase/auth-js.GoTrueClient.mfa.unenroll": {
-        "name": "@supabase/auth-js.GoTrueClient.mfa.unenroll",
+      "@supabase/auth-js.GoTrueMFAApi.unenroll": {
+        "name": "@supabase/auth-js.GoTrueMFAApi.unenroll",
         "params": [
           {
             "name": "params",
@@ -47465,8 +47881,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Unenroll removes a MFA factor.\\nA user has to have an \`aal2\` authenticator level in order to unenroll a \`verified\` factor."
         }
       },
-      "@supabase/auth-js.GoTrueClient.mfa.verify": {
-        "name": "@supabase/auth-js.GoTrueClient.mfa.verify",
+      "@supabase/auth-js.GoTrueMFAApi.verify": {
+        "name": "@supabase/auth-js.GoTrueMFAApi.verify",
         "params": [
           {
             "name": "params",
@@ -49923,8 +50339,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         ]
       },
-      "@supabase/auth-js.GoTrueClient.oauth.approveAuthorization": {
-        "name": "@supabase/auth-js.GoTrueClient.oauth.approveAuthorization",
+      "@supabase/auth-js.AuthOAuthServerApi.approveAuthorization": {
+        "name": "@supabase/auth-js.AuthOAuthServerApi.approveAuthorization",
         "params": [
           {
             "name": "authorizationId",
@@ -50019,8 +50435,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Approves an OAuth authorization request.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
         }
       },
-      "@supabase/auth-js.GoTrueClient.oauth.denyAuthorization": {
-        "name": "@supabase/auth-js.GoTrueClient.oauth.denyAuthorization",
+      "@supabase/auth-js.AuthOAuthServerApi.denyAuthorization": {
+        "name": "@supabase/auth-js.AuthOAuthServerApi.denyAuthorization",
         "params": [
           {
             "name": "authorizationId",
@@ -50115,8 +50531,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Denies an OAuth authorization request.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
         }
       },
-      "@supabase/auth-js.GoTrueClient.oauth.getAuthorizationDetails": {
-        "name": "@supabase/auth-js.GoTrueClient.oauth.getAuthorizationDetails",
+      "@supabase/auth-js.AuthOAuthServerApi.getAuthorizationDetails": {
+        "name": "@supabase/auth-js.AuthOAuthServerApi.getAuthorizationDetails",
         "params": [
           {
             "name": "authorizationId",
@@ -76077,6 +76493,775 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a channel that can broadcast messages, sync presence, and listen to Postgres changes.\\n\\nThe topic determines which realtime stream you are subscribing to. Config options let you\\nenable acknowledgement for broadcasts, presence tracking, or private channels."
         }
       },
+      "@supabase/realtime-js.RealtimePresence.constructor": {
+        "name": "@supabase/realtime-js.RealtimePresence.constructor",
+        "params": [
+          {
+            "name": "channel",
+            "type": {
+              "type": "nameOnly",
+              "name": "RealtimeChannel"
+            },
+            "comment": {
+              "shortText": "The realtime channel to bind to."
+            }
+          },
+          {
+            "name": "opts",
+            "type": {
+              "type": "nameOnly",
+              "name": "PresenceOpts"
+            },
+            "isOptional": true,
+            "comment": {
+              "shortText": "Optional custom event names, e.g. \`{ events: { state: 'state', diff: 'diff' } }\`."
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "nameOnly",
+            "name": "RealtimePresence"
+          }
+        },
+        "comment": {
+          "shortText": "Creates a Presence helper that keeps the local presence state in sync with the server."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.constructor": {
+        "name": "@supabase/realtime-js.RealtimeClient.constructor",
+        "params": [
+          {
+            "name": "endPoint",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            },
+            "comment": {
+              "shortText": "The string WebSocket endpoint, ie, \\"ws://example.com/socket\\", \\"wss://example.com\\", \\"/socket\\" (inherited host & protocol)"
+            }
+          },
+          {
+            "name": "options",
+            "type": {
+              "name": "RealtimeClientOptions",
+              "type": "object",
+              "properties": [
+                {
+                  "name": "accessToken",
+                  "type": {
+                    "type": "function",
+                    "params": [],
+                    "ret": {
+                      "type": {
+                        "type": "promise",
+                        "name": "Promise",
+                        "awaited": {
+                          "type": "union",
+                          "subTypes": [
+                            {
+                              "type": "intrinsic",
+                              "name": "string"
+                            },
+                            {
+                              "type": "literal",
+                              "value": null
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "decode",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "Function"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "encode",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "Function"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "fetch",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "Fetch"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "headers",
+                  "type": {
+                    "type": "index signature",
+                    "keyType": {
+                      "type": "intrinsic",
+                      "name": "string"
+                    },
+                    "valueType": {
+                      "type": "intrinsic",
+                      "name": "string"
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "heartbeatCallback",
+                  "type": {
+                    "type": "function",
+                    "params": [
+                      {
+                        "name": "status",
+                        "type": {
+                          "type": "nameOnly",
+                          "name": "HeartbeatStatus"
+                        }
+                      }
+                    ],
+                    "ret": {
+                      "type": {
+                        "type": "intrinsic",
+                        "name": "void"
+                      }
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "heartbeatIntervalMs",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "number"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "log_level",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "LogLevel"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "logger",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "Function"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "logLevel",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "LogLevel"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "params",
+                  "type": {
+                    "type": "index signature",
+                    "keyType": {
+                      "type": "intrinsic",
+                      "name": "string"
+                    },
+                    "valueType": {
+                      "type": "intrinsic",
+                      "name": "any"
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "reconnectAfterMs",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "Function"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "timeout",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "number"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "transport",
+                  "type": {
+                    "type": "object",
+                    "name": "WebSocketLikeConstructor",
+                    "properties": []
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "vsn",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "worker",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "boolean"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "workerUrl",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  },
+                  "isOptional": true
+                }
+              ]
+            },
+            "isOptional": true
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "nameOnly",
+            "name": "RealtimeClient"
+          }
+        },
+        "comment": {
+          "shortText": "Initializes the Socket."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.channel": {
+        "name": "@supabase/realtime-js.RealtimeClient.channel",
+        "params": [
+          {
+            "name": "topic",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "name": "params",
+            "type": {
+              "name": "RealtimeChannelOptions",
+              "type": "object",
+              "properties": [
+                {
+                  "name": "config",
+                  "type": {
+                    "type": "object",
+                    "properties": [
+                      {
+                        "name": "broadcast",
+                        "type": {
+                          "type": "object",
+                          "properties": [
+                            {
+                              "name": "ack",
+                              "type": {
+                                "type": "intrinsic",
+                                "name": "boolean"
+                              },
+                              "isOptional": true
+                            },
+                            {
+                              "name": "replay",
+                              "type": {
+                                "type": "nameOnly",
+                                "name": "ReplayOption"
+                              },
+                              "isOptional": true
+                            },
+                            {
+                              "name": "self",
+                              "type": {
+                                "type": "intrinsic",
+                                "name": "boolean"
+                              },
+                              "isOptional": true
+                            }
+                          ]
+                        },
+                        "isOptional": true,
+                        "comment": {
+                          "shortText": "self option enables client to receive message it broadcast\\nack option instructs server to acknowledge that broadcast message was received\\nreplay option instructs server to replay broadcast messages"
+                        }
+                      },
+                      {
+                        "name": "presence",
+                        "type": {
+                          "type": "object",
+                          "properties": [
+                            {
+                              "name": "enabled",
+                              "type": {
+                                "type": "intrinsic",
+                                "name": "boolean"
+                              },
+                              "isOptional": true
+                            },
+                            {
+                              "name": "key",
+                              "type": {
+                                "type": "intrinsic",
+                                "name": "string"
+                              },
+                              "isOptional": true
+                            }
+                          ]
+                        },
+                        "isOptional": true,
+                        "comment": {
+                          "shortText": "key option is used to track presence payload across clients"
+                        }
+                      },
+                      {
+                        "name": "private",
+                        "type": {
+                          "type": "intrinsic",
+                          "name": "boolean"
+                        },
+                        "isOptional": true,
+                        "comment": {
+                          "shortText": "defines if the channel is private or not and if RLS policies will be used to check data"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "nameOnly",
+            "name": "RealtimeChannel"
+          }
+        },
+        "comment": {
+          "shortText": "Creates (or reuses) a RealtimeChannel for the provided topic.\\n\\nTopics are automatically prefixed with \`realtime:\` to match the Realtime service.\\nIf a channel with the same topic already exists it will be returned instead of creating\\na duplicate connection."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.connect": {
+        "name": "@supabase/realtime-js.RealtimeClient.connect",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Connects the socket, unless already connected."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.connectionState": {
+        "name": "@supabase/realtime-js.RealtimeClient.connectionState",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "nameOnly",
+            "name": "CONNECTION_STATE"
+          }
+        },
+        "comment": {
+          "shortText": "Returns the current state of the socket."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.disconnect": {
+        "name": "@supabase/realtime-js.RealtimeClient.disconnect",
+        "params": [
+          {
+            "name": "code",
+            "type": {
+              "type": "intrinsic",
+              "name": "number"
+            },
+            "isOptional": true,
+            "comment": {
+              "shortText": "A numeric status code to send on disconnect."
+            }
+          },
+          {
+            "name": "reason",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            },
+            "isOptional": true,
+            "comment": {
+              "shortText": "A custom reason for the disconnect."
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Disconnects the socket."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.endpointURL": {
+        "name": "@supabase/realtime-js.RealtimeClient.endpointURL",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "string"
+          }
+        },
+        "comment": {
+          "shortText": "Returns the URL of the websocket."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.flushSendBuffer": {
+        "name": "@supabase/realtime-js.RealtimeClient.flushSendBuffer",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Flushes send buffer"
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.getChannels": {
+        "name": "@supabase/realtime-js.RealtimeClient.getChannels",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "array",
+            "elemType": {
+              "type": "nameOnly",
+              "name": "RealtimeChannel"
+            }
+          }
+        },
+        "comment": {
+          "shortText": "Returns all created channels"
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.isConnected": {
+        "name": "@supabase/realtime-js.RealtimeClient.isConnected",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          }
+        },
+        "comment": {
+          "shortText": "Returns \`true\` is the connection is open."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.isConnecting": {
+        "name": "@supabase/realtime-js.RealtimeClient.isConnecting",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          }
+        },
+        "comment": {
+          "shortText": "Returns \`true\` if the connection is currently connecting."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.isDisconnecting": {
+        "name": "@supabase/realtime-js.RealtimeClient.isDisconnecting",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "boolean"
+          }
+        },
+        "comment": {
+          "shortText": "Returns \`true\` if the connection is currently disconnecting."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.log": {
+        "name": "@supabase/realtime-js.RealtimeClient.log",
+        "params": [
+          {
+            "name": "kind",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "name": "msg",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "name": "data",
+            "type": {
+              "type": "intrinsic",
+              "name": "any"
+            },
+            "isOptional": true
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Logs the message.\\n\\nFor customized logging, \`this.logger\` can be overridden."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.onHeartbeat": {
+        "name": "@supabase/realtime-js.RealtimeClient.onHeartbeat",
+        "params": [
+          {
+            "name": "callback",
+            "type": {
+              "type": "function",
+              "params": [
+                {
+                  "name": "status",
+                  "type": {
+                    "type": "nameOnly",
+                    "name": "HeartbeatStatus"
+                  }
+                }
+              ],
+              "ret": {
+                "type": {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              }
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Sets a callback that receives lifecycle events for internal heartbeat messages.\\nUseful for instrumenting connection health (e.g. sent/ok/timeout/disconnected)."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.push": {
+        "name": "@supabase/realtime-js.RealtimeClient.push",
+        "params": [
+          {
+            "name": "data",
+            "type": {
+              "name": "RealtimeMessage",
+              "type": "object",
+              "properties": [
+                {
+                  "name": "event",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                },
+                {
+                  "name": "join_ref",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "payload",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "any"
+                  }
+                },
+                {
+                  "name": "ref",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                },
+                {
+                  "name": "topic",
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Push out a message if the socket is connected.\\n\\nIf the socket is not connected, the message gets enqueued within a local buffer, and sent out when a connection is next established."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.removeAllChannels": {
+        "name": "@supabase/realtime-js.RealtimeClient.removeAllChannels",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "promise",
+            "name": "Promise",
+            "awaited": {
+              "type": "array",
+              "elemType": {
+                "type": "union",
+                "name": "RealtimeRemoveChannelResponse",
+                "subTypes": [
+                  {
+                    "type": "literal",
+                    "value": "ok"
+                  },
+                  {
+                    "type": "literal",
+                    "value": "timed out"
+                  },
+                  {
+                    "type": "literal",
+                    "value": "error"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "comment": {
+          "shortText": "Unsubscribes and removes all channels"
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.removeChannel": {
+        "name": "@supabase/realtime-js.RealtimeClient.removeChannel",
+        "params": [
+          {
+            "name": "channel",
+            "type": {
+              "type": "nameOnly",
+              "name": "RealtimeChannel"
+            },
+            "comment": {
+              "shortText": "A RealtimeChannel instance"
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "promise",
+            "name": "Promise",
+            "awaited": {
+              "type": "union",
+              "name": "RealtimeRemoveChannelResponse",
+              "subTypes": [
+                {
+                  "type": "literal",
+                  "value": "ok"
+                },
+                {
+                  "type": "literal",
+                  "value": "timed out"
+                },
+                {
+                  "type": "literal",
+                  "value": "error"
+                }
+              ]
+            }
+          }
+        },
+        "comment": {
+          "shortText": "Unsubscribes and removes a single channel"
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.sendHeartbeat": {
+        "name": "@supabase/realtime-js.RealtimeClient.sendHeartbeat",
+        "params": [],
+        "ret": {
+          "type": {
+            "type": "promise",
+            "name": "Promise",
+            "awaited": {
+              "type": "intrinsic",
+              "name": "void"
+            }
+          }
+        },
+        "comment": {
+          "shortText": "Sends a heartbeat message if the socket is connected."
+        }
+      },
+      "@supabase/realtime-js.RealtimeClient.setAuth": {
+        "name": "@supabase/realtime-js.RealtimeClient.setAuth",
+        "params": [
+          {
+            "name": "token",
+            "type": {
+              "type": "union",
+              "subTypes": [
+                {
+                  "type": "literal",
+                  "value": null
+                },
+                {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              ]
+            },
+            "comment": {
+              "shortText": "A JWT string to override the token set on the client."
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "promise",
+            "name": "Promise",
+            "awaited": {
+              "type": "intrinsic",
+              "name": "void"
+            }
+          }
+        },
+        "comment": {
+          "shortText": "Sets the JWT access token used for channel subscription authorization and Realtime RLS.\\n\\nIf param is null it will use the \`accessToken\` callback function or the token set on the client.\\n\\nOn callback used, it will set the value of the token internal to the client."
+        }
+      },
       "@supabase/realtime-js.RealtimeChannel.httpSend": {
         "name": "@supabase/realtime-js.RealtimeChannel.httpSend",
         "params": [
@@ -77720,775 +78905,6 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Updates the payload that will be sent the next time the channel joins (reconnects).\\nUseful for rotating access tokens or updating config without re-creating the channel."
         }
       },
-      "@supabase/realtime-js.RealtimeClient.constructor": {
-        "name": "@supabase/realtime-js.RealtimeClient.constructor",
-        "params": [
-          {
-            "name": "endPoint",
-            "type": {
-              "type": "intrinsic",
-              "name": "string"
-            },
-            "comment": {
-              "shortText": "The string WebSocket endpoint, ie, \\"ws://example.com/socket\\", \\"wss://example.com\\", \\"/socket\\" (inherited host & protocol)"
-            }
-          },
-          {
-            "name": "options",
-            "type": {
-              "name": "RealtimeClientOptions",
-              "type": "object",
-              "properties": [
-                {
-                  "name": "accessToken",
-                  "type": {
-                    "type": "function",
-                    "params": [],
-                    "ret": {
-                      "type": {
-                        "type": "promise",
-                        "name": "Promise",
-                        "awaited": {
-                          "type": "union",
-                          "subTypes": [
-                            {
-                              "type": "intrinsic",
-                              "name": "string"
-                            },
-                            {
-                              "type": "literal",
-                              "value": null
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "decode",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "Function"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "encode",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "Function"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "fetch",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "Fetch"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "headers",
-                  "type": {
-                    "type": "index signature",
-                    "keyType": {
-                      "type": "intrinsic",
-                      "name": "string"
-                    },
-                    "valueType": {
-                      "type": "intrinsic",
-                      "name": "string"
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "heartbeatCallback",
-                  "type": {
-                    "type": "function",
-                    "params": [
-                      {
-                        "name": "status",
-                        "type": {
-                          "type": "nameOnly",
-                          "name": "HeartbeatStatus"
-                        }
-                      }
-                    ],
-                    "ret": {
-                      "type": {
-                        "type": "intrinsic",
-                        "name": "void"
-                      }
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "heartbeatIntervalMs",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "number"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "log_level",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "LogLevel"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "logger",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "Function"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "logLevel",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "LogLevel"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "params",
-                  "type": {
-                    "type": "index signature",
-                    "keyType": {
-                      "type": "intrinsic",
-                      "name": "string"
-                    },
-                    "valueType": {
-                      "type": "intrinsic",
-                      "name": "any"
-                    }
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "reconnectAfterMs",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "Function"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "timeout",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "number"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "transport",
-                  "type": {
-                    "type": "object",
-                    "name": "WebSocketLikeConstructor",
-                    "properties": []
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "vsn",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "worker",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "boolean"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "workerUrl",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  },
-                  "isOptional": true
-                }
-              ]
-            },
-            "isOptional": true
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "nameOnly",
-            "name": "RealtimeClient"
-          }
-        },
-        "comment": {
-          "shortText": "Initializes the Socket."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.channel": {
-        "name": "@supabase/realtime-js.RealtimeClient.channel",
-        "params": [
-          {
-            "name": "topic",
-            "type": {
-              "type": "intrinsic",
-              "name": "string"
-            }
-          },
-          {
-            "name": "params",
-            "type": {
-              "name": "RealtimeChannelOptions",
-              "type": "object",
-              "properties": [
-                {
-                  "name": "config",
-                  "type": {
-                    "type": "object",
-                    "properties": [
-                      {
-                        "name": "broadcast",
-                        "type": {
-                          "type": "object",
-                          "properties": [
-                            {
-                              "name": "ack",
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "boolean"
-                              },
-                              "isOptional": true
-                            },
-                            {
-                              "name": "replay",
-                              "type": {
-                                "type": "nameOnly",
-                                "name": "ReplayOption"
-                              },
-                              "isOptional": true
-                            },
-                            {
-                              "name": "self",
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "boolean"
-                              },
-                              "isOptional": true
-                            }
-                          ]
-                        },
-                        "isOptional": true,
-                        "comment": {
-                          "shortText": "self option enables client to receive message it broadcast\\nack option instructs server to acknowledge that broadcast message was received\\nreplay option instructs server to replay broadcast messages"
-                        }
-                      },
-                      {
-                        "name": "presence",
-                        "type": {
-                          "type": "object",
-                          "properties": [
-                            {
-                              "name": "enabled",
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "boolean"
-                              },
-                              "isOptional": true
-                            },
-                            {
-                              "name": "key",
-                              "type": {
-                                "type": "intrinsic",
-                                "name": "string"
-                              },
-                              "isOptional": true
-                            }
-                          ]
-                        },
-                        "isOptional": true,
-                        "comment": {
-                          "shortText": "key option is used to track presence payload across clients"
-                        }
-                      },
-                      {
-                        "name": "private",
-                        "type": {
-                          "type": "intrinsic",
-                          "name": "boolean"
-                        },
-                        "isOptional": true,
-                        "comment": {
-                          "shortText": "defines if the channel is private or not and if RLS policies will be used to check data"
-                        }
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "nameOnly",
-            "name": "RealtimeChannel"
-          }
-        },
-        "comment": {
-          "shortText": "Creates (or reuses) a RealtimeChannel for the provided topic.\\n\\nTopics are automatically prefixed with \`realtime:\` to match the Realtime service.\\nIf a channel with the same topic already exists it will be returned instead of creating\\na duplicate connection."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.connect": {
-        "name": "@supabase/realtime-js.RealtimeClient.connect",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "void"
-          }
-        },
-        "comment": {
-          "shortText": "Connects the socket, unless already connected."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.connectionState": {
-        "name": "@supabase/realtime-js.RealtimeClient.connectionState",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "nameOnly",
-            "name": "CONNECTION_STATE"
-          }
-        },
-        "comment": {
-          "shortText": "Returns the current state of the socket."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.disconnect": {
-        "name": "@supabase/realtime-js.RealtimeClient.disconnect",
-        "params": [
-          {
-            "name": "code",
-            "type": {
-              "type": "intrinsic",
-              "name": "number"
-            },
-            "isOptional": true,
-            "comment": {
-              "shortText": "A numeric status code to send on disconnect."
-            }
-          },
-          {
-            "name": "reason",
-            "type": {
-              "type": "intrinsic",
-              "name": "string"
-            },
-            "isOptional": true,
-            "comment": {
-              "shortText": "A custom reason for the disconnect."
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "void"
-          }
-        },
-        "comment": {
-          "shortText": "Disconnects the socket."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.endpointURL": {
-        "name": "@supabase/realtime-js.RealtimeClient.endpointURL",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "string"
-          }
-        },
-        "comment": {
-          "shortText": "Returns the URL of the websocket."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.flushSendBuffer": {
-        "name": "@supabase/realtime-js.RealtimeClient.flushSendBuffer",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "void"
-          }
-        },
-        "comment": {
-          "shortText": "Flushes send buffer"
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.getChannels": {
-        "name": "@supabase/realtime-js.RealtimeClient.getChannels",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "array",
-            "elemType": {
-              "type": "nameOnly",
-              "name": "RealtimeChannel"
-            }
-          }
-        },
-        "comment": {
-          "shortText": "Returns all created channels"
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.isConnected": {
-        "name": "@supabase/realtime-js.RealtimeClient.isConnected",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "boolean"
-          }
-        },
-        "comment": {
-          "shortText": "Returns \`true\` is the connection is open."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.isConnecting": {
-        "name": "@supabase/realtime-js.RealtimeClient.isConnecting",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "boolean"
-          }
-        },
-        "comment": {
-          "shortText": "Returns \`true\` if the connection is currently connecting."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.isDisconnecting": {
-        "name": "@supabase/realtime-js.RealtimeClient.isDisconnecting",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "boolean"
-          }
-        },
-        "comment": {
-          "shortText": "Returns \`true\` if the connection is currently disconnecting."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.log": {
-        "name": "@supabase/realtime-js.RealtimeClient.log",
-        "params": [
-          {
-            "name": "kind",
-            "type": {
-              "type": "intrinsic",
-              "name": "string"
-            }
-          },
-          {
-            "name": "msg",
-            "type": {
-              "type": "intrinsic",
-              "name": "string"
-            }
-          },
-          {
-            "name": "data",
-            "type": {
-              "type": "intrinsic",
-              "name": "any"
-            },
-            "isOptional": true
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "void"
-          }
-        },
-        "comment": {
-          "shortText": "Logs the message.\\n\\nFor customized logging, \`this.logger\` can be overridden."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.onHeartbeat": {
-        "name": "@supabase/realtime-js.RealtimeClient.onHeartbeat",
-        "params": [
-          {
-            "name": "callback",
-            "type": {
-              "type": "function",
-              "params": [
-                {
-                  "name": "status",
-                  "type": {
-                    "type": "nameOnly",
-                    "name": "HeartbeatStatus"
-                  }
-                }
-              ],
-              "ret": {
-                "type": {
-                  "type": "intrinsic",
-                  "name": "void"
-                }
-              }
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "void"
-          }
-        },
-        "comment": {
-          "shortText": "Sets a callback that receives lifecycle events for internal heartbeat messages.\\nUseful for instrumenting connection health (e.g. sent/ok/timeout/disconnected)."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.push": {
-        "name": "@supabase/realtime-js.RealtimeClient.push",
-        "params": [
-          {
-            "name": "data",
-            "type": {
-              "name": "RealtimeMessage",
-              "type": "object",
-              "properties": [
-                {
-                  "name": "event",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  }
-                },
-                {
-                  "name": "join_ref",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  },
-                  "isOptional": true
-                },
-                {
-                  "name": "payload",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "any"
-                  }
-                },
-                {
-                  "name": "ref",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  }
-                },
-                {
-                  "name": "topic",
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  }
-                }
-              ]
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "intrinsic",
-            "name": "void"
-          }
-        },
-        "comment": {
-          "shortText": "Push out a message if the socket is connected.\\n\\nIf the socket is not connected, the message gets enqueued within a local buffer, and sent out when a connection is next established."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.removeAllChannels": {
-        "name": "@supabase/realtime-js.RealtimeClient.removeAllChannels",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "promise",
-            "name": "Promise",
-            "awaited": {
-              "type": "array",
-              "elemType": {
-                "type": "union",
-                "name": "RealtimeRemoveChannelResponse",
-                "subTypes": [
-                  {
-                    "type": "literal",
-                    "value": "ok"
-                  },
-                  {
-                    "type": "literal",
-                    "value": "timed out"
-                  },
-                  {
-                    "type": "literal",
-                    "value": "error"
-                  }
-                ]
-              }
-            }
-          }
-        },
-        "comment": {
-          "shortText": "Unsubscribes and removes all channels"
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.removeChannel": {
-        "name": "@supabase/realtime-js.RealtimeClient.removeChannel",
-        "params": [
-          {
-            "name": "channel",
-            "type": {
-              "type": "nameOnly",
-              "name": "RealtimeChannel"
-            },
-            "comment": {
-              "shortText": "A RealtimeChannel instance"
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "promise",
-            "name": "Promise",
-            "awaited": {
-              "type": "union",
-              "name": "RealtimeRemoveChannelResponse",
-              "subTypes": [
-                {
-                  "type": "literal",
-                  "value": "ok"
-                },
-                {
-                  "type": "literal",
-                  "value": "timed out"
-                },
-                {
-                  "type": "literal",
-                  "value": "error"
-                }
-              ]
-            }
-          }
-        },
-        "comment": {
-          "shortText": "Unsubscribes and removes a single channel"
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.sendHeartbeat": {
-        "name": "@supabase/realtime-js.RealtimeClient.sendHeartbeat",
-        "params": [],
-        "ret": {
-          "type": {
-            "type": "promise",
-            "name": "Promise",
-            "awaited": {
-              "type": "intrinsic",
-              "name": "void"
-            }
-          }
-        },
-        "comment": {
-          "shortText": "Sends a heartbeat message if the socket is connected."
-        }
-      },
-      "@supabase/realtime-js.RealtimeClient.setAuth": {
-        "name": "@supabase/realtime-js.RealtimeClient.setAuth",
-        "params": [
-          {
-            "name": "token",
-            "type": {
-              "type": "union",
-              "subTypes": [
-                {
-                  "type": "literal",
-                  "value": null
-                },
-                {
-                  "type": "intrinsic",
-                  "name": "string"
-                }
-              ]
-            },
-            "comment": {
-              "shortText": "A JWT string to override the token set on the client."
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "promise",
-            "name": "Promise",
-            "awaited": {
-              "type": "intrinsic",
-              "name": "void"
-            }
-          }
-        },
-        "comment": {
-          "shortText": "Sets the JWT access token used for channel subscription authorization and Realtime RLS.\\n\\nIf param is null it will use the \`accessToken\` callback function or the token set on the client.\\n\\nOn callback used, it will set the value of the token internal to the client."
-        }
-      },
-      "@supabase/realtime-js.RealtimePresence.constructor": {
-        "name": "@supabase/realtime-js.RealtimePresence.constructor",
-        "params": [
-          {
-            "name": "channel",
-            "type": {
-              "type": "nameOnly",
-              "name": "RealtimeChannel"
-            },
-            "comment": {
-              "shortText": "The realtime channel to bind to."
-            }
-          },
-          {
-            "name": "opts",
-            "type": {
-              "type": "nameOnly",
-              "name": "PresenceOpts"
-            },
-            "isOptional": true,
-            "comment": {
-              "shortText": "Optional custom event names, e.g. \`{ events: { state: 'state', diff: 'diff' } }\`."
-            }
-          }
-        ],
-        "ret": {
-          "type": {
-            "type": "nameOnly",
-            "name": "RealtimePresence"
-          }
-        },
-        "comment": {
-          "shortText": "Creates a Presence helper that keeps the local presence state in sync with the server."
-        }
-      },
       "@supabase/realtime-js.WebSocketFactory.createWebSocket": {
         "name": "@supabase/realtime-js.WebSocketFactory.createWebSocket",
         "params": [
@@ -78852,14 +79268,430 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
         "comment": {
           "shortText": "Detects whether the runtime can establish WebSocket connections."
         }
+      },
+      "@supabase/realtime-js.WebSocketLike.addEventListener": {
+        "name": "@supabase/realtime-js.WebSocketLike.addEventListener",
+        "params": [
+          {
+            "name": "type",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "name": "listener",
+            "type": {
+              "type": "nameOnly",
+              "name": "EventListener"
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Registers an event listener on the socket (compatible with browser WebSocket API)."
+        }
+      },
+      "@supabase/realtime-js.WebSocketLike.close": {
+        "name": "@supabase/realtime-js.WebSocketLike.close",
+        "params": [
+          {
+            "name": "code",
+            "type": {
+              "type": "intrinsic",
+              "name": "number"
+            },
+            "isOptional": true
+          },
+          {
+            "name": "reason",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            },
+            "isOptional": true
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Closes the socket, optionally providing a close code and reason."
+        }
+      },
+      "@supabase/realtime-js.WebSocketLike.removeEventListener": {
+        "name": "@supabase/realtime-js.WebSocketLike.removeEventListener",
+        "params": [
+          {
+            "name": "type",
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "name": "listener",
+            "type": {
+              "type": "nameOnly",
+              "name": "EventListener"
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Removes a previously registered event listener."
+        }
+      },
+      "@supabase/realtime-js.WebSocketLike.send": {
+        "name": "@supabase/realtime-js.WebSocketLike.send",
+        "params": [
+          {
+            "name": "data",
+            "type": {
+              "type": "union",
+              "subTypes": [
+                {
+                  "type": "intrinsic",
+                  "name": "string"
+                },
+                {
+                  "type": "nameOnly",
+                  "name": "ArrayBufferLike"
+                },
+                {
+                  "type": "nameOnly",
+                  "name": "Blob"
+                },
+                {
+                  "type": "nameOnly",
+                  "name": "ArrayBufferView"
+                }
+              ]
+            }
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "intrinsic",
+            "name": "void"
+          }
+        },
+        "comment": {
+          "shortText": "Sends data through the socket using the underlying implementation."
+        }
+      },
+      "@supabase/realtime-js.WebSocketLikeConstructor.constructor": {
+        "name": "@supabase/realtime-js.WebSocketLikeConstructor.constructor",
+        "params": [
+          {
+            "name": "address",
+            "type": {
+              "type": "union",
+              "subTypes": [
+                {
+                  "type": "intrinsic",
+                  "name": "string"
+                },
+                {
+                  "type": "nameOnly",
+                  "name": "URL"
+                }
+              ]
+            }
+          },
+          {
+            "name": "subprotocols",
+            "type": {
+              "type": "union",
+              "subTypes": [
+                {
+                  "type": "intrinsic",
+                  "name": "string"
+                },
+                {
+                  "type": "array",
+                  "elemType": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                }
+              ]
+            },
+            "isOptional": true
+          }
+        ],
+        "ret": {
+          "type": {
+            "type": "object",
+            "name": "WebSocketLike",
+            "properties": [
+              {
+                "name": "binaryType",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                },
+                "isOptional": true
+              },
+              {
+                "name": "bufferedAmount",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+                },
+                "isOptional": true
+              },
+              {
+                "name": "CLOSED",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              },
+              {
+                "name": "CLOSING",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              },
+              {
+                "name": "CONNECTING",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              },
+              {
+                "name": "dispatchEvent",
+                "type": {
+                  "type": "function",
+                  "params": [
+                    {
+                      "name": "event",
+                      "type": {
+                        "type": "nameOnly",
+                        "name": "Event"
+                      }
+                    }
+                  ],
+                  "ret": {
+                    "type": {
+                      "type": "intrinsic",
+                      "name": "boolean"
+                    }
+                  }
+                },
+                "isOptional": true
+              },
+              {
+                "name": "extensions",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                },
+                "isOptional": true
+              },
+              {
+                "name": "onclose",
+                "type": {
+                  "type": "union",
+                  "subTypes": [
+                    {
+                      "type": "literal",
+                      "value": null
+                    },
+                    {
+                      "type": "function",
+                      "params": [
+                        {
+                          "name": "this",
+                          "type": {
+                            "type": "intrinsic",
+                            "name": "any"
+                          }
+                        },
+                        {
+                          "name": "ev",
+                          "type": {
+                            "type": "nameOnly",
+                            "name": "CloseEvent"
+                          }
+                        }
+                      ],
+                      "ret": {
+                        "type": {
+                          "type": "intrinsic",
+                          "name": "any"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "onerror",
+                "type": {
+                  "type": "union",
+                  "subTypes": [
+                    {
+                      "type": "literal",
+                      "value": null
+                    },
+                    {
+                      "type": "function",
+                      "params": [
+                        {
+                          "name": "this",
+                          "type": {
+                            "type": "intrinsic",
+                            "name": "any"
+                          }
+                        },
+                        {
+                          "name": "ev",
+                          "type": {
+                            "type": "nameOnly",
+                            "name": "Event"
+                          }
+                        }
+                      ],
+                      "ret": {
+                        "type": {
+                          "type": "intrinsic",
+                          "name": "any"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "onmessage",
+                "type": {
+                  "type": "union",
+                  "subTypes": [
+                    {
+                      "type": "literal",
+                      "value": null
+                    },
+                    {
+                      "type": "function",
+                      "params": [
+                        {
+                          "name": "this",
+                          "type": {
+                            "type": "intrinsic",
+                            "name": "any"
+                          }
+                        },
+                        {
+                          "name": "ev",
+                          "type": {
+                            "type": "nameOnly",
+                            "name": "MessageEvent"
+                          }
+                        }
+                      ],
+                      "ret": {
+                        "type": {
+                          "type": "intrinsic",
+                          "name": "any"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "onopen",
+                "type": {
+                  "type": "union",
+                  "subTypes": [
+                    {
+                      "type": "literal",
+                      "value": null
+                    },
+                    {
+                      "type": "function",
+                      "params": [
+                        {
+                          "name": "this",
+                          "type": {
+                            "type": "intrinsic",
+                            "name": "any"
+                          }
+                        },
+                        {
+                          "name": "ev",
+                          "type": {
+                            "type": "nameOnly",
+                            "name": "Event"
+                          }
+                        }
+                      ],
+                      "ret": {
+                        "type": {
+                          "type": "intrinsic",
+                          "name": "any"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "OPEN",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              },
+              {
+                "name": "protocol",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              },
+              {
+                "name": "readyState",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              },
+              {
+                "name": "url",
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              }
+            ]
+          }
+        }
       }
     }
   },
   {
     "name": "@supabase/storage-js",
     "methods": {
-      "@supabase/storage-js.index.StorageApiError.constructor": {
-        "name": "@supabase/storage-js.index.StorageApiError.constructor",
+      "@supabase/storage-js.StorageApiError.constructor": {
+        "name": "@supabase/storage-js.StorageApiError.constructor",
         "params": [
           {
             "name": "message",
@@ -78890,8 +79722,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         }
       },
-      "@supabase/storage-js.index.StorageApiError.toJSON": {
-        "name": "@supabase/storage-js.index.StorageApiError.toJSON",
+      "@supabase/storage-js.StorageApiError.toJSON": {
+        "name": "@supabase/storage-js.StorageApiError.toJSON",
         "params": [],
         "ret": {
           "type": {
@@ -78929,8 +79761,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         }
       },
-      "@supabase/storage-js.index.StorageClient.constructor": {
-        "name": "@supabase/storage-js.index.StorageClient.constructor",
+      "@supabase/storage-js.StorageClient.constructor": {
+        "name": "@supabase/storage-js.StorageClient.constructor",
         "params": [
           {
             "name": "url",
@@ -79028,8 +79860,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a client for Storage buckets, files, analytics, and vectors."
         }
       },
-      "@supabase/storage-js.index.StorageClient.createBucket": {
-        "name": "@supabase/storage-js.index.StorageClient.createBucket",
+      "@supabase/storage-js.StorageClient.createBucket": {
+        "name": "@supabase/storage-js.StorageClient.createBucket",
         "params": [
           {
             "name": "id",
@@ -79177,8 +80009,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a new Storage bucket"
         }
       },
-      "@supabase/storage-js.index.StorageClient.deleteBucket": {
-        "name": "@supabase/storage-js.index.StorageClient.deleteBucket",
+      "@supabase/storage-js.StorageClient.deleteBucket": {
+        "name": "@supabase/storage-js.StorageClient.deleteBucket",
         "params": [
           {
             "name": "id",
@@ -79252,8 +80084,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Deletes an existing bucket. A bucket can't be deleted with existing objects inside it.\\nYou must first \`empty()\` the bucket."
         }
       },
-      "@supabase/storage-js.index.StorageClient.emptyBucket": {
-        "name": "@supabase/storage-js.index.StorageClient.emptyBucket",
+      "@supabase/storage-js.StorageClient.emptyBucket": {
+        "name": "@supabase/storage-js.StorageClient.emptyBucket",
         "params": [
           {
             "name": "id",
@@ -79327,8 +80159,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Removes all objects inside a single bucket."
         }
       },
-      "@supabase/storage-js.index.StorageClient.from": {
-        "name": "@supabase/storage-js.index.StorageClient.from",
+      "@supabase/storage-js.StorageClient.from": {
+        "name": "@supabase/storage-js.StorageClient.from",
         "params": [
           {
             "name": "id",
@@ -79351,8 +80183,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Perform file operation in a bucket."
         }
       },
-      "@supabase/storage-js.index.StorageClient.getBucket": {
-        "name": "@supabase/storage-js.index.StorageClient.getBucket",
+      "@supabase/storage-js.StorageClient.getBucket": {
+        "name": "@supabase/storage-js.StorageClient.getBucket",
         "params": [
           {
             "name": "id",
@@ -79499,8 +80331,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Retrieves the details of an existing Storage bucket."
         }
       },
-      "@supabase/storage-js.index.StorageClient.listBuckets": {
-        "name": "@supabase/storage-js.index.StorageClient.listBuckets",
+      "@supabase/storage-js.StorageClient.listBuckets": {
+        "name": "@supabase/storage-js.StorageClient.listBuckets",
         "params": [
           {
             "name": "options",
@@ -79716,8 +80548,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Retrieves the details of all Storage buckets within an existing project."
         }
       },
-      "@supabase/storage-js.index.StorageClient.throwOnError": {
-        "name": "@supabase/storage-js.index.StorageClient.throwOnError",
+      "@supabase/storage-js.StorageClient.throwOnError": {
+        "name": "@supabase/storage-js.StorageClient.throwOnError",
         "params": [],
         "ret": {
           "type": {
@@ -79729,8 +80561,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Enable throwing errors instead of returning them."
         }
       },
-      "@supabase/storage-js.index.StorageClient.updateBucket": {
-        "name": "@supabase/storage-js.index.StorageClient.updateBucket",
+      "@supabase/storage-js.StorageClient.updateBucket": {
+        "name": "@supabase/storage-js.StorageClient.updateBucket",
         "params": [
           {
             "name": "id",
@@ -79869,8 +80701,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Updates a Storage bucket"
         }
       },
-      "@supabase/storage-js.index.StorageError.constructor": {
-        "name": "@supabase/storage-js.index.StorageError.constructor",
+      "@supabase/storage-js.StorageError.constructor": {
+        "name": "@supabase/storage-js.StorageError.constructor",
         "params": [
           {
             "name": "message",
@@ -79887,8 +80719,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         }
       },
-      "@supabase/storage-js.index.StorageUnknownError.constructor": {
-        "name": "@supabase/storage-js.index.StorageUnknownError.constructor",
+      "@supabase/storage-js.StorageUnknownError.constructor": {
+        "name": "@supabase/storage-js.StorageUnknownError.constructor",
         "params": [
           {
             "name": "message",
@@ -79912,8 +80744,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         }
       },
-      "@supabase/storage-js.index.StorageVectorsApiError.constructor": {
-        "name": "@supabase/storage-js.index.StorageVectorsApiError.constructor",
+      "@supabase/storage-js.StorageVectorsApiError.constructor": {
+        "name": "@supabase/storage-js.StorageVectorsApiError.constructor",
         "params": [
           {
             "name": "message",
@@ -79944,8 +80776,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         }
       },
-      "@supabase/storage-js.index.StorageVectorsApiError.toJSON": {
-        "name": "@supabase/storage-js.index.StorageVectorsApiError.toJSON",
+      "@supabase/storage-js.StorageVectorsApiError.toJSON": {
+        "name": "@supabase/storage-js.StorageVectorsApiError.toJSON",
         "params": [],
         "ret": {
           "type": {
@@ -79983,8 +80815,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         }
       },
-      "@supabase/storage-js.index.StorageVectorsClient.constructor": {
-        "name": "@supabase/storage-js.index.StorageVectorsClient.constructor",
+      "@supabase/storage-js.StorageVectorsClient.constructor": {
+        "name": "@supabase/storage-js.StorageVectorsClient.constructor",
         "params": [
           {
             "name": "url",
@@ -80083,8 +80915,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a StorageVectorsClient that can manage buckets, indexes, and vectors.\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.StorageVectorsClient.createBucket": {
-        "name": "@supabase/storage-js.index.StorageVectorsClient.createBucket",
+      "@supabase/storage-js.StorageVectorsClient.createBucket": {
+        "name": "@supabase/storage-js.StorageVectorsClient.createBucket",
         "params": [
           {
             "name": "vectorBucketName",
@@ -80165,8 +80997,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a new vector bucket\\nVector buckets are containers for vector indexes and their data\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.StorageVectorsClient.deleteBucket": {
-        "name": "@supabase/storage-js.index.StorageVectorsClient.deleteBucket",
+      "@supabase/storage-js.StorageVectorsClient.deleteBucket": {
+        "name": "@supabase/storage-js.StorageVectorsClient.deleteBucket",
         "params": [
           {
             "name": "vectorBucketName",
@@ -80247,8 +81079,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Deletes a vector bucket\\nBucket must be empty before deletion (all indexes must be removed first)\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.StorageVectorsClient.from": {
-        "name": "@supabase/storage-js.index.StorageVectorsClient.from",
+      "@supabase/storage-js.StorageVectorsClient.from": {
+        "name": "@supabase/storage-js.StorageVectorsClient.from",
         "params": [
           {
             "name": "vectorBucketName",
@@ -80271,8 +81103,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Access operations for a specific vector bucket\\nReturns a scoped client for index and vector operations within the bucket\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.StorageVectorsClient.getBucket": {
-        "name": "@supabase/storage-js.index.StorageVectorsClient.getBucket",
+      "@supabase/storage-js.StorageVectorsClient.getBucket": {
+        "name": "@supabase/storage-js.StorageVectorsClient.getBucket",
         "params": [
           {
             "name": "vectorBucketName",
@@ -80353,8 +81185,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Retrieves metadata for a specific vector bucket\\nReturns bucket configuration including encryption settings and creation time\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.StorageVectorsClient.listBuckets": {
-        "name": "@supabase/storage-js.index.StorageVectorsClient.listBuckets",
+      "@supabase/storage-js.StorageVectorsClient.listBuckets": {
+        "name": "@supabase/storage-js.StorageVectorsClient.listBuckets",
         "params": [
           {
             "name": "options",
@@ -80470,8 +81302,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Lists vector buckets with optional filtering and pagination\\nSupports prefix-based filtering and paginated results\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.StorageVectorsClient.throwOnError": {
-        "name": "@supabase/storage-js.index.StorageVectorsClient.throwOnError",
+      "@supabase/storage-js.StorageVectorsClient.throwOnError": {
+        "name": "@supabase/storage-js.StorageVectorsClient.throwOnError",
         "params": [],
         "ret": {
           "type": {
@@ -80483,8 +81315,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Enable throwing errors instead of returning them in the response\\nWhen enabled, failed operations will throw instead of returning { data: null, error }\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.StorageVectorsError.constructor": {
-        "name": "@supabase/storage-js.index.StorageVectorsError.constructor",
+      "@supabase/storage-js.StorageVectorsError.constructor": {
+        "name": "@supabase/storage-js.StorageVectorsError.constructor",
         "params": [
           {
             "name": "message",
@@ -80501,8 +81333,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         }
       },
-      "@supabase/storage-js.index.StorageVectorsUnknownError.constructor": {
-        "name": "@supabase/storage-js.index.StorageVectorsUnknownError.constructor",
+      "@supabase/storage-js.StorageVectorsUnknownError.constructor": {
+        "name": "@supabase/storage-js.StorageVectorsUnknownError.constructor",
         "params": [
           {
             "name": "message",
@@ -80526,8 +81358,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         }
       },
-      "@supabase/storage-js.index.VectorBucketApi.constructor": {
-        "name": "@supabase/storage-js.index.VectorBucketApi.constructor",
+      "@supabase/storage-js.VectorBucketApi.constructor": {
+        "name": "@supabase/storage-js.VectorBucketApi.constructor",
         "params": [
           {
             "name": "url",
@@ -80616,8 +81448,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a new VectorBucketApi instance\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorBucketApi.createBucket": {
-        "name": "@supabase/storage-js.index.VectorBucketApi.createBucket",
+      "@supabase/storage-js.VectorBucketApi.createBucket": {
+        "name": "@supabase/storage-js.VectorBucketApi.createBucket",
         "params": [
           {
             "name": "vectorBucketName",
@@ -80698,8 +81530,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a new vector bucket\\nVector buckets are containers for vector indexes and their data\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorBucketApi.deleteBucket": {
-        "name": "@supabase/storage-js.index.VectorBucketApi.deleteBucket",
+      "@supabase/storage-js.VectorBucketApi.deleteBucket": {
+        "name": "@supabase/storage-js.VectorBucketApi.deleteBucket",
         "params": [
           {
             "name": "vectorBucketName",
@@ -80780,8 +81612,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Deletes a vector bucket\\nBucket must be empty before deletion (all indexes must be removed first)\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorBucketApi.getBucket": {
-        "name": "@supabase/storage-js.index.VectorBucketApi.getBucket",
+      "@supabase/storage-js.VectorBucketApi.getBucket": {
+        "name": "@supabase/storage-js.VectorBucketApi.getBucket",
         "params": [
           {
             "name": "vectorBucketName",
@@ -80862,8 +81694,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Retrieves metadata for a specific vector bucket\\nReturns bucket configuration including encryption settings and creation time\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorBucketApi.listBuckets": {
-        "name": "@supabase/storage-js.index.VectorBucketApi.listBuckets",
+      "@supabase/storage-js.VectorBucketApi.listBuckets": {
+        "name": "@supabase/storage-js.VectorBucketApi.listBuckets",
         "params": [
           {
             "name": "options",
@@ -80979,8 +81811,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Lists vector buckets with optional filtering and pagination\\nSupports prefix-based filtering and paginated results\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorBucketApi.throwOnError": {
-        "name": "@supabase/storage-js.index.VectorBucketApi.throwOnError",
+      "@supabase/storage-js.VectorBucketApi.throwOnError": {
+        "name": "@supabase/storage-js.VectorBucketApi.throwOnError",
         "params": [],
         "ret": {
           "type": {
@@ -80992,8 +81824,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Enable throwing errors instead of returning them in the response\\nWhen enabled, failed operations will throw instead of returning { data: null, error }\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorBucketScope.constructor": {
-        "name": "@supabase/storage-js.index.VectorBucketScope.constructor",
+      "@supabase/storage-js.VectorBucketScope.constructor": {
+        "name": "@supabase/storage-js.VectorBucketScope.constructor",
         "params": [
           {
             "name": "url",
@@ -81080,8 +81912,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a helper that automatically scopes all index operations to the provided bucket.\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorBucketScope.createIndex": {
-        "name": "@supabase/storage-js.index.VectorBucketScope.createIndex",
+      "@supabase/storage-js.VectorBucketScope.createIndex": {
+        "name": "@supabase/storage-js.VectorBucketScope.createIndex",
         "params": [
           {
             "name": "options",
@@ -81162,8 +81994,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a new vector index in this bucket\\nConvenience method that automatically includes the bucket name\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorBucketScope.deleteIndex": {
-        "name": "@supabase/storage-js.index.VectorBucketScope.deleteIndex",
+      "@supabase/storage-js.VectorBucketScope.deleteIndex": {
+        "name": "@supabase/storage-js.VectorBucketScope.deleteIndex",
         "params": [
           {
             "name": "indexName",
@@ -81244,8 +82076,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Deletes an index from this bucket\\nConvenience method that automatically includes the bucket name\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorBucketScope.getIndex": {
-        "name": "@supabase/storage-js.index.VectorBucketScope.getIndex",
+      "@supabase/storage-js.VectorBucketScope.getIndex": {
+        "name": "@supabase/storage-js.VectorBucketScope.getIndex",
         "params": [
           {
             "name": "indexName",
@@ -81326,8 +82158,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Retrieves metadata for a specific index in this bucket\\nConvenience method that automatically includes the bucket name\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorBucketScope.index": {
-        "name": "@supabase/storage-js.index.VectorBucketScope.index",
+      "@supabase/storage-js.VectorBucketScope": {
+        "name": "@supabase/storage-js.VectorBucketScope",
         "params": [
           {
             "name": "indexName",
@@ -81350,8 +82182,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Access operations for a specific index within this bucket\\nReturns a scoped client for vector data operations\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorBucketScope.listIndexes": {
-        "name": "@supabase/storage-js.index.VectorBucketScope.listIndexes",
+      "@supabase/storage-js.VectorBucketScope.listIndexes": {
+        "name": "@supabase/storage-js.VectorBucketScope.listIndexes",
         "params": [
           {
             "name": "options",
@@ -81432,8 +82264,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Lists indexes in this bucket\\nConvenience method that automatically includes the bucket name\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorBucketScope.throwOnError": {
-        "name": "@supabase/storage-js.index.VectorBucketScope.throwOnError",
+      "@supabase/storage-js.VectorBucketScope.throwOnError": {
+        "name": "@supabase/storage-js.VectorBucketScope.throwOnError",
         "params": [],
         "ret": {
           "type": {
@@ -81445,8 +82277,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Enable throwing errors instead of returning them in the response\\nWhen enabled, failed operations will throw instead of returning { data: null, error }\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorDataApi.constructor": {
-        "name": "@supabase/storage-js.index.VectorDataApi.constructor",
+      "@supabase/storage-js.VectorDataApi.constructor": {
+        "name": "@supabase/storage-js.VectorDataApi.constructor",
         "params": [
           {
             "name": "url",
@@ -81535,8 +82367,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a VectorDataApi bound to a Storage Vectors deployment.\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorDataApi.deleteVectors": {
-        "name": "@supabase/storage-js.index.VectorDataApi.deleteVectors",
+      "@supabase/storage-js.VectorDataApi.deleteVectors": {
+        "name": "@supabase/storage-js.VectorDataApi.deleteVectors",
         "params": [
           {
             "name": "options",
@@ -81652,8 +82484,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Deletes vectors by their keys in batch\\nAccepts 1-500 keys per request\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorDataApi.getVectors": {
-        "name": "@supabase/storage-js.index.VectorDataApi.getVectors",
+      "@supabase/storage-js.VectorDataApi.getVectors": {
+        "name": "@supabase/storage-js.VectorDataApi.getVectors",
         "params": [
           {
             "name": "options",
@@ -81791,8 +82623,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Retrieves vectors by their keys in batch\\nOptionally includes vector data and/or metadata in response\\nAdditional permissions required when returning data or metadata\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorDataApi.listVectors": {
-        "name": "@supabase/storage-js.index.VectorDataApi.listVectors",
+      "@supabase/storage-js.VectorDataApi.listVectors": {
+        "name": "@supabase/storage-js.VectorDataApi.listVectors",
         "params": [
           {
             "name": "options",
@@ -81961,8 +82793,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Lists/scans vectors in an index with pagination\\nSupports parallel scanning via segment configuration for high-throughput scenarios\\nAdditional permissions required when returning data or metadata\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorDataApi.putVectors": {
-        "name": "@supabase/storage-js.index.VectorDataApi.putVectors",
+      "@supabase/storage-js.VectorDataApi.putVectors": {
+        "name": "@supabase/storage-js.VectorDataApi.putVectors",
         "params": [
           {
             "name": "options",
@@ -82134,8 +82966,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Inserts or updates vectors in batch (upsert operation)\\nAccepts 1-500 vectors per request. Larger batches should be split\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorDataApi.queryVectors": {
-        "name": "@supabase/storage-js.index.VectorDataApi.queryVectors",
+      "@supabase/storage-js.VectorDataApi.queryVectors": {
+        "name": "@supabase/storage-js.VectorDataApi.queryVectors",
         "params": [
           {
             "name": "options",
@@ -82315,8 +83147,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Queries for similar vectors using approximate nearest neighbor (ANN) search\\nReturns top-K most similar vectors based on the configured distance metric\\nSupports optional metadata filtering (requires GetVectors permission)\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorDataApi.throwOnError": {
-        "name": "@supabase/storage-js.index.VectorDataApi.throwOnError",
+      "@supabase/storage-js.VectorDataApi.throwOnError": {
+        "name": "@supabase/storage-js.VectorDataApi.throwOnError",
         "params": [],
         "ret": {
           "type": {
@@ -82328,8 +83160,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Enable throwing errors instead of returning them in the response\\nWhen enabled, failed operations will throw instead of returning { data: null, error }\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexApi.constructor": {
-        "name": "@supabase/storage-js.index.VectorIndexApi.constructor",
+      "@supabase/storage-js.VectorIndexApi.constructor": {
+        "name": "@supabase/storage-js.VectorIndexApi.constructor",
         "params": [
           {
             "name": "url",
@@ -82418,8 +83250,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates an API client for managing vector indexes.\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexApi.createIndex": {
-        "name": "@supabase/storage-js.index.VectorIndexApi.createIndex",
+      "@supabase/storage-js.VectorIndexApi.createIndex": {
+        "name": "@supabase/storage-js.VectorIndexApi.createIndex",
         "params": [
           {
             "name": "options",
@@ -82575,8 +83407,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a new vector index within a bucket\\nDefines the schema for vectors including dimensionality, distance metric, and metadata config\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexApi.deleteIndex": {
-        "name": "@supabase/storage-js.index.VectorIndexApi.deleteIndex",
+      "@supabase/storage-js.VectorIndexApi.deleteIndex": {
+        "name": "@supabase/storage-js.VectorIndexApi.deleteIndex",
         "params": [
           {
             "name": "vectorBucketName",
@@ -82667,8 +83499,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Deletes a vector index and all its data\\nThis operation removes the index schema and all vectors stored in the index\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexApi.getIndex": {
-        "name": "@supabase/storage-js.index.VectorIndexApi.getIndex",
+      "@supabase/storage-js.VectorIndexApi.getIndex": {
+        "name": "@supabase/storage-js.VectorIndexApi.getIndex",
         "params": [
           {
             "name": "vectorBucketName",
@@ -82759,8 +83591,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Retrieves metadata for a specific vector index\\nReturns index configuration including dimension, distance metric, and metadata settings\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexApi.listIndexes": {
-        "name": "@supabase/storage-js.index.VectorIndexApi.listIndexes",
+      "@supabase/storage-js.VectorIndexApi.listIndexes": {
+        "name": "@supabase/storage-js.VectorIndexApi.listIndexes",
         "params": [
           {
             "name": "options",
@@ -82886,8 +83718,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Lists vector indexes within a bucket with optional filtering and pagination\\nSupports prefix-based filtering and paginated results\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexApi.throwOnError": {
-        "name": "@supabase/storage-js.index.VectorIndexApi.throwOnError",
+      "@supabase/storage-js.VectorIndexApi.throwOnError": {
+        "name": "@supabase/storage-js.VectorIndexApi.throwOnError",
         "params": [],
         "ret": {
           "type": {
@@ -82899,8 +83731,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Enable throwing errors instead of returning them in the response\\nWhen enabled, failed operations will throw instead of returning { data: null, error }\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexScope.constructor": {
-        "name": "@supabase/storage-js.index.VectorIndexScope.constructor",
+      "@supabase/storage-js.VectorIndexScope.constructor": {
+        "name": "@supabase/storage-js.VectorIndexScope.constructor",
         "params": [
           {
             "name": "url",
@@ -82994,8 +83826,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Creates a helper that automatically scopes all vector operations to the provided bucket/index names.\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexScope.deleteVectors": {
-        "name": "@supabase/storage-js.index.VectorIndexScope.deleteVectors",
+      "@supabase/storage-js.VectorIndexScope.deleteVectors": {
+        "name": "@supabase/storage-js.VectorIndexScope.deleteVectors",
         "params": [
           {
             "name": "options",
@@ -83076,8 +83908,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Deletes vectors by keys from this index\\nConvenience method that automatically includes bucket and index names\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexScope.getVectors": {
-        "name": "@supabase/storage-js.index.VectorIndexScope.getVectors",
+      "@supabase/storage-js.VectorIndexScope.getVectors": {
+        "name": "@supabase/storage-js.VectorIndexScope.getVectors",
         "params": [
           {
             "name": "options",
@@ -83158,8 +83990,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Retrieves vectors by keys from this index\\nConvenience method that automatically includes bucket and index names\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexScope.listVectors": {
-        "name": "@supabase/storage-js.index.VectorIndexScope.listVectors",
+      "@supabase/storage-js.VectorIndexScope.listVectors": {
+        "name": "@supabase/storage-js.VectorIndexScope.listVectors",
         "params": [
           {
             "name": "options",
@@ -83240,8 +84072,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Lists vectors in this index with pagination\\nConvenience method that automatically includes bucket and index names\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexScope.putVectors": {
-        "name": "@supabase/storage-js.index.VectorIndexScope.putVectors",
+      "@supabase/storage-js.VectorIndexScope.putVectors": {
+        "name": "@supabase/storage-js.VectorIndexScope.putVectors",
         "params": [
           {
             "name": "options",
@@ -83322,8 +84154,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Inserts or updates vectors in this index\\nConvenience method that automatically includes bucket and index names\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexScope.queryVectors": {
-        "name": "@supabase/storage-js.index.VectorIndexScope.queryVectors",
+      "@supabase/storage-js.VectorIndexScope.queryVectors": {
+        "name": "@supabase/storage-js.VectorIndexScope.queryVectors",
         "params": [
           {
             "name": "options",
@@ -83404,8 +84236,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Queries for similar vectors in this index\\nConvenience method that automatically includes bucket and index names\\n\\n**Private alpha:** Vector storage APIs are currently in private alpha and may not be accessible."
         }
       },
-      "@supabase/storage-js.index.VectorIndexScope.throwOnError": {
-        "name": "@supabase/storage-js.index.VectorIndexScope.throwOnError",
+      "@supabase/storage-js.VectorIndexScope.throwOnError": {
+        "name": "@supabase/storage-js.VectorIndexScope.throwOnError",
         "params": [],
         "ret": {
           "type": {
