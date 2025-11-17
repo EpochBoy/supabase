@@ -8479,6 +8479,10 @@ functions:
   - id: storage-js-storageclient-from
     title: StorageClient.from()
     $ref: '@supabase/storage-js.StorageClient.from'
+  - id: storage-vector-list
+    title: 'Overview'
+    notes: |
+      This section contains methods for working with Storage Vectors.
   - id: storage-js-storagevectorsclient-from
     title: StorageVectorsClient.from()
     $ref: '@supabase/storage-js.StorageVectorsClient.from'
@@ -8500,6 +8504,10 @@ functions:
           // List indexes in this bucket
           const { data } = await bucket.listIndexes()
           ```
+  - id: vector-buckets-list
+    title: 'Overview'
+    notes: |
+      This section contains methods for working with Vector Buckets.
   - id: storage-js-vectorbucketapi-constructor
     title: new VectorBucketApi()
     $ref: '@supabase/storage-js.VectorBucketApi.constructor'
@@ -8633,6 +8641,10 @@ functions:
           const bucket = client.bucket('embeddings-prod')
           const { data } = await bucket.listIndexes({ prefix: 'documents-' })
           ```
+  - id: vector-data-list
+    title: 'Overview'
+    notes: |
+      This section contains methods for working with Vector Data.
   - id: storage-js-vectordataapi-deletevectors
     title: VectorDataApi.deleteVectors()
     $ref: '@supabase/storage-js.VectorDataApi.deleteVectors'
@@ -8770,6 +8782,10 @@ functions:
           client.throwOnError()
           const { data } = await client.putVectors(options) // throws on error
           ```
+  - id: vector-index-list
+    title: 'Overview'
+    notes: |
+      This section contains methods for working with Vector Index.
   - id: storage-js-vectorindexapi-createindex
     title: VectorIndexApi.createIndex()
     $ref: '@supabase/storage-js.VectorIndexApi.createIndex'
