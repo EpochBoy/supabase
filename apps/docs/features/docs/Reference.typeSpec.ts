@@ -948,3 +948,60 @@ function parseInternalProperty(elem: any, map: Map<number, any>, typeArguments?:
 
   return res
 }
+
+/**
+ * Formats a type for display in method signatures
+ */
+function formatTypeForSignature(type: TypeDetails | undefined): string {
+  if (!type) return 'any'
+
+  switch (type.type) {
+    case 'intrinsic':
+      return type.name !== TYPESPEC_NODE_ANONYMOUS ? (type.name as string) : 'any'
+    case 'literal':
+      if ('value' in type) {
+        return type.value === null ? 'null' : `"${type.value}"`
+      }
+      return type.name !== TYPESPEC_NODE_ANONYMOUS ? (type.name as string) : 'any'
+    case 'nameOnly':
+      return type.name !== TYPESPEC_NODE_ANONYMOUS ? (type.name as string) : 'any'
+    case 'promise':
+      return `Promise<${formatTypeForSignature(type.awaited)}>`
+    case 'array':
+      return `${formatTypeForSignature(type.elemType)}[]`
+    case 'object':
+      return type.name !== TYPESPEC_NODE_ANONYMOUS ? (type.name as string) : 'object'
+    case 'function':
+      return 'Function'
+    case 'union':
+      if (type.subTypes && type.subTypes.length > 0) {
+        return type.subTypes.map(st => formatTypeForSignature(st)).join(' | ')
+      }
+      return 'any'
+    case 'record':
+      return `Record<${formatTypeForSignature(type.keyType)}, ${formatTypeForSignature(type.valueType)}>`
+    case 'index signature':
+      return `{ [key: ${formatTypeForSignature(type.keyType)}]: ${formatTypeForSignature(type.valueType)} }`
+    default:
+      return 'any'
+  }
+}
+
+/**
+ * Formats a method signature for display (minimal version)
+ * Example: "signUp(credentials, password)" - shows only method name and param names
+ */
+export function formatMethodSignature(method: MethodTypes): string {
+  const methodName = method.name !== TYPESPEC_NODE_ANONYMOUS ? method.name : 'anonymous'
+
+  // Format parameters - only names, no types
+  const params = method.params
+    .map(param => {
+      const paramName = param.name !== TYPESPEC_NODE_ANONYMOUS ? param.name : 'arg'
+      const optional = param.isOptional ? '?' : ''
+      return `${paramName}${optional}`
+    })
+    .join(', ')
+
+  return `${methodName}(${params})`
+}
