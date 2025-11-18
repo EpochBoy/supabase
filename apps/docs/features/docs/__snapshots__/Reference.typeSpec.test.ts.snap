@@ -85895,8 +85895,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           "shortText": "Attaches callbacks for the resolution and/or rejection of the Promise."
         }
       },
-      "@supabase/storage-js.packages/StorageAnalyticsApi.default.constructor": {
-        "name": "@supabase/storage-js.packages/StorageAnalyticsApi.default.constructor",
+      "@supabase/storage-js.packages/StorageAnalyticsClient.default.constructor": {
+        "name": "@supabase/storage-js.packages/StorageAnalyticsClient.default.constructor",
         "params": [
           {
             "name": "url",
@@ -85982,18 +85982,18 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a new StorageAnalyticsApi instance\\n\\n**Public alpha:** This API is part of a public alpha release and may not be available to your account type.",
+          "shortText": "Creates a new StorageAnalyticsClient instance\\n\\n**Public alpha:** This API is part of a public alpha release and may not be available to your account type.",
           "examples": [
             {
               "id": "example-1",
               "name": "Example 1",
-              "code": "\`\`\`typescript\\nconst client = new StorageAnalyticsApi(url, headers)\\n\`\`\`"
+              "code": "\`\`\`typescript\\nconst client = new StorageAnalyticsClient(url, headers)\\n\`\`\`"
             }
           ]
         }
       },
-      "@supabase/storage-js.packages/StorageAnalyticsApi.default.createBucket": {
-        "name": "@supabase/storage-js.packages/StorageAnalyticsApi.default.createBucket",
+      "@supabase/storage-js.packages/StorageAnalyticsClient.default.createBucket": {
+        "name": "@supabase/storage-js.packages/StorageAnalyticsClient.default.createBucket",
         "params": [
           {
             "name": "name",
@@ -86119,8 +86119,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           ]
         }
       },
-      "@supabase/storage-js.packages/StorageAnalyticsApi.default.deleteBucket": {
-        "name": "@supabase/storage-js.packages/StorageAnalyticsApi.default.deleteBucket",
+      "@supabase/storage-js.packages/StorageAnalyticsClient.default.deleteBucket": {
+        "name": "@supabase/storage-js.packages/StorageAnalyticsClient.default.deleteBucket",
         "params": [
           {
             "name": "bucketName",
@@ -86202,8 +86202,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           ]
         }
       },
-      "@supabase/storage-js.packages/StorageAnalyticsApi.default.listBuckets": {
-        "name": "@supabase/storage-js.packages/StorageAnalyticsApi.default.listBuckets",
+      "@supabase/storage-js.packages/StorageAnalyticsClient.default.listBuckets": {
+        "name": "@supabase/storage-js.packages/StorageAnalyticsClient.default.listBuckets",
         "params": [
           {
             "name": "options",
@@ -86415,8 +86415,8 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           ]
         }
       },
-      "@supabase/storage-js.packages/StorageAnalyticsApi.default.throwOnError": {
-        "name": "@supabase/storage-js.packages/StorageAnalyticsApi.default.throwOnError",
+      "@supabase/storage-js.packages/StorageAnalyticsClient.default.throwOnError": {
+        "name": "@supabase/storage-js.packages/StorageAnalyticsClient.default.throwOnError",
         "params": [],
         "ret": {
           "type": {

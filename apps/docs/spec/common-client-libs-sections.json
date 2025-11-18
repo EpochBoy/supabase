@@ -1039,23 +1039,23 @@
         "type": "function",
         "items": [
           {
-            "id": "storageanalyticsapi-createbucket",
+            "id": "storageanalyticsclient-createbucket",
             "title": "Create a new analytics bucket",
-            "slug": "storageanalyticsapi-createbucket",
+            "slug": "storageanalyticsclient-createbucket",
             "type": "function",
             "product": "storage"
           },
           {
-            "id": "storageanalyticsapi-listbuckets",
+            "id": "storageanalyticsclient-listbuckets",
             "title": "List analytics buckets",
-            "slug": "storageanalyticsapi-listbuckets",
+            "slug": "storageanalyticsclient-listbuckets",
             "type": "function",
             "product": "storage"
           },
           {
-            "id": "storageanalyticsapi-deletebucket",
+            "id": "storageanalyticsclient-deletebucket",
             "title": "Delete an analytics bucket",
-            "slug": "storageanalyticsapi-deletebucket",
+            "slug": "storageanalyticsclient-deletebucket",
             "type": "function",
             "product": "storage"
           }
