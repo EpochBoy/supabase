@@ -47,7 +47,7 @@ interface Comment {
   shortText?: string
   text?: string
   tags?: Array<{ tag: string; text: string }>
-  examples?: Array<{ id: string; name: string; code: string }>
+  examples?: Array<{ id: string; name: string; code: string; response?: string }>
 }
 
 export interface FunctionParameterType {
@@ -239,9 +239,21 @@ function normalizeComment(original: TypedocComment | Comment | undefined): Comme
         const name = tag.name || `Example ${index + 1}`
         // Convert name to kebab-case for id
         const id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-        // Join content to get the code
-        const code = tag.content.map((part) => part.text).join('')
-        return { id, name, code }
+        // Join content to get the full text
+        const fullText = tag.content.map((part) => part.text).join('')
+
+        // Check if there's a "Response:" section and split it
+        const responseMatch = fullText.match(/\n\s*Response:\s*\n/i)
+        let code = fullText
+        let response: string | undefined = undefined
+
+        if (responseMatch) {
+          const splitIndex = responseMatch.index! + responseMatch[0].length
+          code = fullText.substring(0, responseMatch.index!).trim()
+          response = fullText.substring(splitIndex).trim()
+        }
+
+        return { id, name, code, response }
       })
     }
   }
