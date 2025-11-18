@@ -1294,130 +1294,140 @@
     "title": "Storage",
     "items": [
       {
-        "id": "list-buckets",
-        "title": "List all buckets",
-        "slug": "storage-listbuckets",
+        "id": "file-buckets",
+        "isFunc": false,
+        "title": "File Buckets",
+        "slug": "file-buckets",
         "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "get-bucket",
-        "title": "Retrieve a bucket",
-        "slug": "storage-getbucket",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "create-bucket",
-        "title": "Create a bucket",
-        "slug": "storage-createbucket",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "empty-bucket",
-        "title": "Empty a bucket",
-        "slug": "storage-emptybucket",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "update-bucket",
-        "title": "Update a bucket",
-        "slug": "storage-updatebucket",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "delete-bucket",
-        "title": "Delete a bucket",
-        "slug": "storage-deletebucket",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "from-upload",
-        "title": "Upload a file",
-        "slug": "storage-from-upload",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "from-update",
-        "title": "Replace an existing file",
-        "slug": "storage-from-update",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "from-move",
-        "title": "Move an existing file",
-        "slug": "storage-from-move",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "from-copy",
-        "title": "Copy an existing file",
-        "slug": "storage-from-copy",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "from-create-signed-url",
-        "title": "Create a signed URL",
-        "slug": "storage-from-createsignedurl",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "from-create-signed-urls",
-        "title": "Create signed URLs",
-        "slug": "storage-from-createsignedurls",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "from-create-signed-upload-url",
-        "title": "Create signed upload URL",
-        "slug": "storage-from-createsigneduploadurl",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "from-upload-to-signed-url",
-        "title": "Upload to a signed URL",
-        "slug": "storage-from-uploadtosignedurl",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "from-get-public-url",
-        "title": "Retrieve public URL",
-        "slug": "storage-from-getpublicurl",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "from-download",
-        "title": "Download a file",
-        "slug": "storage-from-download",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "from-remove",
-        "title": "Delete files in a bucket",
-        "slug": "storage-from-remove",
-        "product": "storage",
-        "type": "function"
-      },
-      {
-        "id": "from-list",
-        "title": "List all files in a bucket",
-        "slug": "storage-from-list",
-        "product": "storage",
-        "type": "function"
+        "type": "function",
+        "items": [
+          {
+            "id": "list-buckets",
+            "title": "List all buckets",
+            "slug": "storage-listbuckets",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "get-bucket",
+            "title": "Retrieve a bucket",
+            "slug": "storage-getbucket",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "create-bucket",
+            "title": "Create a bucket",
+            "slug": "storage-createbucket",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "empty-bucket",
+            "title": "Empty a bucket",
+            "slug": "storage-emptybucket",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "update-bucket",
+            "title": "Update a bucket",
+            "slug": "storage-updatebucket",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "delete-bucket",
+            "title": "Delete a bucket",
+            "slug": "storage-deletebucket",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "from-upload",
+            "title": "Upload a file",
+            "slug": "storage-from-upload",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "from-update",
+            "title": "Replace an existing file",
+            "slug": "storage-from-update",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "from-move",
+            "title": "Move an existing file",
+            "slug": "storage-from-move",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "from-copy",
+            "title": "Copy an existing file",
+            "slug": "storage-from-copy",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "from-create-signed-url",
+            "title": "Create a signed URL",
+            "slug": "storage-from-createsignedurl",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "from-create-signed-urls",
+            "title": "Create signed URLs",
+            "slug": "storage-from-createsignedurls",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "from-create-signed-upload-url",
+            "title": "Create signed upload URL",
+            "slug": "storage-from-createsigneduploadurl",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "from-upload-to-signed-url",
+            "title": "Upload to a signed URL",
+            "slug": "storage-from-uploadtosignedurl",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "from-get-public-url",
+            "title": "Retrieve public URL",
+            "slug": "storage-from-getpublicurl",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "from-download",
+            "title": "Download a file",
+            "slug": "storage-from-download",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "from-remove",
+            "title": "Delete files in a bucket",
+            "slug": "storage-from-remove",
+            "product": "storage",
+            "type": "function"
+          },
+          {
+            "id": "from-list",
+            "title": "List all files in a bucket",
+            "slug": "storage-from-list",
+            "product": "storage",
+            "type": "function"
+          }
+        ]
       },
       {
         "id": "storage-js-storageclient-constructor",
@@ -1434,10 +1444,10 @@
         "product": "storage"
       },
       {
-        "id": "storage-vector-list",
+        "id": "vector-buckets",
         "isFunc": false,
-        "title": "Storage Vectors",
-        "slug": "storage-vector-list",
+        "title": "Vector Buckets",
+        "slug": "vector-buckets",
         "product": "storage",
         "type": "function",
         "items": [
@@ -1454,17 +1464,7 @@
             "slug": "storage-js-storagevectorsclient-from",
             "type": "function",
             "product": "storage"
-          }
-        ]
-      },
-      {
-        "id": "vector-buckets-list",
-        "isFunc": false,
-        "title": "Vector Buckets",
-        "slug": "vector-buckets-list",
-        "product": "storage",
-        "type": "function",
-        "items": [
+          },
           {
             "id": "storage-js-vectorbucketapi-constructor",
             "title": "Create a vector bucket API instance",
@@ -1541,160 +1541,160 @@
             "slug": "storage-js-vectorbucketscope-listindexes",
             "type": "function",
             "product": "storage"
-          }
-        ]
-      },
-      {
-        "id": "vector-data-list",
-        "isFunc": false,
-        "title": "Vector Data",
-        "slug": "vector-data-list",
-        "product": "storage",
-        "type": "function",
-        "items": [
-          {
-            "id": "storage-js-vectordataapi-constructor",
-            "title": "Create a vector data API instance",
-            "slug": "storage-js-vectordataapi-constructor",
-            "type": "function",
-            "product": "storage"
           },
           {
-            "id": "storage-js-vectordataapi-deletevectors",
-            "title": "Delete vectors",
-            "slug": "storage-js-vectordataapi-deletevectors",
+            "id": "vector-data",
+            "isFunc": false,
+            "title": "Vector Data",
+            "slug": "vector-data",
+            "product": "storage",
             "type": "function",
-            "product": "storage"
+            "items": [
+              {
+                "id": "storage-js-vectordataapi-constructor",
+                "title": "Create a vector data API instance",
+                "slug": "storage-js-vectordataapi-constructor",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectordataapi-deletevectors",
+                "title": "Delete vectors",
+                "slug": "storage-js-vectordataapi-deletevectors",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectordataapi-getvectors",
+                "title": "Retrieve vectors",
+                "slug": "storage-js-vectordataapi-getvectors",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectordataapi-listvectors",
+                "title": "List all vectors",
+                "slug": "storage-js-vectordataapi-listvectors",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectordataapi-putvectors",
+                "title": "Insert or update vectors",
+                "slug": "storage-js-vectordataapi-putvectors",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectordataapi-queryvectors",
+                "title": "Query vectors",
+                "slug": "storage-js-vectordataapi-queryvectors",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectordataapi-throwonerror",
+                "title": "Enable error throwing",
+                "slug": "storage-js-vectordataapi-throwonerror",
+                "type": "function",
+                "product": "storage"
+              }
+            ]
           },
           {
-            "id": "storage-js-vectordataapi-getvectors",
-            "title": "Retrieve vectors",
-            "slug": "storage-js-vectordataapi-getvectors",
+            "id": "vector-index",
+            "isFunc": false,
+            "title": "Vector Index",
+            "slug": "vector-index",
+            "product": "storage",
             "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectordataapi-listvectors",
-            "title": "List all vectors",
-            "slug": "storage-js-vectordataapi-listvectors",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectordataapi-putvectors",
-            "title": "Insert or update vectors",
-            "slug": "storage-js-vectordataapi-putvectors",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectordataapi-queryvectors",
-            "title": "Query vectors",
-            "slug": "storage-js-vectordataapi-queryvectors",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectordataapi-throwonerror",
-            "title": "Enable error throwing",
-            "slug": "storage-js-vectordataapi-throwonerror",
-            "type": "function",
-            "product": "storage"
-          }
-        ]
-      },
-      {
-        "id": "vector-index-list",
-        "isFunc": false,
-        "title": "Vector Index",
-        "slug": "vector-index-list",
-        "product": "storage",
-        "type": "function",
-        "items": [
-          {
-            "id": "storage-js-vectorindexapi-constructor",
-            "title": "Create a vector index API instance",
-            "slug": "storage-js-vectorindexapi-constructor",
-            "type": "function",
-            "product": "storage"
-          },
+            "items": [
+              {
+                "id": "storage-js-vectorindexapi-constructor",
+                "title": "Create a vector index API instance",
+                "slug": "storage-js-vectorindexapi-constructor",
+                "type": "function",
+                "product": "storage"
+              },
 
-          {
-            "id": "storage-js-vectorindexapi-createindex",
-            "title": "Create an index",
-            "slug": "storage-js-vectorindexapi-createindex",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectorindexapi-deleteindex",
-            "title": "Delete an index",
-            "slug": "storage-js-vectorindexapi-deleteindex",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectorindexapi-getindex",
-            "title": "Retrieve an index",
-            "slug": "storage-js-vectorindexapi-getindex",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectorindexapi-listindexes",
-            "title": "List all indexes",
-            "slug": "storage-js-vectorindexapi-listindexes",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectorindexapi-throwonerror",
-            "title": "Enable error throwing",
-            "slug": "storage-js-vectorindexapi-throwonerror",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectorindexscope-constructor",
-            "title": "Create a vector index scope",
-            "slug": "storage-js-vectorindexscope-constructor",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectorindexscope-deletevectors",
-            "title": "Delete vectors from index",
-            "slug": "storage-js-vectorindexscope-deletevectors",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectorindexscope-getvectors",
-            "title": "Retrieve vectors from index",
-            "slug": "storage-js-vectorindexscope-getvectors",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectorindexscope-listvectors",
-            "title": "List vectors in index",
-            "slug": "storage-js-vectorindexscope-listvectors",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectorindexscope-putvectors",
-            "title": "Add vectors to index",
-            "slug": "storage-js-vectorindexscope-putvectors",
-            "type": "function",
-            "product": "storage"
-          },
-          {
-            "id": "storage-js-vectorindexscope-queryvectors",
-            "title": "Search vectors in index",
-            "slug": "storage-js-vectorindexscope-queryvectors",
-            "type": "function",
-            "product": "storage"
+              {
+                "id": "storage-js-vectorindexapi-createindex",
+                "title": "Create an index",
+                "slug": "storage-js-vectorindexapi-createindex",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectorindexapi-deleteindex",
+                "title": "Delete an index",
+                "slug": "storage-js-vectorindexapi-deleteindex",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectorindexapi-getindex",
+                "title": "Retrieve an index",
+                "slug": "storage-js-vectorindexapi-getindex",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectorindexapi-listindexes",
+                "title": "List all indexes",
+                "slug": "storage-js-vectorindexapi-listindexes",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectorindexapi-throwonerror",
+                "title": "Enable error throwing",
+                "slug": "storage-js-vectorindexapi-throwonerror",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectorindexscope-constructor",
+                "title": "Create a vector index scope",
+                "slug": "storage-js-vectorindexscope-constructor",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectorindexscope-deletevectors",
+                "title": "Delete vectors from index",
+                "slug": "storage-js-vectorindexscope-deletevectors",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectorindexscope-getvectors",
+                "title": "Retrieve vectors from index",
+                "slug": "storage-js-vectorindexscope-getvectors",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectorindexscope-listvectors",
+                "title": "List vectors in index",
+                "slug": "storage-js-vectorindexscope-listvectors",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectorindexscope-putvectors",
+                "title": "Add vectors to index",
+                "slug": "storage-js-vectorindexscope-putvectors",
+                "type": "function",
+                "product": "storage"
+              },
+              {
+                "id": "storage-js-vectorindexscope-queryvectors",
+                "title": "Search vectors in index",
+                "slug": "storage-js-vectorindexscope-queryvectors",
+                "type": "function",
+                "product": "storage"
+              }
+            ]
           }
         ]
       }
