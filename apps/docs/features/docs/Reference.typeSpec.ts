@@ -238,7 +238,10 @@ function normalizeComment(original: TypedocComment | Comment | undefined): Comme
         // Use the name if provided, otherwise generate a default name
         const name = tag.name || `Example ${index + 1}`
         // Convert name to kebab-case for id
-        const id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+        const id = name
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-|-$/g, '')
         // Join content to get the full text
         const fullText = tag.content.map((part) => part.text).join('')
 

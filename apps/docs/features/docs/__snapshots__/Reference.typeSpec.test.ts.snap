@@ -682,7 +682,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates an admin API client that can be used to manage users and OAuth clients."
+          "shortText": "Creates an admin API client that can be used to manage users and OAuth clients.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport { GoTrueAdminApi } from '@supabase/auth-js'\\n\\nconst admin = new GoTrueAdminApi({\\n  url: 'https://xyzcompany.supabase.co/auth/v1',\\n  headers: { Authorization: \`Bearer \${process.env.SUPABASE_SERVICE_ROLE_KEY}\` },\\n})\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/supabase-js.GoTrueAdminMFAApi.deleteFactor": {
@@ -6582,7 +6589,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Create a new client for use in the browser."
+          "shortText": "Create a new client for use in the browser.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport { GoTrueClient } from '@supabase/auth-js'\\n\\nconst auth = new GoTrueClient({\\n  url: 'https://xyzcompany.supabase.co/auth/v1',\\n  headers: { apikey: 'public-anon-key' },\\n  storageKey: 'supabase-auth',\\n})\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/supabase-js.GoTrueMFAApi.challenge": {
@@ -35524,7 +35538,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": ""
+          "shortText": "",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport PostgrestError from '@supabase/postgrest-js'\\n\\nthrow new PostgrestError({\\n  message: 'Row level security prevented the request',\\n  details: 'RLS denied the insert',\\n  hint: 'Check your policies',\\n  code: 'PGRST301',\\n})\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/supabase-js.RealtimeChannel.constructor": {
@@ -35656,7 +35677,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a channel that can broadcast messages, sync presence, and listen to Postgres changes.\\n\\nThe topic determines which realtime stream you are subscribing to. Config options let you\\nenable acknowledgement for broadcasts, presence tracking, or private channels."
+          "shortText": "Creates a channel that can broadcast messages, sync presence, and listen to Postgres changes.\\n\\nThe topic determines which realtime stream you are subscribing to. Config options let you\\nenable acknowledgement for broadcasts, presence tracking, or private channels.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport RealtimeClient from '@supabase/realtime-js'\\n\\nconst client = new RealtimeClient('https://xyzcompany.supabase.co/realtime/v1', {\\n  params: { apikey: 'public-anon-key' },\\n})\\nconst channel = new RealtimeChannel('realtime:public:messages', { config: {} }, client)\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/supabase-js.RealtimePresence.constructor": {
@@ -35691,7 +35719,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a Presence helper that keeps the local presence state in sync with the server."
+          "shortText": "Creates a Presence helper that keeps the local presence state in sync with the server.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nconst presence = new RealtimePresence(channel)\\n\\nchannel.on('presence', ({ event, key }) => {\\n  console.log(\`Presence \${event} on \${key}\`)\\n})\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/supabase-js.RealtimeClient.constructor": {
@@ -35909,7 +35944,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Initializes the Socket."
+          "shortText": "Initializes the Socket.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport RealtimeClient from '@supabase/realtime-js'\\n\\nconst client = new RealtimeClient('https://xyzcompany.supabase.co/realtime/v1', {\\n  params: { apikey: 'public-anon-key' },\\n})\\nclient.connect()\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/supabase-js.RealtimeClient.channel": {
@@ -38545,7 +38587,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Create a new client for use in the browser."
+          "shortText": "Create a new client for use in the browser.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport { createClient } from '@supabase/supabase-js'\\n\\nconst supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')\\nconst { data } = await supabase.from('profiles').select('*')\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/supabase-js.SupabaseClient.channel": {
@@ -39201,7 +39250,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a WebSocket using the detected constructor."
+          "shortText": "Creates a WebSocket using the detected constructor.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nconst socket = WebSocketFactory.createWebSocket('wss://realtime.supabase.co/socket')\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/supabase-js.WebSocketFactory.getWebSocketConstructor": {
@@ -39257,7 +39313,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Returns the best available WebSocket constructor for the current runtime."
+          "shortText": "Returns the best available WebSocket constructor for the current runtime.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nconst WS = WebSocketFactory.getWebSocketConstructor()\\nconst socket = new WS('wss://realtime.supabase.co/socket')\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/supabase-js.WebSocketFactory.isWebSocketSupported": {
@@ -39270,7 +39333,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Detects whether the runtime can establish WebSocket connections."
+          "shortText": "Detects whether the runtime can establish WebSocket connections.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nif (!WebSocketFactory.isWebSocketSupported()) {\\n  console.warn('Falling back to long polling')\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/supabase-js.WebSocketLike.addEventListener": {
@@ -40281,7 +40351,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates an admin API client that can be used to manage users and OAuth clients."
+          "shortText": "Creates an admin API client that can be used to manage users and OAuth clients.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport { GoTrueAdminApi } from '@supabase/auth-js'\\n\\nconst admin = new GoTrueAdminApi({\\n  url: 'https://xyzcompany.supabase.co/auth/v1',\\n  headers: { Authorization: \`Bearer \${process.env.SUPABASE_SERVICE_ROLE_KEY}\` },\\n})\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/auth-js.GoTrueAdminMFAApi.deleteFactor": {
@@ -46178,7 +46255,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Create a new client for use in the browser."
+          "shortText": "Create a new client for use in the browser.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport { GoTrueClient } from '@supabase/auth-js'\\n\\nconst auth = new GoTrueClient({\\n  url: 'https://xyzcompany.supabase.co/auth/v1',\\n  headers: { apikey: 'public-anon-key' },\\n  storageKey: 'supabase-auth',\\n})\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/auth-js.GoTrueMFAApi.challenge": {
@@ -72162,7 +72246,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a builder configured for a specific PostgREST request."
+          "shortText": "Creates a builder configured for a specific PostgREST request.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport PostgrestQueryBuilder from '@supabase/postgrest-js'\\n\\nconst builder = new PostgrestQueryBuilder(\\n  new URL('https://xyzcompany.supabase.co/rest/v1/users'),\\n  { headers: new Headers({ apikey: 'public-anon-key' }) }\\n)\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/postgrest-js.PostgrestBuilder.overrideTypes": {
@@ -72175,7 +72266,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Override the type of the returned \`data\` field in the response."
+          "shortText": "Override the type of the returned \`data\` field in the response.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\n// Merge with existing types (default behavior)\\nconst query = supabase\\n  .from('users')\\n  .select()\\n  .overrideTypes<{ custom_field: string }>()\\n\\n// Replace existing types completely\\nconst replaceQuery = supabase\\n  .from('users')\\n  .select()\\n  .overrideTypes<{ id: number; name: string }, { merge: false }>()\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/postgrest-js.PostgrestBuilder.returns": {
@@ -72425,7 +72523,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a PostgREST client."
+          "shortText": "Creates a PostgREST client.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport PostgrestClient from '@supabase/postgrest-js'\\n\\nconst postgrest = new PostgrestClient('https://xyzcompany.supabase.co/rest/v1', {\\n  headers: { apikey: 'public-anon-key' },\\n  schema: 'public',\\n})\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/postgrest-js.PostgrestClient.from": {
@@ -72627,7 +72732,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": ""
+          "shortText": "",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport PostgrestError from '@supabase/postgrest-js'\\n\\nthrow new PostgrestError({\\n  message: 'Row level security prevented the request',\\n  details: 'RLS denied the insert',\\n  hint: 'Check your policies',\\n  code: 'PGRST301',\\n})\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/postgrest-js.PostgrestFilterBuilder.constructor": {
@@ -72777,7 +72889,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a builder configured for a specific PostgREST request."
+          "shortText": "Creates a builder configured for a specific PostgREST request.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport PostgrestQueryBuilder from '@supabase/postgrest-js'\\n\\nconst builder = new PostgrestQueryBuilder(\\n  new URL('https://xyzcompany.supabase.co/rest/v1/users'),\\n  { headers: new Headers({ apikey: 'public-anon-key' }) }\\n)\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/postgrest-js.PostgrestFilterBuilder.abortSignal": {
@@ -74535,7 +74654,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Override the type of the returned \`data\` field in the response."
+          "shortText": "Override the type of the returned \`data\` field in the response.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\n// Merge with existing types (default behavior)\\nconst query = supabase\\n  .from('users')\\n  .select()\\n  .overrideTypes<{ custom_field: string }>()\\n\\n// Replace existing types completely\\nconst replaceQuery = supabase\\n  .from('users')\\n  .select()\\n  .overrideTypes<{ id: number; name: string }, { merge: false }>()\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/postgrest-js.PostgrestFilterBuilder.range": {
@@ -75366,7 +75492,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a query builder scoped to a Postgres table or view."
+          "shortText": "Creates a query builder scoped to a Postgres table or view.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport PostgrestQueryBuilder from '@supabase/postgrest-js'\\n\\nconst query = new PostgrestQueryBuilder(\\n  new URL('https://xyzcompany.supabase.co/rest/v1/users'),\\n  { headers: { apikey: 'public-anon-key' } }\\n)\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/postgrest-js.PostgrestQueryBuilder.delete": {
@@ -75944,7 +76077,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a builder configured for a specific PostgREST request."
+          "shortText": "Creates a builder configured for a specific PostgREST request.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport PostgrestQueryBuilder from '@supabase/postgrest-js'\\n\\nconst builder = new PostgrestQueryBuilder(\\n  new URL('https://xyzcompany.supabase.co/rest/v1/users'),\\n  { headers: new Headers({ apikey: 'public-anon-key' }) }\\n)\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/postgrest-js.PostgrestTransformBuilder.abortSignal": {
@@ -76413,7 +76553,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Override the type of the returned \`data\` field in the response."
+          "shortText": "Override the type of the returned \`data\` field in the response.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\n// Merge with existing types (default behavior)\\nconst query = supabase\\n  .from('users')\\n  .select()\\n  .overrideTypes<{ custom_field: string }>()\\n\\n// Replace existing types completely\\nconst replaceQuery = supabase\\n  .from('users')\\n  .select()\\n  .overrideTypes<{ id: number; name: string }, { merge: false }>()\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/postgrest-js.PostgrestTransformBuilder.range": {
@@ -76900,7 +77047,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a channel that can broadcast messages, sync presence, and listen to Postgres changes.\\n\\nThe topic determines which realtime stream you are subscribing to. Config options let you\\nenable acknowledgement for broadcasts, presence tracking, or private channels."
+          "shortText": "Creates a channel that can broadcast messages, sync presence, and listen to Postgres changes.\\n\\nThe topic determines which realtime stream you are subscribing to. Config options let you\\nenable acknowledgement for broadcasts, presence tracking, or private channels.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport RealtimeClient from '@supabase/realtime-js'\\n\\nconst client = new RealtimeClient('https://xyzcompany.supabase.co/realtime/v1', {\\n  params: { apikey: 'public-anon-key' },\\n})\\nconst channel = new RealtimeChannel('realtime:public:messages', { config: {} }, client)\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/realtime-js.RealtimePresence.constructor": {
@@ -76935,7 +77089,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a Presence helper that keeps the local presence state in sync with the server."
+          "shortText": "Creates a Presence helper that keeps the local presence state in sync with the server.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nconst presence = new RealtimePresence(channel)\\n\\nchannel.on('presence', ({ event, key }) => {\\n  console.log(\`Presence \${event} on \${key}\`)\\n})\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/realtime-js.RealtimeClient.constructor": {
@@ -77153,7 +77314,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Initializes the Socket."
+          "shortText": "Initializes the Socket.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport RealtimeClient from '@supabase/realtime-js'\\n\\nconst client = new RealtimeClient('https://xyzcompany.supabase.co/realtime/v1', {\\n  params: { apikey: 'public-anon-key' },\\n})\\nclient.connect()\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/realtime-js.RealtimeClient.channel": {
@@ -79607,7 +79775,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a WebSocket using the detected constructor."
+          "shortText": "Creates a WebSocket using the detected constructor.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nconst socket = WebSocketFactory.createWebSocket('wss://realtime.supabase.co/socket')\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/realtime-js.WebSocketFactory.getWebSocketConstructor": {
@@ -79663,7 +79838,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Returns the best available WebSocket constructor for the current runtime."
+          "shortText": "Returns the best available WebSocket constructor for the current runtime.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nconst WS = WebSocketFactory.getWebSocketConstructor()\\nconst socket = new WS('wss://realtime.supabase.co/socket')\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/realtime-js.WebSocketFactory.isWebSocketSupported": {
@@ -79676,7 +79858,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Detects whether the runtime can establish WebSocket connections."
+          "shortText": "Detects whether the runtime can establish WebSocket connections.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nif (!WebSocketFactory.isWebSocketSupported()) {\\n  console.warn('Falling back to long polling')\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/realtime-js.WebSocketLike.addEventListener": {
@@ -80267,7 +80456,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a client for Storage buckets, files, analytics, and vectors."
+          "shortText": "Creates a client for Storage buckets, files, analytics, and vectors.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport { StorageClient } from '@supabase/storage-js'\\n\\nconst storage = new StorageClient('https://xyzcompany.supabase.co/storage/v1', {\\n  apikey: 'public-anon-key',\\n})\\nconst avatars = storage.from('avatars')\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.StorageClient.createBucket": {
@@ -80416,7 +80612,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a new Storage bucket"
+          "shortText": "Creates a new Storage bucket",
+          "examples": [
+            {
+              "id": "create-bucket",
+              "name": "Create bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .createBucket('avatars', {\\n    public: false,\\n    allowedMimeTypes: ['image/png'],\\n    fileSizeLimit: 1024\\n  })\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"name\\": \\"avatars\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.StorageClient.deleteBucket": {
@@ -80491,7 +80695,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Deletes an existing bucket. A bucket can't be deleted with existing objects inside it.\\nYou must first \`empty()\` the bucket."
+          "shortText": "Deletes an existing bucket. A bucket can't be deleted with existing objects inside it.\\nYou must first \`empty()\` the bucket.",
+          "examples": [
+            {
+              "id": "delete-bucket",
+              "name": "Delete bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .deleteBucket('avatars')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"message\\": \\"Successfully deleted\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.StorageClient.emptyBucket": {
@@ -80566,7 +80778,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Removes all objects inside a single bucket."
+          "shortText": "Removes all objects inside a single bucket.",
+          "examples": [
+            {
+              "id": "empty-bucket",
+              "name": "Empty bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .emptyBucket('avatars')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"message\\": \\"Successfully emptied\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.StorageClient.from": {
@@ -80590,7 +80810,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Perform file operation in a bucket."
+          "shortText": "Perform file operation in a bucket.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst avatars = storage.from('avatars')\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.StorageClient.getBucket": {
@@ -80738,7 +80965,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Retrieves the details of an existing Storage bucket."
+          "shortText": "Retrieves the details of an existing Storage bucket.",
+          "examples": [
+            {
+              "id": "get-bucket",
+              "name": "Get bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .getBucket('avatars')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"id\\": \\"avatars\\",\\n    \\"name\\": \\"avatars\\",\\n    \\"owner\\": \\"\\",\\n    \\"public\\": false,\\n    \\"file_size_limit\\": 1024,\\n    \\"allowed_mime_types\\": [\\n      \\"image/png\\"\\n    ],\\n    \\"created_at\\": \\"2024-05-22T22:26:05.100Z\\",\\n    \\"updated_at\\": \\"2024-05-22T22:26:05.100Z\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.StorageClient.listBuckets": {
@@ -80818,7 +81053,10 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                 }
               ]
             },
-            "isOptional": true
+            "isOptional": true,
+            "comment": {
+              "shortText": "Query parameters for listing buckets"
+            }
           }
         ],
         "ret": {
@@ -80955,7 +81193,19 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Retrieves the details of all Storage buckets within an existing project."
+          "shortText": "Retrieves the details of all Storage buckets within an existing project.",
+          "examples": [
+            {
+              "id": "list-buckets",
+              "name": "List buckets",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .listBuckets()\\n\`\`\`"
+            },
+            {
+              "id": "list-buckets-with-options",
+              "name": "List buckets with options",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .listBuckets({\\n    limit: 10,\\n    offset: 0,\\n    sortColumn: 'created_at',\\n    sortOrder: 'desc',\\n    search: 'prod'\\n  })\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.StorageClient.throwOnError": {
@@ -81108,7 +81358,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Updates a Storage bucket"
+          "shortText": "Updates a Storage bucket",
+          "examples": [
+            {
+              "id": "update-bucket",
+              "name": "Update bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .updateBucket('avatars', {\\n    public: false,\\n    allowedMimeTypes: ['image/png'],\\n    fileSizeLimit: 1024\\n  })\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"message\\": \\"Successfully updated\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.StorageError.constructor": {
@@ -81340,6 +81598,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst client = new StorageVectorsClient(url, options)\\n\`\`\`"
+            }
           ]
         }
       },
@@ -81427,6 +81692,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst { data, error } = await client.createBucket('embeddings-prod')\\nif (error) {\\n  console.error('Failed to create bucket:', error.message)\\n}\\n\`\`\`"
             }
           ]
         }
@@ -81516,6 +81788,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\n// Delete all indexes first, then delete bucket\\nconst { error } = await client.deleteBucket('old-bucket')\\nif (error?.statusCode === 'S3VectorBucketNotEmpty') {\\n  console.error('Must delete all indexes first')\\n}\\n\`\`\`"
+            }
           ]
         }
       },
@@ -81545,6 +81824,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst bucket = client.bucket('embeddings-prod')\\n\\n// Create an index in this bucket\\nawait bucket.createIndex({\\n  indexName: 'documents-openai',\\n  dataType: 'float32',\\n  dimension: 1536,\\n  distanceMetric: 'cosine'\\n})\\n\\n// List indexes in this bucket\\nconst { data } = await bucket.listIndexes()\\n\`\`\`"
             }
           ]
         }
@@ -81633,6 +81919,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst { data, error } = await client.getBucket('embeddings-prod')\\nif (data) {\\n  console.log('Bucket created at:', new Date(data.vectorBucket.creationTime! * 1000))\\n}\\n\`\`\`"
             }
           ]
         }
@@ -81757,6 +82050,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\n// List all buckets with prefix 'prod-'\\nconst { data, error } = await client.listBuckets({ prefix: 'prod-' })\\nif (data) {\\n  console.log('Found buckets:', data.buckets.length)\\n  // Fetch next page if available\\n  if (data.nextToken) {\\n    const next = await client.listBuckets({ nextToken: data.nextToken })\\n  }\\n}\\n\`\`\`"
+            }
           ]
         }
       },
@@ -81775,6 +82075,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst client = new VectorBucketApi(url, headers)\\nclient.throwOnError()\\nconst { data } = await client.createBucket('my-bucket') // throws on error\\n\`\`\`"
             }
           ]
         }
@@ -81915,6 +82222,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst client = new VectorBucketApi(url, headers)\\n\`\`\`"
+            }
           ]
         }
       },
@@ -82002,6 +82316,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst { data, error } = await client.createBucket('embeddings-prod')\\nif (error) {\\n  console.error('Failed to create bucket:', error.message)\\n}\\n\`\`\`"
             }
           ]
         }
@@ -82091,6 +82412,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\n// Delete all indexes first, then delete bucket\\nconst { error } = await client.deleteBucket('old-bucket')\\nif (error?.statusCode === 'S3VectorBucketNotEmpty') {\\n  console.error('Must delete all indexes first')\\n}\\n\`\`\`"
+            }
           ]
         }
       },
@@ -82178,6 +82506,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst { data, error } = await client.getBucket('embeddings-prod')\\nif (data) {\\n  console.log('Bucket created at:', new Date(data.vectorBucket.creationTime! * 1000))\\n}\\n\`\`\`"
             }
           ]
         }
@@ -82302,6 +82637,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\n// List all buckets with prefix 'prod-'\\nconst { data, error } = await client.listBuckets({ prefix: 'prod-' })\\nif (data) {\\n  console.log('Found buckets:', data.buckets.length)\\n  // Fetch next page if available\\n  if (data.nextToken) {\\n    const next = await client.listBuckets({ nextToken: data.nextToken })\\n  }\\n}\\n\`\`\`"
+            }
           ]
         }
       },
@@ -82320,6 +82662,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst client = new VectorBucketApi(url, headers)\\nclient.throwOnError()\\nconst { data } = await client.createBucket('my-bucket') // throws on error\\n\`\`\`"
             }
           ]
         }
@@ -82415,6 +82764,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst bucket = client.bucket('embeddings-prod')\\n\`\`\`"
+            }
           ]
         }
       },
@@ -82502,6 +82858,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst bucket = client.bucket('embeddings-prod')\\nawait bucket.createIndex({\\n  indexName: 'documents-openai',\\n  dataType: 'float32',\\n  dimension: 1536,\\n  distanceMetric: 'cosine',\\n  metadataConfiguration: {\\n    nonFilterableMetadataKeys: ['raw_text']\\n  }\\n})\\n\`\`\`"
             }
           ]
         }
@@ -82591,6 +82954,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst bucket = client.bucket('embeddings-prod')\\nawait bucket.deleteIndex('old-index')\\n\`\`\`"
+            }
           ]
         }
       },
@@ -82679,6 +83049,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst bucket = client.bucket('embeddings-prod')\\nconst { data } = await bucket.getIndex('documents-openai')\\nconsole.log('Dimension:', data?.index.dimension)\\n\`\`\`"
+            }
           ]
         }
       },
@@ -82708,6 +83085,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst index = client.bucket('embeddings-prod').index('documents-openai')\\n\\n// Insert vectors\\nawait index.putVectors({\\n  vectors: [\\n    { key: 'doc-1', data: { float32: [...] }, metadata: { title: 'Intro' } }\\n  ]\\n})\\n\\n// Query similar vectors\\nconst { data } = await index.queryVectors({\\n  queryVector: { float32: [...] },\\n  topK: 5\\n})\\n\`\`\`"
             }
           ]
         }
@@ -82797,6 +83181,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst bucket = client.bucket('embeddings-prod')\\nconst { data } = await bucket.listIndexes({ prefix: 'documents-' })\\n\`\`\`"
+            }
           ]
         }
       },
@@ -82815,6 +83206,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst client = new VectorIndexApi(url, headers)\\nclient.throwOnError()\\nconst { data } = await client.createIndex(options) // throws on error\\n\`\`\`"
             }
           ]
         }
@@ -82911,6 +83309,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst client = new VectorDataApi(url, headers)\\n\`\`\`"
             }
           ]
         }
@@ -83034,6 +83439,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst { error } = await client.deleteVectors({\\n  vectorBucketName: 'embeddings-prod',\\n  indexName: 'documents-openai-small',\\n  keys: ['doc-1', 'doc-2', 'doc-3']\\n})\\nif (!error) {\\n  console.log('Vectors deleted successfully')\\n}\\n\`\`\`"
             }
           ]
         }
@@ -83179,6 +83591,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst { data, error } = await client.getVectors({\\n  vectorBucketName: 'embeddings-prod',\\n  indexName: 'documents-openai-small',\\n  keys: ['doc-1', 'doc-2', 'doc-3'],\\n  returnData: false,     // Don't return embeddings\\n  returnMetadata: true   // Return metadata only\\n})\\nif (data) {\\n  data.vectors.forEach(v => console.log(v.key, v.metadata))\\n}\\n\`\`\`"
             }
           ]
         }
@@ -83355,6 +83774,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\n// Simple pagination\\nlet nextToken: string | undefined\\ndo {\\n  const { data, error } = await client.listVectors({\\n    vectorBucketName: 'embeddings-prod',\\n    indexName: 'documents-openai-small',\\n    maxResults: 500,\\n    nextToken,\\n    returnMetadata: true\\n  })\\n  if (error) break\\n  console.log('Batch:', data.vectors.length)\\n  nextToken = data.nextToken\\n} while (nextToken)\\n\\n// Parallel scanning (4 concurrent workers)\\nconst workers = [0, 1, 2, 3].map(async (segmentIndex) => {\\n  const { data } = await client.listVectors({\\n    vectorBucketName: 'embeddings-prod',\\n    indexName: 'documents-openai-small',\\n    segmentCount: 4,\\n    segmentIndex,\\n    returnMetadata: true\\n  })\\n  return data?.vectors || []\\n})\\nconst results = await Promise.all(workers)\\n\`\`\`"
             }
           ]
         }
@@ -83534,6 +83960,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst { data, error } = await client.putVectors({\\n  vectorBucketName: 'embeddings-prod',\\n  indexName: 'documents-openai-small',\\n  vectors: [\\n    {\\n      key: 'doc-1',\\n      data: { float32: [0.1, 0.2, 0.3, ...] }, // 1536 dimensions\\n      metadata: { title: 'Introduction', page: 1 }\\n    },\\n    {\\n      key: 'doc-2',\\n      data: { float32: [0.4, 0.5, 0.6, ...] },\\n      metadata: { title: 'Conclusion', page: 42 }\\n    }\\n  ]\\n})\\n\`\`\`"
             }
           ]
         }
@@ -83722,6 +84155,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\n// Semantic search with filtering\\nconst { data, error } = await client.queryVectors({\\n  vectorBucketName: 'embeddings-prod',\\n  indexName: 'documents-openai-small',\\n  queryVector: { float32: [0.1, 0.2, 0.3, ...] }, // 1536 dimensions\\n  topK: 5,\\n  filter: {\\n    category: 'technical',\\n    published: true\\n  },\\n  returnDistance: true,\\n  returnMetadata: true\\n})\\nif (data) {\\n  data.matches.forEach(match => {\\n    console.log(\`\${match.key}: distance=\${match.distance}\`)\\n    console.log('Metadata:', match.metadata)\\n  })\\n}\\n\`\`\`"
+            }
           ]
         }
       },
@@ -83740,6 +84180,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst client = new VectorDataApi(url, headers)\\nclient.throwOnError()\\nconst { data } = await client.putVectors(options) // throws on error\\n\`\`\`"
             }
           ]
         }
@@ -83836,6 +84283,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst client = new VectorIndexApi(url, headers)\\n\`\`\`"
             }
           ]
         }
@@ -84054,6 +84508,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst { data, error } = await client.createIndex({\\n  vectorBucketName: 'embeddings-prod',\\n  indexName: 'documents-openai-small',\\n  dataType: 'float32',\\n  dimension: 1536,\\n  distanceMetric: 'cosine',\\n  metadataConfiguration: {\\n    nonFilterableMetadataKeys: ['raw_text', 'internal_id']\\n  }\\n})\\n\`\`\`"
+            }
           ]
         }
       },
@@ -84152,6 +84613,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\n// Delete an index and all its vectors\\nconst { error } = await client.deleteIndex('embeddings-prod', 'old-index')\\nif (!error) {\\n  console.log('Index deleted successfully')\\n}\\n\`\`\`"
+            }
           ]
         }
       },
@@ -84249,6 +84717,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst { data, error } = await client.getIndex('embeddings-prod', 'documents-openai-small')\\nif (data) {\\n  console.log('Index dimension:', data.index.dimension)\\n  console.log('Distance metric:', data.index.distanceMetric)\\n}\\n\`\`\`"
             }
           ]
         }
@@ -84383,6 +84858,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\n// List all indexes in a bucket\\nconst { data, error } = await client.listIndexes({\\n  vectorBucketName: 'embeddings-prod',\\n  prefix: 'documents-'\\n})\\nif (data) {\\n  console.log('Found indexes:', data.indexes.map(i => i.indexName))\\n  // Fetch next page if available\\n  if (data.nextToken) {\\n    const next = await client.listIndexes({\\n      vectorBucketName: 'embeddings-prod',\\n      nextToken: data.nextToken\\n    })\\n  }\\n}\\n\`\`\`"
+            }
           ]
         }
       },
@@ -84401,6 +84883,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst client = new VectorIndexApi(url, headers)\\nclient.throwOnError()\\nconst { data } = await client.createIndex(options) // throws on error\\n\`\`\`"
             }
           ]
         }
@@ -84503,6 +84992,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst index = client.bucket('embeddings-prod').index('documents-openai')\\n\`\`\`"
+            }
           ]
         }
       },
@@ -84590,6 +85086,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst index = client.bucket('embeddings-prod').index('documents-openai')\\nawait index.deleteVectors({\\n  keys: ['doc-1', 'doc-2', 'doc-3']\\n})\\n\`\`\`"
             }
           ]
         }
@@ -84679,6 +85182,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst index = client.bucket('embeddings-prod').index('documents-openai')\\nconst { data } = await index.getVectors({\\n  keys: ['doc-1', 'doc-2'],\\n  returnMetadata: true\\n})\\n\`\`\`"
+            }
           ]
         }
       },
@@ -84766,6 +85276,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst index = client.bucket('embeddings-prod').index('documents-openai')\\nconst { data } = await index.listVectors({\\n  maxResults: 500,\\n  returnMetadata: true\\n})\\n\`\`\`"
             }
           ]
         }
@@ -84855,6 +85372,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst index = client.bucket('embeddings-prod').index('documents-openai')\\nawait index.putVectors({\\n  vectors: [\\n    {\\n      key: 'doc-1',\\n      data: { float32: [0.1, 0.2, ...] },\\n      metadata: { title: 'Introduction', page: 1 }\\n    }\\n  ]\\n})\\n\`\`\`"
+            }
           ]
         }
       },
@@ -84943,6 +85467,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "tag": "alpha",
               "text": ""
             }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst index = client.bucket('embeddings-prod').index('documents-openai')\\nconst { data } = await index.queryVectors({\\n  queryVector: { float32: [0.1, 0.2, ...] },\\n  topK: 5,\\n  filter: { category: 'technical' },\\n  returnDistance: true,\\n  returnMetadata: true\\n})\\n\`\`\`"
+            }
           ]
         }
       },
@@ -84961,6 +85492,13 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             {
               "tag": "alpha",
               "text": ""
+            }
+          ],
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst client = new VectorDataApi(url, headers)\\nclient.throwOnError()\\nconst { data } = await client.putVectors(options) // throws on error\\n\`\`\`"
             }
           ]
         }
@@ -85444,7 +85982,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a new StorageAnalyticsApi instance"
+          "shortText": "Creates a new StorageAnalyticsApi instance",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`typescript\\nconst client = new StorageAnalyticsApi(url, headers)\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageAnalyticsApi.default.createBucket": {
@@ -85498,7 +86043,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                             }
                           },
                           {
-                            "name": "id",
+                            "name": "name",
                             "type": {
                               "type": "intrinsic",
                               "name": "string"
@@ -85563,14 +86108,22 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a new analytics bucket using Iceberg tables\\nAnalytics buckets are optimized for analytical queries and data processing"
+          "shortText": "Creates a new analytics bucket using Iceberg tables\\nAnalytics buckets are optimized for analytical queries and data processing",
+          "examples": [
+            {
+              "id": "create-analytics-bucket",
+              "name": "Create analytics bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .analytics\\n  .createBucket('analytics-data')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"name\\": \\"analytics-data\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageAnalyticsApi.default.deleteBucket": {
         "name": "@supabase/storage-js.packages/StorageAnalyticsApi.default.deleteBucket",
         "params": [
           {
-            "name": "bucketId",
+            "name": "bucketName",
             "type": {
               "type": "intrinsic",
               "name": "string"
@@ -85638,7 +86191,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Deletes an existing analytics bucket\\nA bucket can't be deleted with existing objects inside it\\nYou must first empty the bucket before deletion"
+          "shortText": "Deletes an existing analytics bucket\\nA bucket can't be deleted with existing objects inside it\\nYou must first empty the bucket before deletion",
+          "examples": [
+            {
+              "id": "delete-analytics-bucket",
+              "name": "Delete analytics bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .analytics\\n  .deleteBucket('analytics-data')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"message\\": \\"Successfully deleted\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageAnalyticsApi.default.listBuckets": {
@@ -85777,7 +86338,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                               }
                             },
                             {
-                              "name": "id",
+                              "name": "name",
                               "type": {
                                 "type": "intrinsic",
                                 "name": "string"
@@ -85843,7 +86404,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Retrieves the details of all Analytics Storage buckets within an existing project\\nOnly returns buckets of type 'ANALYTICS'"
+          "shortText": "Retrieves the details of all Analytics Storage buckets within an existing project\\nOnly returns buckets of type 'ANALYTICS'",
+          "examples": [
+            {
+              "id": "list-analytics-buckets",
+              "name": "List analytics buckets",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .analytics\\n  .listBuckets({\\n    limit: 10,\\n    offset: 0,\\n    sortColumn: 'created_at',\\n    sortOrder: 'desc'\\n  })\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": [\\n    {\\n      \\"id\\": \\"analytics-data\\",\\n      \\"name\\": \\"analytics-data\\",\\n      \\"type\\": \\"ANALYTICS\\",\\n      \\"created_at\\": \\"2024-05-22T22:26:05.100Z\\",\\n      \\"updated_at\\": \\"2024-05-22T22:26:05.100Z\\"\\n    }\\n  ],\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageAnalyticsApi.default.throwOnError": {
@@ -86101,7 +86670,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a new Storage bucket"
+          "shortText": "Creates a new Storage bucket",
+          "examples": [
+            {
+              "id": "create-bucket",
+              "name": "Create bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .createBucket('avatars', {\\n    public: false,\\n    allowedMimeTypes: ['image/png'],\\n    fileSizeLimit: 1024\\n  })\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"name\\": \\"avatars\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageBucketApi.default.deleteBucket": {
@@ -86176,7 +86753,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Deletes an existing bucket. A bucket can't be deleted with existing objects inside it.\\nYou must first \`empty()\` the bucket."
+          "shortText": "Deletes an existing bucket. A bucket can't be deleted with existing objects inside it.\\nYou must first \`empty()\` the bucket.",
+          "examples": [
+            {
+              "id": "delete-bucket",
+              "name": "Delete bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .deleteBucket('avatars')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"message\\": \\"Successfully deleted\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageBucketApi.default.emptyBucket": {
@@ -86251,7 +86836,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Removes all objects inside a single bucket."
+          "shortText": "Removes all objects inside a single bucket.",
+          "examples": [
+            {
+              "id": "empty-bucket",
+              "name": "Empty bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .emptyBucket('avatars')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"message\\": \\"Successfully emptied\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageBucketApi.default.getBucket": {
@@ -86399,7 +86992,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Retrieves the details of an existing Storage bucket."
+          "shortText": "Retrieves the details of an existing Storage bucket.",
+          "examples": [
+            {
+              "id": "get-bucket",
+              "name": "Get bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .getBucket('avatars')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"id\\": \\"avatars\\",\\n    \\"name\\": \\"avatars\\",\\n    \\"owner\\": \\"\\",\\n    \\"public\\": false,\\n    \\"file_size_limit\\": 1024,\\n    \\"allowed_mime_types\\": [\\n      \\"image/png\\"\\n    ],\\n    \\"created_at\\": \\"2024-05-22T22:26:05.100Z\\",\\n    \\"updated_at\\": \\"2024-05-22T22:26:05.100Z\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageBucketApi.default.listBuckets": {
@@ -86479,7 +87080,10 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                 }
               ]
             },
-            "isOptional": true
+            "isOptional": true,
+            "comment": {
+              "shortText": "Query parameters for listing buckets"
+            }
           }
         ],
         "ret": {
@@ -86616,7 +87220,19 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Retrieves the details of all Storage buckets within an existing project."
+          "shortText": "Retrieves the details of all Storage buckets within an existing project.",
+          "examples": [
+            {
+              "id": "list-buckets",
+              "name": "List buckets",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .listBuckets()\\n\`\`\`"
+            },
+            {
+              "id": "list-buckets-with-options",
+              "name": "List buckets with options",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .listBuckets({\\n    limit: 10,\\n    offset: 0,\\n    sortColumn: 'created_at',\\n    sortOrder: 'desc',\\n    search: 'prod'\\n  })\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageBucketApi.default.throwOnError": {
@@ -86769,7 +87385,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Updates a Storage bucket"
+          "shortText": "Updates a Storage bucket",
+          "examples": [
+            {
+              "id": "update-bucket",
+              "name": "Update bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .updateBucket('avatars', {\\n    public: false,\\n    allowedMimeTypes: ['image/png'],\\n    fileSizeLimit: 1024\\n  })\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"message\\": \\"Successfully updated\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.constructor": {
@@ -86961,7 +87585,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Copies an existing file to a new path in the same bucket."
+          "shortText": "Copies an existing file to a new path in the same bucket.",
+          "examples": [
+            {
+              "id": "copy-file",
+              "name": "Copy file",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .copy('public/avatar1.png', 'private/avatar2.png')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"path\\": \\"avatars/private/avatar2.png\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.createSignedUploadUrl": {
@@ -87069,7 +87701,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a signed upload URL.\\nSigned upload URLs can be used to upload files to the bucket without further authentication.\\nThey are valid for 2 hours."
+          "shortText": "Creates a signed upload URL.\\nSigned upload URLs can be used to upload files to the bucket without further authentication.\\nThey are valid for 2 hours.",
+          "examples": [
+            {
+              "id": "create-signed-upload-url",
+              "name": "Create Signed Upload URL",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .createSignedUploadUrl('folder/cat.jpg')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"signedUrl\\": \\"https://example.supabase.co/storage/v1/object/upload/sign/avatars/folder/cat.jpg?token=<TOKEN>\\",\\n    \\"path\\": \\"folder/cat.jpg\\",\\n    \\"token\\": \\"<TOKEN>\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.createSignedUrl": {
@@ -87264,7 +87904,25 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a signed URL. Use a signed URL to share a file for a fixed amount of time."
+          "shortText": "Creates a signed URL. Use a signed URL to share a file for a fixed amount of time.",
+          "examples": [
+            {
+              "id": "create-signed-url",
+              "name": "Create Signed URL",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .createSignedUrl('folder/avatar1.png', 60)\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"signedUrl\\": \\"https://example.supabase.co/storage/v1/object/sign/avatars/folder/avatar1.png?token=<TOKEN>\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            },
+            {
+              "id": "create-a-signed-url-for-an-asset-with-transformations",
+              "name": "Create a signed URL for an asset with transformations",
+              "code": "\`\`\`js\\nconst { data } = await supabase\\n  .storage\\n  .from('avatars')\\n  .createSignedUrl('folder/avatar1.png', 60, {\\n    transform: {\\n      width: 100,\\n      height: 100,\\n    }\\n  })\\n\`\`\`"
+            },
+            {
+              "id": "create-a-signed-url-which-triggers-the-download-of-the-asset",
+              "name": "Create a signed URL which triggers the download of the asset",
+              "code": "\`\`\`js\\nconst { data } = await supabase\\n  .storage\\n  .from('avatars')\\n  .createSignedUrl('folder/avatar1.png', 60, {\\n    download: true,\\n  })\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.createSignedUrls": {
@@ -87415,7 +88073,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates multiple signed URLs. Use a signed URL to share a file for a fixed amount of time."
+          "shortText": "Creates multiple signed URLs. Use a signed URL to share a file for a fixed amount of time.",
+          "examples": [
+            {
+              "id": "create-signed-urls",
+              "name": "Create Signed URLs",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .createSignedUrls(['folder/avatar1.png', 'folder/avatar2.png'], 60)\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": [\\n    {\\n      \\"error\\": null,\\n      \\"path\\": \\"folder/avatar1.png\\",\\n      \\"signedURL\\": \\"/object/sign/avatars/folder/avatar1.png?token=<TOKEN>\\",\\n      \\"signedUrl\\": \\"https://example.supabase.co/storage/v1/object/sign/avatars/folder/avatar1.png?token=<TOKEN>\\"\\n    },\\n    {\\n      \\"error\\": null,\\n      \\"path\\": \\"folder/avatar2.png\\",\\n      \\"signedURL\\": \\"/object/sign/avatars/folder/avatar2.png?token=<TOKEN>\\",\\n      \\"signedUrl\\": \\"https://example.supabase.co/storage/v1/object/sign/avatars/folder/avatar2.png?token=<TOKEN>\\"\\n    }\\n  ],\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.download": {
@@ -87447,7 +88113,20 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Downloads a file from a private bucket. For public buckets, make a request to the URL returned from \`getPublicUrl\` instead."
+          "shortText": "Downloads a file from a private bucket. For public buckets, make a request to the URL returned from \`getPublicUrl\` instead.",
+          "examples": [
+            {
+              "id": "download-file",
+              "name": "Download file",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .download('folder/avatar1.png')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": <BLOB>,\\n  \\"error\\": null\\n}\\n\`\`\`"
+            },
+            {
+              "id": "download-file-with-transformations",
+              "name": "Download file with transformations",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .download('folder/avatar1.png', {\\n    transform: {\\n      width: 100,\\n      height: 100,\\n      quality: 80\\n    }\\n  })\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.exists": {
@@ -87458,6 +88137,9 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             "type": {
               "type": "intrinsic",
               "name": "string"
+            },
+            "comment": {
+              "shortText": "The file path, including the file name. For example \`folder/image.png\`."
             }
           }
         ],
@@ -87511,7 +88193,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Checks the existence of a file."
+          "shortText": "Checks the existence of a file.",
+          "examples": [
+            {
+              "id": "check-file-existence",
+              "name": "Check file existence",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .exists('folder/avatar1.png')\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.getPublicUrl": {
@@ -87661,7 +88350,25 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "A simple convenience function to get the URL for an asset in a public bucket. If you do not want to use this function, you can construct the public URL by concatenating the bucket URL with the path to the asset.\\nThis function does not verify if the bucket is public. If a public URL is created for a bucket which is not public, you will not be able to download the asset."
+          "shortText": "A simple convenience function to get the URL for an asset in a public bucket. If you do not want to use this function, you can construct the public URL by concatenating the bucket URL with the path to the asset.\\nThis function does not verify if the bucket is public. If a public URL is created for a bucket which is not public, you will not be able to download the asset.",
+          "examples": [
+            {
+              "id": "returns-the-url-for-an-asset-in-a-public-bucket",
+              "name": "Returns the URL for an asset in a public bucket",
+              "code": "\`\`\`js\\nconst { data } = supabase\\n  .storage\\n  .from('public-bucket')\\n  .getPublicUrl('folder/avatar1.png')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"publicUrl\\": \\"https://example.supabase.co/storage/v1/object/public/public-bucket/folder/avatar1.png\\"\\n  }\\n}\\n\`\`\`"
+            },
+            {
+              "id": "returns-the-url-for-an-asset-in-a-public-bucket-with-transformations",
+              "name": "Returns the URL for an asset in a public bucket with transformations",
+              "code": "\`\`\`js\\nconst { data } = supabase\\n  .storage\\n  .from('public-bucket')\\n  .getPublicUrl('folder/avatar1.png', {\\n    transform: {\\n      width: 100,\\n      height: 100,\\n    }\\n  })\\n\`\`\`"
+            },
+            {
+              "id": "returns-the-url-which-triggers-the-download-of-an-asset-in-a-public-bucket",
+              "name": "Returns the URL which triggers the download of an asset in a public bucket",
+              "code": "\`\`\`js\\nconst { data } = supabase\\n  .storage\\n  .from('public-bucket')\\n  .getPublicUrl('folder/avatar1.png', {\\n    download: true,\\n  })\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.info": {
@@ -87672,6 +88379,9 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
             "type": {
               "type": "intrinsic",
               "name": "string"
+            },
+            "comment": {
+              "shortText": "The file path, including the file name. For example \`folder/image.png\`."
             }
           }
         ],
@@ -87725,7 +88435,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Retrieves the details of an existing file."
+          "shortText": "Retrieves the details of an existing file.",
+          "examples": [
+            {
+              "id": "get-file-info",
+              "name": "Get file info",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .info('folder/avatar1.png')\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.list": {
@@ -87836,7 +88553,10 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                 }
               ]
             },
-            "isOptional": true
+            "isOptional": true,
+            "comment": {
+              "shortText": "Optional fetch parameters including signal for cancellation"
+            }
           }
         ],
         "ret": {
@@ -88049,7 +88769,20 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Lists all the files and folders within a path of the bucket."
+          "shortText": "Lists all the files and folders within a path of the bucket.",
+          "examples": [
+            {
+              "id": "list-files-in-a-bucket",
+              "name": "List files in a bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .list('folder', {\\n    limit: 100,\\n    offset: 0,\\n    sortBy: { column: 'name', order: 'asc' },\\n  })\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": [\\n    {\\n      \\"name\\": \\"avatar1.png\\",\\n      \\"id\\": \\"e668cf7f-821b-4a2f-9dce-7dfa5dd1cfd2\\",\\n      \\"updated_at\\": \\"2024-05-22T23:06:05.580Z\\",\\n      \\"created_at\\": \\"2024-05-22T23:04:34.443Z\\",\\n      \\"last_accessed_at\\": \\"2024-05-22T23:04:34.443Z\\",\\n      \\"metadata\\": {\\n        \\"eTag\\": \\"\\\\\\"c5e8c553235d9af30ef4f6e280790b92\\\\\\"\\",\\n        \\"size\\": 32175,\\n        \\"mimetype\\": \\"image/png\\",\\n        \\"cacheControl\\": \\"max-age=3600\\",\\n        \\"lastModified\\": \\"2024-05-22T23:06:05.574Z\\",\\n        \\"contentLength\\": 32175,\\n        \\"httpStatusCode\\": 200\\n      }\\n    }\\n  ],\\n  \\"error\\": null\\n}\\n\`\`\`"
+            },
+            {
+              "id": "search-files-in-a-bucket",
+              "name": "Search files in a bucket",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .list('folder', {\\n    limit: 100,\\n    offset: 0,\\n    sortBy: { column: 'name', order: 'asc' },\\n    search: 'jon'\\n  })\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.listV2": {
@@ -88445,7 +89178,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Moves an existing file to a new path in the same bucket."
+          "shortText": "Moves an existing file to a new path in the same bucket.",
+          "examples": [
+            {
+              "id": "move-file",
+              "name": "Move file",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .move('public/avatar1.png', 'private/avatar2.png')\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"message\\": \\"Successfully moved\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.remove": {
@@ -88675,7 +89416,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Deletes files within the same bucket"
+          "shortText": "Deletes files within the same bucket",
+          "examples": [
+            {
+              "id": "delete-file",
+              "name": "Delete file",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .remove(['folder/avatar1.png'])\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": [],\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.throwOnError": {
@@ -88863,7 +89612,10 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                 }
               ]
             },
-            "isOptional": true
+            "isOptional": true,
+            "comment": {
+              "shortText": "Optional file upload options including cacheControl, contentType, upsert, and metadata."
+            }
           }
         ],
         "ret": {
@@ -88938,7 +89690,20 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Replaces an existing file at the specified path with a new one."
+          "shortText": "Replaces an existing file at the specified path with a new one.",
+          "examples": [
+            {
+              "id": "update-file",
+              "name": "Update file",
+              "code": "\`\`\`js\\nconst avatarFile = event.target.files[0]\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .update('public/avatar1.png', avatarFile, {\\n    cacheControl: '3600',\\n    upsert: true\\n  })\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"path\\": \\"public/avatar1.png\\",\\n    \\"fullPath\\": \\"avatars/public/avatar1.png\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            },
+            {
+              "id": "update-file-using-arraybuffer-from-base64-file-data",
+              "name": "Update file using \`ArrayBuffer\` from base64 file data",
+              "code": "\`\`\`js\\nimport {decode} from 'base64-arraybuffer'\\n\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .update('public/avatar1.png', decode('base64FileData'), {\\n    contentType: 'image/png'\\n  })\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.upload": {
@@ -89054,7 +89819,10 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                 }
               ]
             },
-            "isOptional": true
+            "isOptional": true,
+            "comment": {
+              "shortText": "Optional file upload options including cacheControl, contentType, upsert, and metadata."
+            }
           }
         ],
         "ret": {
@@ -89129,7 +89897,20 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Uploads a file to an existing bucket."
+          "shortText": "Uploads a file to an existing bucket.",
+          "examples": [
+            {
+              "id": "upload-file",
+              "name": "Upload file",
+              "code": "\`\`\`js\\nconst avatarFile = event.target.files[0]\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .upload('public/avatar1.png', avatarFile, {\\n    cacheControl: '3600',\\n    upsert: false\\n  })\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"path\\": \\"public/avatar1.png\\",\\n    \\"fullPath\\": \\"avatars/public/avatar1.png\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            },
+            {
+              "id": "upload-file-using-arraybuffer-from-base64-file-data",
+              "name": "Upload file using \`ArrayBuffer\` from base64 file data",
+              "code": "\`\`\`js\\nimport { decode } from 'base64-arraybuffer'\\n\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .upload('public/avatar1.png', decode('base64FileData'), {\\n    contentType: 'image/png'\\n  })\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StorageFileApi.default.uploadToSignedUrl": {
@@ -89255,7 +90036,10 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                 }
               ]
             },
-            "isOptional": true
+            "isOptional": true,
+            "comment": {
+              "shortText": "Optional file upload options including cacheControl and contentType."
+            }
           }
         ],
         "ret": {
@@ -89323,7 +90107,15 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Upload a file with a token generated from \`createSignedUploadUrl\`."
+          "shortText": "Upload a file with a token generated from \`createSignedUploadUrl\`.",
+          "examples": [
+            {
+              "id": "upload-to-a-signed-url",
+              "name": "Upload to a signed URL",
+              "code": "\`\`\`js\\nconst { data, error } = await supabase\\n  .storage\\n  .from('avatars')\\n  .uploadToSignedUrl('folder/cat.jpg', 'token-from-createSignedUploadUrl', file)\\n\`\`\`",
+              "response": "\`\`\`json\\n{\\n  \\"data\\": {\\n    \\"path\\": \\"folder/cat.jpg\\",\\n    \\"fullPath\\": \\"avatars/folder/cat.jpg\\"\\n  },\\n  \\"error\\": null\\n}\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/storage-js.packages/StreamDownloadBuilder.default.constructor": {
@@ -89614,7 +90406,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a new Functions client bound to an Edge Functions URL."
+          "shortText": "Creates a new Functions client bound to an Edge Functions URL.",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nimport { FunctionsClient, FunctionRegion } from '@supabase/functions-js'\\n\\nconst functions = new FunctionsClient('https://xyzcompany.supabase.co/functions/v1', {\\n  headers: { apikey: 'public-anon-key' },\\n  region: FunctionRegion.UsEast1,\\n})\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/functions-js.FunctionsClient.invoke": {
@@ -89795,7 +90594,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Invokes a function"
+          "shortText": "Invokes a function",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nconst { data, error } = await functions.invoke('hello-world', {\\n  body: { name: 'Ada' },\\n})\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/functions-js.FunctionsClient.setAuth": {
@@ -89819,7 +90625,14 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Updates the authorization header"
+          "shortText": "Updates the authorization header",
+          "examples": [
+            {
+              "id": "example-1",
+              "name": "Example 1",
+              "code": "\`\`\`ts\\nfunctions.setAuth(session.access_token)\\n\`\`\`"
+            }
+          ]
         }
       },
       "@supabase/functions-js.FunctionsError.constructor": {

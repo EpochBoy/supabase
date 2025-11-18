@@ -481,12 +481,11 @@ async function FunctionSection({
       <div className="overflow-auto">
         {(() => {
           // Prefer YAML examples, fallback to TypeDoc examples
-          const yamlExamples = 'examples' in fn && Array.isArray(fn.examples) && fn.examples.length > 0
-            ? fn.examples
-            : []
-          const examples = yamlExamples.length > 0
-            ? yamlExamples
-            : (types?.comment?.examples || [])
+          const yamlExamples =
+            'examples' in fn && Array.isArray(fn.examples) && fn.examples.length > 0
+              ? fn.examples
+              : []
+          const examples = yamlExamples.length > 0 ? yamlExamples : types?.comment?.examples || []
 
           if (examples.length === 0) return null
 
