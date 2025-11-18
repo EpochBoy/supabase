@@ -47,6 +47,7 @@ interface Comment {
   shortText?: string
   text?: string
   tags?: Array<{ tag: string; text: string }>
+  examples?: Array<{ id: string; name: string; code: string }>
 }
 
 export interface FunctionParameterType {
@@ -204,6 +205,10 @@ interface CommentBlockTag {
    * An @ string, e.g., `@returns`
    */
   tag: string
+  /**
+   * Optional name for the tag, e.g., "Empty bucket" for @example tags
+   */
+  name?: string
   content: CommentKind[]
 }
 
@@ -223,6 +228,22 @@ function normalizeComment(original: TypedocComment | Comment | undefined): Comme
 
   if ('modifierTags' in original) {
     comment.tags = original.modifierTags.map((tag) => ({ tag: tag.replace(/^@/, ''), text: '' }))
+  }
+
+  // Extract @example tags from blockTags
+  if ('blockTags' in original && Array.isArray(original.blockTags)) {
+    const exampleTags = original.blockTags.filter((tag) => tag.tag === '@example')
+    if (exampleTags.length > 0) {
+      comment.examples = exampleTags.map((tag, index) => {
+        // Use the name if provided, otherwise generate a default name
+        const name = tag.name || `Example ${index + 1}`
+        // Convert name to kebab-case for id
+        const id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+        // Join content to get the code
+        const code = tag.content.map((part) => part.text).join('')
+        return { id, name, code }
+      })
+    }
   }
 
   return comment

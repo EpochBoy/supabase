@@ -7452,36 +7452,6 @@ functions:
         - `buckets` table permissions: `select`
         - `objects` table permissions: none
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: list-buckets
-        name: List buckets
-        isSpotlight: true
-        code: |
-          ```ts
-          const { data, error } = await supabase
-            .storage
-            .listBuckets()
-          ```
-        response: |
-          ```json
-          {
-            "data": [
-              {
-                "id": "avatars",
-                "name": "avatars",
-                "owner": "",
-                "public": false,
-                "file_size_limit": 1024,
-                "allowed_mime_types": [
-                  "image/png"
-                ],
-                "created_at": "2024-05-22T22:26:05.100Z",
-                "updated_at": "2024-05-22T22:26:05.100Z"
-              }
-            ],
-            "error": null
-          }
-          ```
 
   - id: get-bucket
     title: getBucket()
@@ -7491,34 +7461,6 @@ functions:
         - `buckets` table permissions: `select`
         - `objects` table permissions: none
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: get-bucket
-        name: Get bucket
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .getBucket('avatars')
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "id": "avatars",
-              "name": "avatars",
-              "owner": "",
-              "public": false,
-              "file_size_limit": 1024,
-              "allowed_mime_types": [
-                "image/png"
-              ],
-              "created_at": "2024-05-22T22:26:05.100Z",
-              "updated_at": "2024-05-22T22:26:05.100Z"
-            },
-            "error": null
-          }
-          ```
 
   - id: create-bucket
     title: createBucket()
@@ -7528,29 +7470,6 @@ functions:
         - `buckets` table permissions: `insert`
         - `objects` table permissions: none
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: create-bucket
-        name: Create bucket
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .createBucket('avatars', {
-              public: false,
-              allowedMimeTypes: ['image/png'],
-              fileSizeLimit: 1024
-            })
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "name": "avatars"
-            },
-            "error": null
-          }
-          ```
 
   - id: empty-bucket
     title: emptyBucket()
@@ -7560,25 +7479,7 @@ functions:
         - `buckets` table permissions: `select`
         - `objects` table permissions: `select` and `delete`
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: empty-bucket
-        name: Empty bucket
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .emptyBucket('avatars')
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "message": "Successfully emptied"
-            },
-            "error": null
-          }
-          ```
+
   - id: update-bucket
     title: updateBucket()
     $ref: '@supabase/storage-js.packages/StorageBucketApi.default.updateBucket'
@@ -7587,29 +7488,6 @@ functions:
         - `buckets` table permissions: `select` and `update`
         - `objects` table permissions: none
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: update-bucket
-        name: Update bucket
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .updateBucket('avatars', {
-              public: false,
-              allowedMimeTypes: ['image/png'],
-              fileSizeLimit: 1024
-            })
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "message": "Successfully updated"
-            },
-            "error": null
-          }
-          ```
 
   - id: delete-bucket
     title: deleteBucket()
@@ -7619,25 +7497,6 @@ functions:
         - `buckets` table permissions: `select` and `delete`
         - `objects` table permissions: none
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: delete-bucket
-        name: Delete bucket
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .deleteBucket('avatars')
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "message": "Successfully deleted"
-            },
-            "error": null
-          }
-          ```
 
   - id: analytics-buckets
     title: 'Overview'
@@ -7649,134 +7508,19 @@ functions:
     notes: |
       - Creates a new analytics bucket using Iceberg tables
       - Analytics buckets are optimized for analytical queries and data processing
-    examples:
-      - id: create-analytics-bucket
-        name: Create analytics bucket
-        isSpotlight: true
-        code: |
-          ```ts
-          const { data, error } = await supabase
-            .storage
-            .analytics
-            .createBucket('analytics-data')
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "name": "analytics-data"
-            },
-            "error": null
-          }
-          ```
-      - id: storage-js-storageanalyticsapi-createbucket-typedoc-example-1
-        name: Example 2
-        code: >-
-          ```typescript
 
-          const { data, error } = await
-          storage.analytics.createBucket('analytics-data')
-
-          if (error) {
-            console.error('Failed to create analytics bucket:', error.message)
-          } else {
-            console.log('Created bucket:', data.name)
-          }
-
-          ```
   - id: storage-js-storageanalyticsapi-listbuckets
     title: List analytics buckets
     $ref: '@supabase/storage-js.packages/StorageAnalyticsApi.default.listBuckets'
     notes: |
       - Retrieves the details of all Analytics Storage buckets within an existing project
       - Only returns buckets of type 'ANALYTICS'
-    examples:
-      - id: list-analytics-buckets
-        name: List analytics buckets
-        isSpotlight: true
-        code: |
-          ```ts
-          const { data, error } = await supabase
-            .storage
-            .analytics
-            .listBuckets({
-              limit: 10,
-              offset: 0,
-              sortColumn: 'created_at',
-              sortOrder: 'desc'
-            })
-          ```
-        response: |
-          ```json
-          {
-            "data": [
-              {
-                "id": "analytics-data",
-                "name": "analytics-data",
-                "type": "ANALYTICS",
-                "created_at": "2024-05-22T22:26:05.100Z",
-                "updated_at": "2024-05-22T22:26:05.100Z"
-              }
-            ],
-            "error": null
-          }
-          ```
-      - id: storage-js-storageanalyticsapi-listbuckets-typedoc-example-1
-        name: Example 2
-        code: |-
-          ```typescript
-          const { data, error } = await storage.analytics.listBuckets({
-            limit: 10,
-            offset: 0,
-            sortColumn: 'created_at',
-            sortOrder: 'desc',
-            search: 'analytics'
-          })
-          if (data) {
-            console.log('Found analytics buckets:', data.length)
-            data.forEach(bucket => console.log(`- ${bucket.name}`))
-          }
-          ```
+
   - id: storage-js-storageanalyticsapi-deletebucket
     title: Delete an analytics bucket
     $ref: '@supabase/storage-js.packages/StorageAnalyticsApi.default.deleteBucket'
     notes: |
       - Deletes an analytics bucket
-    examples:
-      - id: delete-analytics-bucket
-        name: Delete analytics bucket
-        isSpotlight: true
-        code: |
-          ```ts
-          const { data, error } = await supabase
-            .storage
-            .analytics
-            .deleteBucket('analytics-data')
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "message": "Successfully deleted"
-            },
-            "error": null
-          }
-          ```
-      - id: storage-js-storageanalyticsapi-deletebucket-typedoc-example-1
-        name: Example 2
-        code: >-
-          ```typescript
-
-          const { data, error } = await
-          analyticsApi.deleteBucket('old-analytics-bucket')
-
-          if (error) {
-            console.error('Failed to delete bucket:', error.message)
-          } else {
-            console.log('Bucket deleted successfully:', data.message)
-          }
-
-          ```
 
   - id: from-upload
     title: from.upload()
@@ -7787,43 +7531,6 @@ functions:
         - `objects` table permissions: only `insert` when you are uploading new files and `select`, `insert` and `update` when you are upserting files
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
       - For React Native, using either `Blob`, `File` or `FormData` does not work as intended. Upload file using `ArrayBuffer` from base64 file data instead, see example below.
-    examples:
-      - id: upload-file
-        name: Upload file
-        isSpotlight: true
-        code: |
-          ```js
-          const avatarFile = event.target.files[0]
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .upload('public/avatar1.png', avatarFile, {
-              cacheControl: '3600',
-              upsert: false
-            })
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "path": "public/avatar1.png",
-              "fullPath": "avatars/public/avatar1.png"
-            },
-            "error": null
-          }
-      - id: upload-file-using-arraybuffer-from-base64-file-data
-        name: Upload file using `ArrayBuffer` from base64 file data
-        code: |
-          ```js
-          import { decode } from 'base64-arraybuffer'
-
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .upload('public/avatar1.png', decode('base64FileData'), {
-              contentType: 'image/png'
-            })
-          ```
 
   - id: from-update
     title: from.update()
@@ -7834,44 +7541,6 @@ functions:
         - `objects` table permissions: `update` and `select`
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
       - For React Native, using either `Blob`, `File` or `FormData` does not work as intended. Update file using `ArrayBuffer` from base64 file data instead, see example below.
-    examples:
-      - id: update-file
-        name: Update file
-        isSpotlight: true
-        code: |
-          ```js
-          const avatarFile = event.target.files[0]
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .update('public/avatar1.png', avatarFile, {
-              cacheControl: '3600',
-              upsert: true
-            })
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "path": "public/avatar1.png",
-              "fullPath": "avatars/public/avatar1.png"
-            },
-            "error": null
-          }
-          ```
-      - id: update-file-using-arraybuffer-from-base64-file-data
-        name: Update file using `ArrayBuffer` from base64 file data
-        code: |
-          ```js
-          import {decode} from 'base64-arraybuffer'
-
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .update('public/avatar1.png', decode('base64FileData'), {
-              contentType: 'image/png'
-            })
-          ```
 
   - id: from-move
     title: from.move()
@@ -7881,26 +7550,6 @@ functions:
         - `buckets` table permissions: none
         - `objects` table permissions: `update` and `select`
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: move-file
-        name: Move file
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .move('public/avatar1.png', 'private/avatar2.png')
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "message": "Successfully moved"
-            },
-            "error": null
-          }
-          ```
 
   - id: from-copy
     title: from.copy()
@@ -7910,26 +7559,6 @@ functions:
         - `buckets` table permissions: none
         - `objects` table permissions: `insert` and `select`
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: copy-file
-        name: Copy file
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .copy('public/avatar1.png', 'private/avatar2.png')
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "path": "avatars/private/avatar2.png"
-            },
-            "error": null
-          }
-          ```
 
   - id: from-create-signed-url
     title: from.createSignedUrl()
@@ -7939,53 +7568,6 @@ functions:
         - `buckets` table permissions: none
         - `objects` table permissions: `select`
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: create-signed-url
-        name: Create Signed URL
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .createSignedUrl('folder/avatar1.png', 60)
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "signedUrl": "https://example.supabase.co/storage/v1/object/sign/avatars/folder/avatar1.png?token=<TOKEN>"
-            },
-            "error": null
-          }
-          ```
-      - id: create-signed-url-with-transformations
-        name: Create a signed URL for an asset with transformations
-        isSpotlight: true
-        code: |
-          ```js
-          const { data } = await supabase
-            .storage
-            .from('avatars')
-            .createSignedUrl('folder/avatar1.png', 60, {
-              transform: {
-                width: 100,
-                height: 100,
-              }
-            })
-          ```
-      - id: create-signed-url-with-download
-        name: Create a signed URL which triggers the download of the asset
-        isSpotlight: true
-        code: |
-          ```js
-          const { data } = await supabase
-            .storage
-            .from('avatars')
-            .createSignedUrl('folder/avatar1.png', 60, {
-              download: true,
-            })
-          ```
 
   - id: from-create-signed-urls
     title: from.createSignedUrls()
@@ -7995,37 +7577,6 @@ functions:
         - `buckets` table permissions: none
         - `objects` table permissions: `select`
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: create-signed-urls
-        name: Create Signed URLs
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .createSignedUrls(['folder/avatar1.png', 'folder/avatar2.png'], 60)
-          ```
-        response: |
-          ```json
-          {
-            "data": [
-              {
-                "error": null,
-                "path": "folder/avatar1.png",
-                "signedURL": "/object/sign/avatars/folder/avatar1.png?token=<TOKEN>",
-                "signedUrl": "https://example.supabase.co/storage/v1/object/sign/avatars/folder/avatar1.png?token=<TOKEN>"
-              },
-              {
-                "error": null,
-                "path": "folder/avatar2.png",
-                "signedURL": "/object/sign/avatars/folder/avatar2.png?token=<TOKEN>",
-                "signedUrl": "https://example.supabase.co/storage/v1/object/sign/avatars/folder/avatar2.png?token=<TOKEN>"
-              }
-            ],
-            "error": null
-          }
-          ```
 
   - id: from-create-signed-upload-url
     title: from.createSignedUploadUrl()
@@ -8035,28 +7586,6 @@ functions:
         - `buckets` table permissions: none
         - `objects` table permissions: `insert`
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: create-signed-upload-url
-        name: Create Signed Upload URL
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .createSignedUploadUrl('folder/cat.jpg')
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "signedUrl": "https://example.supabase.co/storage/v1/object/upload/sign/avatars/folder/cat.jpg?token=<TOKEN>",
-              "path": "folder/cat.jpg",
-              "token": "<TOKEN>"
-            },
-            "error": null
-          }
-          ```
 
   - id: from-upload-to-signed-url
     title: from.uploadToSignedUrl()
@@ -8066,27 +7595,6 @@ functions:
         - `buckets` table permissions: none
         - `objects` table permissions: none
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: upload-to-signed-url
-        name: Upload to a signed URL
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .uploadToSignedUrl('folder/cat.jpg', 'token-from-createSignedUploadUrl', file)
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "path": "folder/cat.jpg",
-              "fullPath": "avatars/folder/cat.jpg"
-            },
-            "error": null
-          }
-          ```
 
   - id: from-get-public-url
     title: from.getPublicUrl()
@@ -8097,52 +7605,6 @@ functions:
         - `buckets` table permissions: none
         - `objects` table permissions: none
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: returns-the-url-for-an-asset-in-a-public-bucket
-        name: Returns the URL for an asset in a public bucket
-        isSpotlight: true
-        code: |
-          ```js
-          const { data } = supabase
-            .storage
-            .from('public-bucket')
-            .getPublicUrl('folder/avatar1.png')
-          ```
-        response: |
-          ```json
-          {
-            "data": {
-              "publicUrl": "https://example.supabase.co/storage/v1/object/public/public-bucket/folder/avatar1.png"
-            }
-          }
-          ```
-      - id: transform-asset-in-public-bucket
-        name: Returns the URL for an asset in a public bucket with transformations
-        isSpotlight: true
-        code: |
-          ```js
-          const { data } = supabase
-            .storage
-            .from('public-bucket')
-            .getPublicUrl('folder/avatar1.png', {
-              transform: {
-                width: 100,
-                height: 100,
-              }
-            })
-          ```
-      - id: download-asset-in-public-bucket
-        name: Returns the URL which triggers the download of an asset in a public bucket
-        isSpotlight: true
-        code: |
-          ```js
-          const { data } = supabase
-            .storage
-            .from('public-bucket')
-            .getPublicUrl('folder/avatar1.png', {
-              download: true,
-            })
-          ```
 
   - id: from-download
     title: from.download()
@@ -8152,40 +7614,6 @@ functions:
         - `buckets` table permissions: none
         - `objects` table permissions: `select`
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: download-file
-        name: Download file
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .download('folder/avatar1.png')
-          ```
-        response: |
-          ```json
-          {
-            "data": <BLOB>,
-            "error": null
-          }
-          ```
-      - id: download-file-with-transformations
-        name: Download file with transformations
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .download('folder/avatar1.png', {
-              transform: {
-                width: 100,
-                height: 100,
-                quality: 80
-              }
-            })
-          ```
 
   - id: from-remove
     title: from.remove()
@@ -8195,24 +7623,6 @@ functions:
         - `buckets` table permissions: none
         - `objects` table permissions: `delete` and `select`
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: delete-file
-        name: Delete file
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .remove(['folder/avatar1.png'])
-          ```
-        response: |
-          ```json
-          {
-            "data": [],
-            "error": null
-          }
-          ```
 
   - id: from-list
     title: from.list()
@@ -8222,59 +7632,6 @@ functions:
         - `buckets` table permissions: none
         - `objects` table permissions: `select`
       - Refer to the [Storage guide](/docs/guides/storage/security/access-control) on how access control works
-    examples:
-      - id: list-files-in-a-bucket
-        name: List files in a bucket
-        isSpotlight: true
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .list('folder', {
-              limit: 100,
-              offset: 0,
-              sortBy: { column: 'name', order: 'asc' },
-            })
-          ```
-        response: |
-          ```json
-          {
-            "data": [
-              {
-                "name": "avatar1.png",
-                "id": "e668cf7f-821b-4a2f-9dce-7dfa5dd1cfd2",
-                "updated_at": "2024-05-22T23:06:05.580Z",
-                "created_at": "2024-05-22T23:04:34.443Z",
-                "last_accessed_at": "2024-05-22T23:04:34.443Z",
-                "metadata": {
-                  "eTag": "\"c5e8c553235d9af30ef4f6e280790b92\"",
-                  "size": 32175,
-                  "mimetype": "image/png",
-                  "cacheControl": "max-age=3600",
-                  "lastModified": "2024-05-22T23:06:05.574Z",
-                  "contentLength": 32175,
-                  "httpStatusCode": 200
-                }
-              }
-            ],
-            "error": null
-          }
-          ```
-      - id: search-files-in-a-bucket
-        name: Search files in a bucket
-        code: |
-          ```js
-          const { data, error } = await supabase
-            .storage
-            .from('avatars')
-            .list('folder', {
-              limit: 100,
-              offset: 0,
-              sortBy: { column: 'name', order: 'asc' },
-              search: 'jon'
-            })
-          ```
 
   - id: supabase-js-supabaseclient-channel
     title: SupabaseClient.channel()
@@ -8607,42 +7964,14 @@ functions:
   - id: storage-js-storageclient-constructor
     title: new StorageClient()
     $ref: '@supabase/storage-js.StorageClient.constructor'
-    examples:
-      - id: storage-js-storageclient-constructor-example-1
-        name: Example 1
-        code: |-
-          ```ts
-          import { StorageClient } from '@supabase/storage-js'
 
-          const storage = new StorageClient('https://xyzcompany.supabase.co/storage/v1', {
-            apikey: 'public-anon-key',
-          })
-          const avatars = storage.from('avatars')
-          ```
   - id: storage-js-storageclient-from
     title: StorageClient.from()
     $ref: '@supabase/storage-js.StorageClient.from'
   - id: storage-js-storagevectorsclient-from
     title: StorageVectorsClient.from()
     $ref: '@supabase/storage-js.StorageVectorsClient.from'
-    examples:
-      - id: storage-js-storagevectorsclient-from-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const bucket = client.bucket('embeddings-prod')
 
-          // Create an index in this bucket
-          await bucket.createIndex({
-            indexName: 'documents-openai',
-            dataType: 'float32',
-            dimension: 1536,
-            distanceMetric: 'cosine'
-          })
-
-          // List indexes in this bucket
-          const { data } = await bucket.listIndexes()
-          ```
   - id: vector-buckets
     title: 'Overview'
     notes: |
@@ -8650,136 +7979,43 @@ functions:
   - id: storage-js-vectorbucketapi-constructor
     title: new VectorBucketApi()
     $ref: '@supabase/storage-js.VectorBucketApi.constructor'
-    examples:
-      - id: storage-js-vectorbucketapi-constructor-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const client = new VectorBucketApi(url, headers)
-          ```
+
   - id: storage-js-vectorbucketapi-createbucket
     title: VectorBucketApi.createBucket()
     $ref: '@supabase/storage-js.VectorBucketApi.createBucket'
-    examples:
-      - id: storage-js-vectorbucketapi-createbucket-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const { data, error } = await client.createBucket('embeddings-prod')
-          if (error) {
-            console.error('Failed to create bucket:', error.message)
-          }
-          ```
+
   - id: storage-js-vectorbucketapi-deletebucket
     title: VectorBucketApi.deleteBucket()
     $ref: '@supabase/storage-js.VectorBucketApi.deleteBucket'
-    examples:
-      - id: storage-js-vectorbucketapi-deletebucket-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          // Delete all indexes first, then delete bucket
-          const { error } = await client.deleteBucket('old-bucket')
-          if (error?.statusCode === 'S3VectorBucketNotEmpty') {
-            console.error('Must delete all indexes first')
-          }
-          ```
+
   - id: storage-js-vectorbucketapi-getbucket
     title: VectorBucketApi.getBucket()
     $ref: '@supabase/storage-js.VectorBucketApi.getBucket'
-    examples:
-      - id: storage-js-vectorbucketapi-getbucket-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const { data, error } = await client.getBucket('embeddings-prod')
-          if (data) {
-            console.log('Bucket created at:', new Date(data.vectorBucket.creationTime! * 1000))
-          }
-          ```
+
   - id: storage-js-vectorbucketapi-listbuckets
     title: VectorBucketApi.listBuckets()
     $ref: '@supabase/storage-js.VectorBucketApi.listBuckets'
-    examples:
-      - id: storage-js-vectorbucketapi-listbuckets-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          // List all buckets with prefix 'prod-'
-          const { data, error } = await client.listBuckets({ prefix: 'prod-' })
-          if (data) {
-            console.log('Found buckets:', data.buckets.length)
-            // Fetch next page if available
-            if (data.nextToken) {
-              const next = await client.listBuckets({ nextToken: data.nextToken })
-            }
-          }
-          ```
+
   - id: storage-js-vectorbucketapi-throwonerror
     title: VectorBucketApi.throwOnError()
     $ref: '@supabase/storage-js.VectorBucketApi.throwOnError'
-    examples:
-      - id: storage-js-vectorbucketapi-throwonerror-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const client = new VectorBucketApi(url, headers)
-          client.throwOnError()
-          const { data } = await client.createBucket('my-bucket') // throws on error
-          ```
+
   - id: storage-js-vectorbucketscope-createindex
     title: VectorBucketScope.createIndex()
     $ref: '@supabase/storage-js.VectorBucketScope.createIndex'
-    examples:
-      - id: storage-js-vectorbucketscope-createindex-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const bucket = client.bucket('embeddings-prod')
-          await bucket.createIndex({
-            indexName: 'documents-openai',
-            dataType: 'float32',
-            dimension: 1536,
-            distanceMetric: 'cosine',
-            metadataConfiguration: {
-              nonFilterableMetadataKeys: ['raw_text']
-            }
-          })
-          ```
+
   - id: storage-js-vectorbucketscope-deleteindex
     title: VectorBucketScope.deleteIndex()
     $ref: '@supabase/storage-js.VectorBucketScope.deleteIndex'
-    examples:
-      - id: storage-js-vectorbucketscope-deleteindex-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const bucket = client.bucket('embeddings-prod')
-          await bucket.deleteIndex('old-index')
-          ```
+
   - id: storage-js-vectorbucketscope-getindex
     title: VectorBucketScope.getIndex()
     $ref: '@supabase/storage-js.VectorBucketScope.getIndex'
-    examples:
-      - id: storage-js-vectorbucketscope-getindex-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const bucket = client.bucket('embeddings-prod')
-          const { data } = await bucket.getIndex('documents-openai')
-          console.log('Dimension:', data?.index.dimension)
-          ```
+
   - id: storage-js-vectorbucketscope-listindexes
     title: VectorBucketScope.listIndexes()
     $ref: '@supabase/storage-js.VectorBucketScope.listIndexes'
-    examples:
-      - id: storage-js-vectorbucketscope-listindexes-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const bucket = client.bucket('embeddings-prod')
-          const { data } = await bucket.listIndexes({ prefix: 'documents-' })
-          ```
+
   - id: vector-data
     title: 'Overview'
     notes: |
@@ -8787,140 +8023,27 @@ functions:
   - id: storage-js-vectordataapi-deletevectors
     title: VectorDataApi.deleteVectors()
     $ref: '@supabase/storage-js.VectorDataApi.deleteVectors'
-    examples:
-      - id: storage-js-vectordataapi-deletevectors-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const { error } = await client.deleteVectors({
-            vectorBucketName: 'embeddings-prod',
-            indexName: 'documents-openai-small',
-            keys: ['doc-1', 'doc-2', 'doc-3']
-          })
-          if (!error) {
-            console.log('Vectors deleted successfully')
-          }
-          ```
+
   - id: storage-js-vectordataapi-getvectors
     title: VectorDataApi.getVectors()
     $ref: '@supabase/storage-js.VectorDataApi.getVectors'
-    examples:
-      - id: storage-js-vectordataapi-getvectors-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const { data, error } = await client.getVectors({
-            vectorBucketName: 'embeddings-prod',
-            indexName: 'documents-openai-small',
-            keys: ['doc-1', 'doc-2', 'doc-3'],
-            returnData: false,     // Don't return embeddings
-            returnMetadata: true   // Return metadata only
-          })
-          if (data) {
-            data.vectors.forEach(v => console.log(v.key, v.metadata))
-          }
-          ```
+
   - id: storage-js-vectordataapi-listvectors
     title: VectorDataApi.listVectors()
     $ref: '@supabase/storage-js.VectorDataApi.listVectors'
-    examples:
-      - id: storage-js-vectordataapi-listvectors-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          // Simple pagination
-          let nextToken: string | undefined
-          do {
-            const { data, error } = await client.listVectors({
-              vectorBucketName: 'embeddings-prod',
-              indexName: 'documents-openai-small',
-              maxResults: 500,
-              nextToken,
-              returnMetadata: true
-            })
-            if (error) break
-            console.log('Batch:', data.vectors.length)
-            nextToken = data.nextToken
-          } while (nextToken)
 
-          // Parallel scanning (4 concurrent workers)
-          const workers = [0, 1, 2, 3].map(async (segmentIndex) => {
-            const { data } = await client.listVectors({
-              vectorBucketName: 'embeddings-prod',
-              indexName: 'documents-openai-small',
-              segmentCount: 4,
-              segmentIndex,
-              returnMetadata: true
-            })
-            return data?.vectors || []
-          })
-          const results = await Promise.all(workers)
-          ```
   - id: storage-js-vectordataapi-putvectors
     title: VectorDataApi.putVectors()
     $ref: '@supabase/storage-js.VectorDataApi.putVectors'
-    examples:
-      - id: storage-js-vectordataapi-putvectors-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const { data, error } = await client.putVectors({
-            vectorBucketName: 'embeddings-prod',
-            indexName: 'documents-openai-small',
-            vectors: [
-              {
-                key: 'doc-1',
-                data: { float32: [0.1, 0.2, 0.3, ...] }, // 1536 dimensions
-                metadata: { title: 'Introduction', page: 1 }
-              },
-              {
-                key: 'doc-2',
-                data: { float32: [0.4, 0.5, 0.6, ...] },
-                metadata: { title: 'Conclusion', page: 42 }
-              }
-            ]
-          })
-          ```
+
   - id: storage-js-vectordataapi-queryvectors
     title: VectorDataApi.queryVectors()
     $ref: '@supabase/storage-js.VectorDataApi.queryVectors'
-    examples:
-      - id: storage-js-vectordataapi-queryvectors-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          // Semantic search with filtering
-          const { data, error } = await client.queryVectors({
-            vectorBucketName: 'embeddings-prod',
-            indexName: 'documents-openai-small',
-            queryVector: { float32: [0.1, 0.2, 0.3, ...] }, // 1536 dimensions
-            topK: 5,
-            filter: {
-              category: 'technical',
-              published: true
-            },
-            returnDistance: true,
-            returnMetadata: true
-          })
-          if (data) {
-            data.matches.forEach(match => {
-              console.log(`${match.key}: distance=${match.distance}`)
-              console.log('Metadata:', match.metadata)
-            })
-          }
-          ```
+
   - id: storage-js-vectordataapi-throwonerror
     title: VectorDataApi.throwOnError()
     $ref: '@supabase/storage-js.VectorDataApi.throwOnError'
-    examples:
-      - id: storage-js-vectordataapi-throwonerror-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const client = new VectorDataApi(url, headers)
-          client.throwOnError()
-          const { data } = await client.putVectors(options) // throws on error
-          ```
+
   - id: vector-index
     title: 'Overview'
     notes: |
@@ -8928,163 +8051,42 @@ functions:
   - id: storage-js-vectorindexapi-createindex
     title: VectorIndexApi.createIndex()
     $ref: '@supabase/storage-js.VectorIndexApi.createIndex'
-    examples:
-      - id: storage-js-vectorindexapi-createindex-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const { data, error } = await client.createIndex({
-            vectorBucketName: 'embeddings-prod',
-            indexName: 'documents-openai-small',
-            dataType: 'float32',
-            dimension: 1536,
-            distanceMetric: 'cosine',
-            metadataConfiguration: {
-              nonFilterableMetadataKeys: ['raw_text', 'internal_id']
-            }
-          })
-          ```
+
   - id: storage-js-vectorindexapi-deleteindex
     title: VectorIndexApi.deleteIndex()
     $ref: '@supabase/storage-js.VectorIndexApi.deleteIndex'
-    examples:
-      - id: storage-js-vectorindexapi-deleteindex-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          // Delete an index and all its vectors
-          const { error } = await client.deleteIndex('embeddings-prod', 'old-index')
-          if (!error) {
-            console.log('Index deleted successfully')
-          }
-          ```
+
   - id: storage-js-vectorindexapi-getindex
     title: VectorIndexApi.getIndex()
     $ref: '@supabase/storage-js.VectorIndexApi.getIndex'
-    examples:
-      - id: storage-js-vectorindexapi-getindex-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const { data, error } = await client.getIndex('embeddings-prod', 'documents-openai-small')
-          if (data) {
-            console.log('Index dimension:', data.index.dimension)
-            console.log('Distance metric:', data.index.distanceMetric)
-          }
-          ```
+
   - id: storage-js-vectorindexapi-listindexes
     title: VectorIndexApi.listIndexes()
     $ref: '@supabase/storage-js.VectorIndexApi.listIndexes'
-    examples:
-      - id: storage-js-vectorindexapi-listindexes-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          // List all indexes in a bucket
-          const { data, error } = await client.listIndexes({
-            vectorBucketName: 'embeddings-prod',
-            prefix: 'documents-'
-          })
-          if (data) {
-            console.log('Found indexes:', data.indexes.map(i => i.indexName))
-            // Fetch next page if available
-            if (data.nextToken) {
-              const next = await client.listIndexes({
-                vectorBucketName: 'embeddings-prod',
-                nextToken: data.nextToken
-              })
-            }
-          }
-          ```
+
   - id: storage-js-vectorindexapi-throwonerror
     title: VectorIndexApi.throwOnError()
     $ref: '@supabase/storage-js.VectorIndexApi.throwOnError'
-    examples:
-      - id: storage-js-vectorindexapi-throwonerror-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const client = new VectorIndexApi(url, headers)
-          client.throwOnError()
-          const { data } = await client.createIndex(options) // throws on error
-          ```
+
   - id: storage-js-vectorindexscope-deletevectors
     title: VectorIndexScope.deleteVectors()
     $ref: '@supabase/storage-js.VectorIndexScope.deleteVectors'
-    examples:
-      - id: storage-js-vectorindexscope-deletevectors-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const index = client.bucket('embeddings-prod').index('documents-openai')
-          await index.deleteVectors({
-            keys: ['doc-1', 'doc-2', 'doc-3']
-          })
-          ```
+
   - id: storage-js-vectorindexscope-getvectors
     title: VectorIndexScope.getVectors()
     $ref: '@supabase/storage-js.VectorIndexScope.getVectors'
-    examples:
-      - id: storage-js-vectorindexscope-getvectors-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const index = client.bucket('embeddings-prod').index('documents-openai')
-          const { data } = await index.getVectors({
-            keys: ['doc-1', 'doc-2'],
-            returnMetadata: true
-          })
-          ```
+
   - id: storage-js-vectorindexscope-listvectors
     title: VectorIndexScope.listVectors()
     $ref: '@supabase/storage-js.VectorIndexScope.listVectors'
-    examples:
-      - id: storage-js-vectorindexscope-listvectors-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const index = client.bucket('embeddings-prod').index('documents-openai')
-          const { data } = await index.listVectors({
-            maxResults: 500,
-            returnMetadata: true
-          })
-          ```
+
   - id: storage-js-vectorindexscope-putvectors
     title: VectorIndexScope.putVectors()
     $ref: '@supabase/storage-js.VectorIndexScope.putVectors'
-    examples:
-      - id: storage-js-vectorindexscope-putvectors-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const index = client.bucket('embeddings-prod').index('documents-openai')
-          await index.putVectors({
-            vectors: [
-              {
-                key: 'doc-1',
-                data: { float32: [0.1, 0.2, ...] },
-                metadata: { title: 'Introduction', page: 1 }
-              }
-            ]
-          })
-          ```
+
   - id: storage-js-vectorindexscope-queryvectors
     title: VectorIndexScope.queryVectors()
     $ref: '@supabase/storage-js.VectorIndexScope.queryVectors'
-    examples:
-      - id: storage-js-vectorindexscope-queryvectors-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const index = client.bucket('embeddings-prod').index('documents-openai')
-          const { data } = await index.queryVectors({
-            queryVector: { float32: [0.1, 0.2, ...] },
-            topK: 5,
-            filter: { category: 'technical' },
-            returnDistance: true,
-            returnMetadata: true
-          })
-          ```
 
   - id: realtime-js-realtimechannel-constructor
     title: new RealtimeChannel()
@@ -9148,56 +8150,23 @@ functions:
   - id: storage-js-storagevectorsclient-constructor
     title: new StorageVectorsClient()
     $ref: '@supabase/storage-js.StorageVectorsClient.constructor'
-    examples:
-      - id: storage-js-storagevectorsclient-constructor-typedoc-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const client = new StorageVectorsClient(url, options)
-          ```
+
   - id: storage-js-vectorbucketscope-constructor
     title: new VectorBucketScope()
     $ref: '@supabase/storage-js.VectorBucketScope.constructor'
-    examples:
-      - id: storage-js-vectorbucketscope-constructor-typedoc-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const bucket = client.bucket('embeddings-prod')
-          ```
+
   - id: storage-js-vectordataapi-constructor
     title: new VectorDataApi()
     $ref: '@supabase/storage-js.VectorDataApi.constructor'
-    examples:
-      - id: storage-js-vectordataapi-constructor-typedoc-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const client = new VectorDataApi(url, headers)
-          ```
+
   - id: storage-js-vectorindexapi-constructor
     title: new VectorIndexApi()
     $ref: '@supabase/storage-js.VectorIndexApi.constructor'
-    examples:
-      - id: storage-js-vectorindexapi-constructor-typedoc-example-1
-        name: Example 1
-        code: |-
-          ```typescript
-          const client = new VectorIndexApi(url, headers)
-          ```
+
   - id: storage-js-vectorindexscope-constructor
     title: new VectorIndexScope()
     $ref: '@supabase/storage-js.VectorIndexScope.constructor'
-    examples:
-      - id: storage-js-vectorindexscope-constructor-typedoc-example-1
-        name: Example 1
-        code: >-
-          ```typescript
 
-          const index =
-          client.bucket('embeddings-prod').index('documents-openai')
-
-          ```
   - id: realtime-js-websocketlikeconstructor-constructor
     title: new WebSocketLikeConstructor()
     $ref: '@supabase/realtime-js.WebSocketLikeConstructor.constructor'
