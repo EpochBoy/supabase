@@ -3,6 +3,7 @@
 import { ExternalLink } from 'lucide-react'
 import Image from 'next/image'
 import yaml from 'js-yaml'
+import { stringify as stringifyToml } from '@std/toml/stringify'
 import { Button, cn } from 'ui'
 import { CodeBlock, CodeBlockLang } from 'ui/src/components/CodeBlock'
 import type { McpClient, McpClientConfig } from '../types'
@@ -15,6 +16,8 @@ interface McpConfigurationDisplayProps {
   theme?: 'light' | 'dark'
   basePath: string
 }
+
+type ConfigFormat = CodeBlockLang | 'toml'
 
 export function McpConfigurationDisplay({
   selectedClient,
@@ -32,21 +35,31 @@ export function McpConfigurationDisplay({
 
   // Extract file extension and determine format
   const fileExtension = selectedClient.configFile?.split('.').pop()?.toLowerCase()
-  // If the file extension is not 'json' or 'yaml', default to 'txt'
-  let configFormat: CodeBlockLang
-  if (['json', 'yaml'].includes(fileExtension ?? '')) {
-    configFormat = fileExtension as CodeBlockLang
-  } else {
-    configFormat = 'txt'
+  // If the file extension is not 'json', 'yaml', or 'toml', default to 'txt'
+  let configFormat: ConfigFormat | undefined
+  if (['json', 'yaml', 'toml'].includes(fileExtension ?? '')) {
+    configFormat = fileExtension as ConfigFormat
   }
 
   // Serialize config based on format
-  const configValue =
-    configFormat === 'yaml'
-      ? yaml.dump(clientConfig, { indent: 2, lineWidth: -1 })
-      : configFormat === 'json'
-        ? JSON.stringify(clientConfig, null, 2)
-        : String(clientConfig)
+  let configValue: string
+  switch (configFormat) {
+    case 'yaml':
+      configValue = yaml.dump(clientConfig, { indent: 2, lineWidth: -1 })
+      break
+    case 'toml':
+      configValue = stringifyToml(clientConfig as Record<string, any>).trim()
+      break
+    case 'json':
+      configValue = JSON.stringify(clientConfig, null, 2)
+      break
+    default:
+      configValue = String(clientConfig)
+  }
+
+  // Toml will default to undefined display language
+  const displayLanguage: CodeBlockLang | undefined =
+    configFormat === 'toml' ? undefined : configFormat
 
   return (
     <div className={cn('space-y-4', className)}>
@@ -89,7 +102,7 @@ export function McpConfigurationDisplay({
 
       <CodeBlock
         value={configValue}
-        language={configFormat}
+        language={displayLanguage}
         className="max-h-64 overflow-y-auto"
         focusable={false}
       />
