@@ -888,13 +888,6 @@
         "product": "storage"
       },
       {
-        "id": "storage-js-storageclient-from",
-        "title": "Access a storage bucket",
-        "slug": "storage-js-storageclient-from",
-        "type": "function",
-        "product": "storage"
-      },
-      {
         "id": "file-buckets",
         "isFunc": false,
         "title": "File Buckets",
@@ -902,6 +895,13 @@
         "product": "storage",
         "type": "function",
         "items": [
+          {
+            "id": "storage-js-storageclient-from",
+            "title": "Access a storage bucket",
+            "slug": "storage-js-storageclient-from",
+            "type": "function",
+            "product": "storage"
+          },
           {
             "id": "list-buckets",
             "title": "List all buckets",
