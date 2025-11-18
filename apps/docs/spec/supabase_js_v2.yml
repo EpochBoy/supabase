@@ -7502,21 +7502,21 @@ functions:
     title: 'Overview'
     notes: |
       This section contains methods for working with Analytics Buckets.
-  - id: storage-js-storageanalyticsapi-createbucket
+  - id: storageanalyticsapi-createbucket
     title: Create a new analytics bucket
     $ref: '@supabase/storage-js.packages/StorageAnalyticsApi.default.createBucket'
     notes: |
       - Creates a new analytics bucket using Iceberg tables
       - Analytics buckets are optimized for analytical queries and data processing
 
-  - id: storage-js-storageanalyticsapi-listbuckets
+  - id: storageanalyticsapi-listbuckets
     title: List analytics buckets
     $ref: '@supabase/storage-js.packages/StorageAnalyticsApi.default.listBuckets'
     notes: |
       - Retrieves the details of all Analytics Storage buckets within an existing project
       - Only returns buckets of type 'ANALYTICS'
 
-  - id: storage-js-storageanalyticsapi-deletebucket
+  - id: storageanalyticsapi-deletebucket
     title: Delete an analytics bucket
     $ref: '@supabase/storage-js.packages/StorageAnalyticsApi.default.deleteBucket'
     notes: |
@@ -7961,14 +7961,14 @@ functions:
           functions.setAuth(session.access_token)
           ```
 
-  - id: storage-js-storageclient-constructor
+  - id: storageclient-constructor
     title: new StorageClient()
     $ref: '@supabase/storage-js.StorageClient.constructor'
 
-  - id: storage-js-storageclient-from
+  - id: storageclient-from
     title: StorageClient.from()
     $ref: '@supabase/storage-js.StorageClient.from'
-  - id: storage-js-storagevectorsclient-from
+  - id: storagevectorsclient-from
     title: StorageVectorsClient.from()
     $ref: '@supabase/storage-js.StorageVectorsClient.from'
 
@@ -7976,43 +7976,43 @@ functions:
     title: 'Overview'
     notes: |
       This section contains methods for working with Vector Buckets.
-  - id: storage-js-vectorbucketapi-constructor
+  - id: vectorbucketapi-constructor
     title: new VectorBucketApi()
     $ref: '@supabase/storage-js.VectorBucketApi.constructor'
 
-  - id: storage-js-vectorbucketapi-createbucket
+  - id: vectorbucketapi-createbucket
     title: VectorBucketApi.createBucket()
     $ref: '@supabase/storage-js.VectorBucketApi.createBucket'
 
-  - id: storage-js-vectorbucketapi-deletebucket
+  - id: vectorbucketapi-deletebucket
     title: VectorBucketApi.deleteBucket()
     $ref: '@supabase/storage-js.VectorBucketApi.deleteBucket'
 
-  - id: storage-js-vectorbucketapi-getbucket
+  - id: vectorbucketapi-getbucket
     title: VectorBucketApi.getBucket()
     $ref: '@supabase/storage-js.VectorBucketApi.getBucket'
 
-  - id: storage-js-vectorbucketapi-listbuckets
+  - id: vectorbucketapi-listbuckets
     title: VectorBucketApi.listBuckets()
     $ref: '@supabase/storage-js.VectorBucketApi.listBuckets'
 
-  - id: storage-js-vectorbucketapi-throwonerror
+  - id: vectorbucketapi-throwonerror
     title: VectorBucketApi.throwOnError()
     $ref: '@supabase/storage-js.VectorBucketApi.throwOnError'
 
-  - id: storage-js-vectorbucketscope-createindex
+  - id: vectorbucketscope-createindex
     title: VectorBucketScope.createIndex()
     $ref: '@supabase/storage-js.VectorBucketScope.createIndex'
 
-  - id: storage-js-vectorbucketscope-deleteindex
+  - id: vectorbucketscope-deleteindex
     title: VectorBucketScope.deleteIndex()
     $ref: '@supabase/storage-js.VectorBucketScope.deleteIndex'
 
-  - id: storage-js-vectorbucketscope-getindex
+  - id: vectorbucketscope-getindex
     title: VectorBucketScope.getIndex()
     $ref: '@supabase/storage-js.VectorBucketScope.getIndex'
 
-  - id: storage-js-vectorbucketscope-listindexes
+  - id: vectorbucketscope-listindexes
     title: VectorBucketScope.listIndexes()
     $ref: '@supabase/storage-js.VectorBucketScope.listIndexes'
 
@@ -8020,27 +8020,27 @@ functions:
     title: 'Overview'
     notes: |
       This section contains methods for working with Vector Data.
-  - id: storage-js-vectordataapi-deletevectors
+  - id: vectordataapi-deletevectors
     title: VectorDataApi.deleteVectors()
     $ref: '@supabase/storage-js.VectorDataApi.deleteVectors'
 
-  - id: storage-js-vectordataapi-getvectors
+  - id: vectordataapi-getvectors
     title: VectorDataApi.getVectors()
     $ref: '@supabase/storage-js.VectorDataApi.getVectors'
 
-  - id: storage-js-vectordataapi-listvectors
+  - id: vectordataapi-listvectors
     title: VectorDataApi.listVectors()
     $ref: '@supabase/storage-js.VectorDataApi.listVectors'
 
-  - id: storage-js-vectordataapi-putvectors
+  - id: vectordataapi-putvectors
     title: VectorDataApi.putVectors()
     $ref: '@supabase/storage-js.VectorDataApi.putVectors'
 
-  - id: storage-js-vectordataapi-queryvectors
+  - id: vectordataapi-queryvectors
     title: VectorDataApi.queryVectors()
     $ref: '@supabase/storage-js.VectorDataApi.queryVectors'
 
-  - id: storage-js-vectordataapi-throwonerror
+  - id: vectordataapi-throwonerror
     title: VectorDataApi.throwOnError()
     $ref: '@supabase/storage-js.VectorDataApi.throwOnError'
 
@@ -8048,43 +8048,43 @@ functions:
     title: 'Overview'
     notes: |
       This section contains methods for working with Vector Index.
-  - id: storage-js-vectorindexapi-createindex
+  - id: vectorindexapi-createindex
     title: VectorIndexApi.createIndex()
     $ref: '@supabase/storage-js.VectorIndexApi.createIndex'
 
-  - id: storage-js-vectorindexapi-deleteindex
+  - id: vectorindexapi-deleteindex
     title: VectorIndexApi.deleteIndex()
     $ref: '@supabase/storage-js.VectorIndexApi.deleteIndex'
 
-  - id: storage-js-vectorindexapi-getindex
+  - id: vectorindexapi-getindex
     title: VectorIndexApi.getIndex()
     $ref: '@supabase/storage-js.VectorIndexApi.getIndex'
 
-  - id: storage-js-vectorindexapi-listindexes
+  - id: vectorindexapi-listindexes
     title: VectorIndexApi.listIndexes()
     $ref: '@supabase/storage-js.VectorIndexApi.listIndexes'
 
-  - id: storage-js-vectorindexapi-throwonerror
+  - id: vectorindexapi-throwonerror
     title: VectorIndexApi.throwOnError()
     $ref: '@supabase/storage-js.VectorIndexApi.throwOnError'
 
-  - id: storage-js-vectorindexscope-deletevectors
+  - id: vectorindexscope-deletevectors
     title: VectorIndexScope.deleteVectors()
     $ref: '@supabase/storage-js.VectorIndexScope.deleteVectors'
 
-  - id: storage-js-vectorindexscope-getvectors
+  - id: vectorindexscope-getvectors
     title: VectorIndexScope.getVectors()
     $ref: '@supabase/storage-js.VectorIndexScope.getVectors'
 
-  - id: storage-js-vectorindexscope-listvectors
+  - id: vectorindexscope-listvectors
     title: VectorIndexScope.listVectors()
     $ref: '@supabase/storage-js.VectorIndexScope.listVectors'
 
-  - id: storage-js-vectorindexscope-putvectors
+  - id: vectorindexscope-putvectors
     title: VectorIndexScope.putVectors()
     $ref: '@supabase/storage-js.VectorIndexScope.putVectors'
 
-  - id: storage-js-vectorindexscope-queryvectors
+  - id: vectorindexscope-queryvectors
     title: VectorIndexScope.queryVectors()
     $ref: '@supabase/storage-js.VectorIndexScope.queryVectors'
 
@@ -8147,23 +8147,23 @@ functions:
   - id: realtime-js-websocketlike-send
     title: WebSocketLike.send()
     $ref: '@supabase/realtime-js.WebSocketLike.send'
-  - id: storage-js-storagevectorsclient-constructor
+  - id: storagevectorsclient-constructor
     title: new StorageVectorsClient()
     $ref: '@supabase/storage-js.StorageVectorsClient.constructor'
 
-  - id: storage-js-vectorbucketscope-constructor
+  - id: vectorbucketscope-constructor
     title: new VectorBucketScope()
     $ref: '@supabase/storage-js.VectorBucketScope.constructor'
 
-  - id: storage-js-vectordataapi-constructor
+  - id: vectordataapi-constructor
     title: new VectorDataApi()
     $ref: '@supabase/storage-js.VectorDataApi.constructor'
 
-  - id: storage-js-vectorindexapi-constructor
+  - id: vectorindexapi-constructor
     title: new VectorIndexApi()
     $ref: '@supabase/storage-js.VectorIndexApi.constructor'
 
-  - id: storage-js-vectorindexscope-constructor
+  - id: vectorindexscope-constructor
     title: new VectorIndexScope()
     $ref: '@supabase/storage-js.VectorIndexScope.constructor'
 
