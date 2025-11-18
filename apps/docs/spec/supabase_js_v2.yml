@@ -4,7 +4,7 @@ info:
   id: reference/supabase-js
   title: Supabase Javascript Client
   description: |
-    
+
     Supabase JavaScript.
 
   definition: spec/enrichments/tsdoc_v2/combined.json
